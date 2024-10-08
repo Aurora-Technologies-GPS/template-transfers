@@ -1,9 +1,10 @@
 <template>
-	<div class="vistaStandar">
-		<VistaStandarHeader style="padding: 10px;"/>
-		<VistaStandarList />
-		
-	</div>
+<div class="vistaStandar">
+
+<VistaStandarHeader/>
+<VistaStandarList/>	
+
+</div>
 
 </template>
 <script setup>
@@ -14,12 +15,11 @@
 <style scoped>
 
 	.vistaStandar{
-		background-color: white;
+		
 		display: flex;
 		flex-direction: column;
-		/*justify-content: space-between;*/
 		height: 100%;
-		
+		border-radius: 8px 8px 0px 0px;		
 	}
 	
 </style>

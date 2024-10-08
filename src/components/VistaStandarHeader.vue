@@ -47,6 +47,10 @@
 
 		display: flex;
 		justify-content: space-between;
+		border-radius: 8px 8px 0px 0px;
+		background-color: white;
+		padding: 10px;
+		padding-top: 20px;
 
 	}
 

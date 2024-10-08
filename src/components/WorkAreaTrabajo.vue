@@ -1,11 +1,9 @@
 <template>
 	<div class="contenedorWorking">
 
-		<div class="mainContent">
-
-			<VistaStandar />
+		<VistaStandar />
 			
-		</div>
+
 		
 	</div>
 </template>
@@ -20,18 +18,10 @@
 	.contenedorWorking{
 		width: 100%;
 		height: 100%;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-bottom: 5px;
-	}
-
-	.mainContent{
-		border: solid 1px;
-		height: 100%;
-		border-color: #80808030;
+		padding: 20px;
 		overflow: auto;
-
-		border-radius: 8px 8px 8px 8px;
 	}
+
+
 	
 </style>
