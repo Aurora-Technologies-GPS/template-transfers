@@ -1,8 +1,8 @@
 <template>
 
-<!-- 	v-show="showingCounter" -->
+	<!-- 	v-show="showingCounter" -->
 
-	<div  id="collapseOne" class="contenedor collapse show">
+	<div id="collapseOne" class="contenedor collapse show">
 
 		<div class="targeticasContainer">
 
@@ -17,16 +17,16 @@
 
 						<!-- bi bi-square -->
 						<!-- @click="change('progIschecked')"  -->
-<!-- 						<i :class="{ 'bi bi-check-square-fill': keys.progIschecked, 'bi bi-square-fill':!keys.progIschecked}" :style="{ color: getStatus(4).color, cursor: 'pointer'}">							
+						<!-- 						<i :class="{ 'bi bi-check-square-fill': keys.progIschecked, 'bi bi-square-fill':!keys.progIschecked}" :style="{ color: getStatus(4).color, cursor: 'pointer'}">							
 						</i> -->
-					<img class="icons" src="../assets/icons/enlace.svg">
-						
+						<img class="icons" src="../assets/icons/enlace.svg">
+
 					</div>
 
 					<div class="title">{{ "Enlazados" }}</div>
 
 					<!-- sumarCounters([countList.inTime, countList.warning, countList.overdue]) -->
-			
+
 					<div class="labelCounter">{{ "13" }}
 						<!-- <sub>{{ '/' + (countList.total || 0)}} </sub> -->
 
@@ -35,7 +35,7 @@
 
 				</div>
 
-			<!-- 	<div class="comentario">+30 Desde la Ultima Semana</div> -->
+				<!-- 	<div class="comentario">+30 Desde la Ultima Semana</div> -->
 
 
 
@@ -43,13 +43,13 @@
 
 			</div>
 
-			
+
 
 		</div>
 
-				<div class="targeticasContainer">
+		<div class="targeticasContainer">
 
-			
+
 			<div class="targeticas">
 
 
@@ -58,13 +58,13 @@
 
 					<div class="checkColor">
 						<!--  @click="change('pendIschecked')"  -->
-					<img class="icons" src="../assets/icons/transito.svg">
-						
+						<img class="icons" src="../assets/icons/transito.svg">
+
 					</div>
 
 					<!-- getStatus(1).label -->
 
-					<div class="title">{{ "En Transito"  }}</div>
+					<div class="title">{{ "En Transito" }}</div>
 
 					<!-- (countList.pending || 0)  -->
 
@@ -76,7 +76,7 @@
 
 				</div>
 
-<!-- 				<div class="comentario">+30 Desde la Ultima Semana</div> -->
+				<!-- 				<div class="comentario">+30 Desde la Ultima Semana</div> -->
 
 
 
@@ -84,12 +84,12 @@
 
 			</div>
 
-			
+
 
 		</div>
-				<div class="targeticasContainer">
+		<div class="targeticasContainer">
 
-			
+
 			<div class="targeticas">
 
 
@@ -97,24 +97,24 @@
 				<div class="headerContainer" :style="{ borderColor: getStatus(3).color }">
 
 					<div class="checkColor">
-						<!--  @click="change('checkIschecked')" --> 
+						<!--  @click="change('checkIschecked')" -->
 						<img class="icons" src="../assets/icons/complete.svg">
 
-						
+
 					</div>
 
 					<div class="title">{{ "Completados" }}</div>
 					<!-- countList.checkin-->
-<!-- 					sumarCounters([countList.preCheckin, countList.lateCheckin]) -->
+					<!-- 					sumarCounters([countList.preCheckin, countList.lateCheckin]) -->
 					<div class="labelCounter">{{ "13" }}
-<!-- 						<sub>{{ '/' + (countList.total || 0)}} </sub> -->
+						<!-- 						<sub>{{ '/' + (countList.total || 0)}} </sub> -->
 
 					</div>
 
 
 				</div>
 
-<!-- 				<div class="comentario">+30 Desde la Ultima Semana</div> -->
+				<!-- 				<div class="comentario">+30 Desde la Ultima Semana</div> -->
 
 
 
@@ -122,12 +122,12 @@
 
 			</div>
 
-			
+
 
 		</div>
-				<div class="targeticasContainer">
+		<div class="targeticasContainer">
 
-			
+
 			<div class="targeticas">
 
 
@@ -138,11 +138,11 @@
 						<!--  @click="change('doneIschecked')" -->
 						<img class="icons" src="../assets/icons/canceled.svg">
 
-						
+
 					</div>
 
-					<div class="title">{{"Cancelados" }}</div>
-<!-- 					sumarCounters([countList.doneInTime, countList.doneLate]) -->
+					<div class="title">{{ "Cancelados" }}</div>
+					<!-- 					sumarCounters([countList.doneInTime, countList.doneLate]) -->
 					<div class="labelCounter">{{ "13" }}
 						<!-- <sub>{{ '/' + (countList.total || 0)}} </sub> -->
 
@@ -159,12 +159,12 @@
 
 			</div>
 
-			
+
 
 		</div>
-				<div class="targeticasContainer">
+		<div class="targeticasContainer">
 
-			
+
 			<div class="targeticas">
 
 
@@ -175,25 +175,25 @@
 						<!-- @click="change('cancelIschecked')" -->
 
 
-<!-- 	border-color: #80808030; -->
+						<!-- 	border-color: #80808030; -->
 
-					<img  class="icons"  src="../assets/icons/expired.svg">
-						
-
+						<img class="icons" src="../assets/icons/expired.svg">
 
 
-							
- 
-<!-- 						<i  :class="{ 'bi bi-check-square-fill': keys.cancelIschecked, 'bi bi-square-fill':!keys.cancelIschecked}" :style="{ color: getStatus(10).color, cursor: 'pointer' }" >
+
+
+
+
+						<!-- 						<i  :class="{ 'bi bi-check-square-fill': keys.cancelIschecked, 'bi bi-square-fill':!keys.cancelIschecked}" :style="{ color: getStatus(10).color, cursor: 'pointer' }" >
 							
 						</i> -->
-						
+
 					</div>
 
 					<div class="title">{{ "Expirados" }}</div>
-					<!-- sumarCounters([countList.expired, countList.cancelled]) --> 
-					<div class="labelCounter">{{ "13"}}
-					<!-- 	<sub>{{ '/' + (countList.total  || 0)}} </sub> -->
+					<!-- sumarCounters([countList.expired, countList.cancelled]) -->
+					<div class="labelCounter">{{ "13" }}
+						<!-- 	<sub>{{ '/' + (countList.total  || 0)}} </sub> -->
 
 					</div>
 
@@ -208,25 +208,27 @@
 
 			</div>
 
-			
+
 
 		</div>
 
 	</div>
 
 
-          
 
-	<i data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="bi bi-arrow-down-right-square mb-1 text-right" style="color:#66b9d9; cursor: pointer; padding-right: 10px;"></i>
+
+	<i data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+		class="bi bi-arrow-down-right-square mb-1 text-right"
+		style="color:#66b9d9; cursor: pointer; padding-right: 10px;"></i>
 
 
 </template>
 
 <script setup>
 
-	
+
 //import { ref } from 'vue' //defineEmits, defineProps 
-import { getStatus,  } from './utils.js' //sumarCounters
+import { getStatus, } from './utils.js' //sumarCounters
 
 
 
@@ -286,25 +288,25 @@ const outGoingData = defineEmits(
 
 
 
-.contenedor{
-/*	background: red;*/
+.contenedor {
+	/*	background: red;*/
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-around;
 }
 
-.targeticasContainer{
+.targeticasContainer {
 
 	width: 20%;
-	height:auto;
-	padding:20px;
+	height: auto;
+	padding: 20px;
 	padding-bottom: 0px;
 
 }
 
-.targeticas{
-	padding:15px;
+.targeticas {
+	padding: 15px;
 	background-color: white;
 	min-height: 90px;
 	border: solid 1px;
@@ -313,48 +315,48 @@ const outGoingData = defineEmits(
 }
 
 
-.labelCounter{
+.labelCounter {
 	font-size: 29px;
 	padding-top: 0px;
-	font-weight:600;		
+	font-weight: 600;
 }
 
-.headerContainer{
-	
-	position:relative;
-/*	border-left: solid 6px;
-*/	padding-left:10px;
+.headerContainer {
+
+	position: relative;
+	/*	border-left: solid 6px;
+*/
+	padding-left: 10px;
 	border-color: #80808030;
 
 }
 
-.icons{
-	width: 27px; 
-	border: solid 1px; 
-	border-color:#80808030;
+.icons {
+	width: 27px;
+	border: solid 1px;
+	border-color: #80808030;
 	padding: 2px;
 	border-radius: 6px 6px 6px 6px;
 }
 
-.title{
+.title {
 
 	font-size: 14px;
 	font-weight: bold;
 	color: #adaeb2;
 }
 
-.checkColor  {
+.checkColor {
 	font-size: 25px;
-	position:absolute;
-	right:0px;
+	position: absolute;
+	right: 0px;
 	top: -10px;
 
 }
 
-.comentario{
+.comentario {
 	font-size: 10px;
-	padding-top:5px;
+	padding-top: 5px;
 	color: #adaeb2;
 }
-
 </style>

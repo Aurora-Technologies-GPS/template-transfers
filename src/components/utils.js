@@ -7,7 +7,7 @@ export function getStatus(estatusN) {
 
     case 2:
       return { label: 'transit', color: 'grey' }
-  
+
     case 3:
       return { label: 'Done', color: 'pink' }
 
@@ -19,7 +19,7 @@ export function getStatus(estatusN) {
 
     default:
       return { label: 'Expired', color: '#ecec7a' }
- 
+
   }
 }
 

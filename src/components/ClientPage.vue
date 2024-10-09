@@ -9,7 +9,7 @@
 
     <NewDashBord />
 
-    
+
   </div>
 
 </template>
@@ -17,8 +17,8 @@
 
 //import {ref} from 'vue'
 
- // import HeaderComponet from './HeaderComponet.vue'
-  import NewDashBord from './NewDashBord.vue'
+// import HeaderComponet from './HeaderComponet.vue'
+import NewDashBord from './NewDashBord.vue'
 
 
 
@@ -26,14 +26,14 @@
 export default {
   //props: [],
   components: {
-   // HeaderComponet,
+    // HeaderComponet,
     //DashBoard,
     NewDashBord
   },
   setup() { //  setup(props) 
 
     // let hash=ref("defecto")
-    
+
     //let saludo = "hola mundo"
 
     ///console.log(props)
@@ -56,12 +56,12 @@ export default {
 </script>
 
 <style scoped>
-  .windows_Page{
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.windows_Page {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
-  }
+}
 </style>
