@@ -8,15 +8,15 @@
 
 				<div class="rowInfo">
 					<div>
-						<div style="font-size: 9px;">Bill of Landing</div>
+						<div style="font-size: 9px;">Bill of Lading</div>
 						<strong>1234567812ABCVB</strong>
 
 						<div>
 							<i class="bi bi-circle-fill vineta" style="color: #72c9eb;"></i><span
 								class="miniLetra">Puerto caucedo</span>
-								<img style="height: 25px; margin-left: 5px;" src="../assets/icons/flechaAzul.svg">
+							<img style="height: 25px; margin-left: 5px;" src="../assets/icons/flechaAzul.svg">
 
-								
+
 
 							<i class="bi bi-circle-fill vineta"></i><span class="miniLetra">Maritima Dominicana
 								(MARDOM)</span>
@@ -38,67 +38,11 @@
 
 			</div>
 
-			<div v-show="isOpen(index)" class="expandible">
-				<div class="rowMenu"> <!-- columnaName -->
+			<div v-show="isOpen(index)" class="contendorTabla">
 
+				<TablaHeader />
 
-
-					<div>
-						<img class="icons" src="../assets/icons/contenedor.svg">
-
-						<span class="titlePop">Contenedores</span>
-
-					</div>
-
-
-					<div class="rowMenu">
-						<div class="softBorders">
-							<input placeholder="Buscar..." type="text" class="textInput">
-						</div>
-
-						<div class="softBorders">
-							<i class="bi bi-sliders filter"> Filtros</i>
-						</div>
-
-					</div>
-				</div>
-
-				<table class="table table-striped table-lg mb-0 requests-table mt-1">
-
-
-					<thead>
-						<tr>
-							<th class="titleTable text-center">ID</th>
-							<th class="titleTable text-center">Precinto</th>
-							<th class="titleTable text-center">Fecha Inicio</th>
-							<th class="titleTable text-center">Fecha Fin</th>
-							<th class="titleTable text-center">Ruta</th>
-							<th class="titleTable text-center">Estatus</th>
-						</tr>
-					</thead>
-
-					<tbody>
-						<tr v-for=" (dato, index) in [1, 2, 3, 4, 5, 6, 7]" :key="index" class="hovertabla">
-							<td class="datoTable text-center">123456789A</td>
-							<td class="datoTable text-center">022456545</td>
-							<td class="datoTable text-center">1/10/2024 00:00PM</td>
-							<td class="datoTable text-center">1/10/2024 00:00PM</td>
-
-							<td class="datoTable text-center">
-							<span>Puerto Causedo</span>
-							<img style="height: 25px; margin-left: 5px; margin-right: 5px;" src="../assets/icons/flechaNegra.svg">
-							<span>Maritima Dominicana (MARDOM)</span>
-							</td>
-
-							<td class="datoTable text-center">
-								<span class="text-center estatusTable">
-									En Transito
-								</span>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-
+				<TablaList class="myTable" />
 
 
 
@@ -111,6 +55,8 @@
 <script setup>
 
 import { ref } from 'vue'
+import TablaList from './TablaList.vue'
+import TablaHeader from './TablaHeader.vue'
 
 let openIndex = ref()
 
@@ -135,7 +81,7 @@ function isOpen(index) {
 <style scoped>
 .vistaStandarList {
 	width: 100%;
-	height: 90%;
+	height: 100%;
 	overflow: auto;
 	background-color: white;
 	border-right: solid 1px;
@@ -151,6 +97,19 @@ function isOpen(index) {
 	padding-top: 2px;
 	padding-bottom: 0.5px;
 	width: 100%;
+}
+
+.contendorTabla {
+	margin-left: 20px;
+	border-radius: 8px 8px 0px 0px;
+	border: solid 1px;
+	padding: 10px;
+	border-color: #80808030;
+}
+
+.myTable {
+	max-height: 230px;
+	overflow: auto;
 }
 
 .listaSelected {
@@ -256,15 +215,6 @@ function isOpen(index) {
 }
 
 
-.expandible {
-	border: solid 1px;
-	padding: 10px;
-	margin-left: 20px;
-	border-color: #80808030;
-	cursor: pointer;
-	/*	min-height: 65px;*/
-	border-radius: 8px 8px 8px 8px;
-}
 
 .titlePop {
 	padding: 2px;

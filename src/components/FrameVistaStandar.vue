@@ -1,9 +1,6 @@
 <template>
 	<div class="contenedorWorking">
-
 		<VistaStandar />
-
-
 
 	</div>
 </template>
@@ -18,7 +15,9 @@ import VistaStandar from './VistaStandar.vue'
 .contenedorWorking {
 	width: 100%;
 	height: 100%;
-	padding: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
 	overflow: auto;
 }
 </style>

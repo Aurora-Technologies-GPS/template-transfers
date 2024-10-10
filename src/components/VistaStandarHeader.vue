@@ -5,7 +5,7 @@
 			<div>
 				<img class="icons" src="../assets/icons/bl.svg">
 
-				<strong>BL</strong><span style="font-size: 12px;">(Bill of Landing)</span>
+				<strong>BL</strong><span style="font-size: 12px;">(Bill of Lading)</span>
 			</div>
 
 			<div class="softBorders d-none">

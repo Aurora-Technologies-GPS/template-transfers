@@ -6,10 +6,10 @@
 			<div class="selectorVista">
 
 				<div @click="cambiarvistaGeneral" class="targetas" :class="{ 'vistaSelected': !vistaGeneral }">
-					Vista General
+					Vista Standar
 				</div>
 				<div @click="cambiarVistaStandar" class="targetas" :class="{ 'vistaSelected': vistaGeneral }">
-					Vista Standar
+					Vista General
 				</div>
 
 			</div>
@@ -32,14 +32,20 @@
 
 
 		<CounterPage />
+		<FrameVistaGeneral v-if="vistaGeneral" />
 
-		<WorkAreaTrabajo />
+		<FrameVistaStandar v-if="!vistaGeneral" />
+
 
 	</div>
 </template>
 <script setup>
 import CounterPage from './CounterPage.vue'
-import WorkAreaTrabajo from './WorkAreaTrabajo.vue'
+import FrameVistaGeneral from './FrameVistaGeneral.vue'
+
+
+import FrameVistaStandar from './FrameVistaStandar.vue'
+
 
 import { ref } from 'vue';
 
