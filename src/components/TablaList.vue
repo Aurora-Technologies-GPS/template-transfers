@@ -17,9 +17,9 @@
 			</thead>
 
 			<tbody>
-				<tr v-for=" (dato, index) in [1, 2, 3, 4, 5, 6, 1, 1, 1, 1, 1, 1, 1, 1,]" :key="index"
+				<tr v-for=" (dato, index) in [1,1,1,1,1,1,1,1,1 ]" :key="index"
 					class="hovertabla">
-					<td class="datoTable text-center">123456789A</td>
+					<td class="datoTable text-center">1234567899</td>
 					<td class="datoTable text-center">022456545</td>
 					<td class="datoTable text-center">1/10/2024 00:00PM</td>
 					<td class="datoTable text-center">1/10/2024 00:00PM</td>
@@ -47,6 +47,7 @@
 </template>
 
 <script setup>
+
 
 </script>
 

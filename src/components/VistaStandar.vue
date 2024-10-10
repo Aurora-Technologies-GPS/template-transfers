@@ -2,7 +2,7 @@
 	<div class="vistaStandar">
 
 		<VistaStandarHeader />
-		<VistaStandarList />
+		<VistaStandarList :vista="2"/>
 
 	</div>
 

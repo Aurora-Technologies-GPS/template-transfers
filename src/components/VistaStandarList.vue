@@ -38,9 +38,10 @@
 
 			</div>
 
-			<div v-show="isOpen(index)" class="contendorTabla">
+			<div v-if="incomingData.vista == 2" v-show="isOpen(index)" class="contendorTabla">
 
 				<TablaHeader />
+
 
 				<TablaList class="myTable" />
 
@@ -57,6 +58,13 @@
 import { ref } from 'vue'
 import TablaList from './TablaList.vue'
 import TablaHeader from './TablaHeader.vue'
+
+import {defineProps } from 'vue' //onMounted defineExpose ref
+
+const incomingData = defineProps(['vista']);
+
+
+
 
 let openIndex = ref()
 

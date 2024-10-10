@@ -4,7 +4,12 @@
 
 		<div class="rowMenu" style="height: 36vh">
 
-			<div>HolaMundo</div>
+			<div class="contenedorLeft">
+
+				<VistaStandarList :vista="1" style="border: none; "/>
+
+
+			</div>
 
 			<div class="contenedorRigth">
 
@@ -22,8 +27,13 @@
 
 
 						<div class="col cuadroTexto">
-							<div class="imagen">
-								Contenedores 13
+							<div class="imagen text-center">
+								<div>
+									Contenedores
+								</div>
+								<div>
+									13
+								</div>	 
 							</div>
 
 						</div>
@@ -40,7 +50,7 @@
 
 						</div>
 					</div>
-					<div class="col-2">
+					<div class="col">
 						<div class="borderRight">
 							<div>Enlazado</div>
 							<div>13</div>
@@ -48,31 +58,25 @@
 						</div>
 					</div>
 
-					<div class="col-2">
+					<div class="col">
 						<div class="borderRight">
 							<div>En Transito</div>
 							<div>13</div>
 						</div>
 					</div>
-					<div class="col-2">
+					<div class="col">
 						<div class="borderRight">
 							<div>Completado</div>
 							<div>13</div>
 						</div>
 					</div>
-					<div class="col-2">
-						<div class="borderRight">
+					<div class="col">
+						<div >
 							<div>Cancelados</div>
 							<div>13</div>
 						</div>
 					</div>
 
-					<div class="col">
-						<div>
-							<div>Enlazado</div>
-							<div>13</div>
-						</div>
-					</div>
 
 				</div>
 
@@ -83,6 +87,12 @@
 	</div>
 
 </template>
+
+<script setup>
+	import VistaStandarList from './VistaStandarList.vue'
+
+
+</script>
 
 <style scoped>
 .VistaGeneralList {
@@ -112,6 +122,7 @@
 	width: 43%;
 }
 
+
 .cuadroTexto {
 	display: flex;
 	justify-content: center;
@@ -129,4 +140,8 @@
 	border-color: #80808030;
 	height: 40px;
 }
+.contenedorLeft{
+	min-width: 45%;
+}
+
 </style>
