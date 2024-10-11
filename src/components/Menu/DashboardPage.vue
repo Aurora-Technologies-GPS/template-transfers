@@ -2,33 +2,8 @@
 	<div class="AreaTrabajoPage">
 		<div class="mainTitulo"><strong>Dashboard</strong></div>
 
-		<div class="selectorVistaContainer">
-			<div class="selectorVista">
 
-				<div @click="cambiarvistaGeneral" class="targetas" :class="{ 'vistaSelected': !vistaGeneral }">
-					Vista Standar
-				</div>
-				<div @click="cambiarVistaStandar" class="targetas" :class="{ 'vistaSelected': vistaGeneral }">
-					Vista General
-				</div>
-
-			</div>
-
-
-			<div class="dateSelectorContainer">
-
-				<!-- 				v-model="adding.tracker" -->
-
-				<select class="dateSelector">
-					<option value="ultima">{{ "Ultima Semana" }}</option>
-					<option value="ultima">{{ "Ultimo Mes" }}</option>
-				</select>
-
-
-
-			</div>
-
-		</div>
+		<HeaderComun @vistaGeneral="cambiarvistaGeneral" @vistaStandar="cambiarVistaStandar" />
 
 
 		<CounterPage />
@@ -40,11 +15,11 @@
 	</div>
 </template>
 <script setup>
-import CounterPage from './CounterPage.vue'
-import FrameVistaGeneral from './FrameVistaGeneral.vue'
+import CounterPage from '@/components/CounterPage.vue'
+import HeaderComun from '@/components/HeaderComun.vue'
 
-
-import FrameVistaStandar from './FrameVistaStandar.vue'
+import FrameVistaGeneral from '@/components/Frame/Dashboard/FrameVistaGeneral.vue'
+import FrameVistaStandar from '@/components/Frame/Dashboard/FrameVistaStandar.vue'
 
 
 import { ref } from 'vue';

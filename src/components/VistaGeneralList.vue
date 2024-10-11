@@ -19,10 +19,10 @@
 							<i class="bi bi-sliders filter"> Filtros</i>
 						</div>
 					</div>
-					
+
 				</div>
 
-				<VistaStandarList :vista="1" style="border: none; height: 90%;"/>
+				<VistaStandarList :vista="1" style="border: none; height: 90%;" />
 
 
 			</div>
@@ -42,16 +42,16 @@
 
 
 
-						<div class="col cuadroTexto" >
+						<div class="col cuadroTexto">
 
 							<div class="text-center">
 
-									<div class="cuadroTextoTitle" >Contenedores</div>
-									<div class="cuadroTextoValue">13</div>
-								
+								<div class="cuadroTextoTitle">Contenedores</div>
+								<div class="cuadroTextoValue">13</div>
+
 							</div>
-												
-						
+
+
 
 						</div>
 
@@ -62,7 +62,7 @@
 
 				<div class="row text-center">
 					<div class="col borderRight">
-						<div >
+						<div>
 							<img class="imagen" style="" height="100" src="../assets/carga.png">
 
 						</div>
@@ -76,25 +76,25 @@
 					</div>
 
 					<div class="col borderRight">
-						<div >
+						<div>
 							<div>Transito</div>
 							<div class="statusValue">13</div>
 						</div>
 					</div>
 					<div class="col borderRight">
-						<div >
+						<div>
 							<div>Completado</div>
 							<div class="statusValue">13</div>
 						</div>
 					</div>
 					<div class="col borderRight">
-						<div >
+						<div>
 							<div>Cancelados</div>
 							<div class="statusValue">13</div>
 						</div>
 					</div>
 					<div class="col borderRightLast">
-						<div >
+						<div>
 							<div>Expirado</div>
 							<div class="statusValue">13</div>
 						</div>
@@ -112,7 +112,7 @@
 </template>
 
 <script setup>
-	import VistaStandarList from './VistaStandarList.vue'
+import VistaStandarList from '@/components/VistaStandarList.vue'
 
 
 </script>
@@ -177,9 +177,9 @@
 	width: 43%;
 }
 
-.cuadroImagen{
+.cuadroImagen {
 	display: flex;
-	padding-left:5%;
+	padding-left: 5%;
 	/*justify-content: center;*/
 	/*align-items: center;*/
 	height: 100%;
@@ -193,15 +193,15 @@
 	margin-bottom: auto;
 
 	display: flex
-	/* Ocupa todo el espacio disponible */
+		/* Ocupa todo el espacio disponible */
 }
 
-.cuadroTextoTitle{
+.cuadroTextoTitle {
 	font-size: 30px;
 
 }
 
-.cuadroTextoValue{
+.cuadroTextoValue {
 	font-size: 40px;
 	font-weight: 600;
 }
@@ -220,18 +220,17 @@
 	height: 40px;
 }
 
-.statusValue{
+.statusValue {
 	font-weight: 600;
 }
 
-.borderRightLast{
+.borderRightLast {
 	margin-top: 5px;
 	height: 40px;
 }
 
-.contenedorLeft{
+.contenedorLeft {
 	min-width: 45%;
 	background-color: blue;
 }
-
 </style>

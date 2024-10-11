@@ -10,8 +10,8 @@
 </template>
 
 <script setup>
-import TablaHeader from './TablaHeader.vue'
-import TablaList from './TablaList.vue'
+import TablaHeader from '@/components/TablaHeader.vue'
+import TablaList from '@/components/TablaList.vue'
 </script>
 
 <style scoped>

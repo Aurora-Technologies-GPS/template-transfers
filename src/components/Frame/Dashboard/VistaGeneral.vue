@@ -8,7 +8,7 @@
 
 </template>
 <script setup>
-import VistaGeneralList from './VistaGeneralList.vue'
+import VistaGeneralList from '@/components/VistaGeneralList.vue'
 import TablaVistaGeneral from './TablaVistaGeneral.vue'
 
 

@@ -27,7 +27,8 @@
 
 					<div class="row">
 						<div class="col-2">
-							<img :class="{ 'iconSeleected': vistas.dashboard_selected }" class="logo" src="../assets/icons/dashboard.svg">
+							<img :class="{ 'iconSeleected': vistas.dashboard_selected }" class="logo"
+								src="../assets/icons/dashboard.svg">
 						</div>
 						<div class="col-10 btnMenu">Dashboard</div>
 					</div>
@@ -39,7 +40,8 @@
 
 					<div class="row">
 						<div class="col-2">
-							<img :class="{ 'iconSeleected': vistas.mapa_selected }" class="logo" src="../assets/icons/mapa.svg">
+							<img :class="{ 'iconSeleected': vistas.mapa_selected }" class="logo"
+								src="../assets/icons/mapa.svg">
 						</div>
 						<div class="col-10 btnMenu">Vista Mapa</div>
 					</div>
@@ -51,7 +53,8 @@
 
 					<div class="row">
 						<div class="col-2">
-							<img :class="{ 'iconSeleected': vistas.historial_selected }" class="logo" src="../assets/icons/historial.svg">
+							<img :class="{ 'iconSeleected': vistas.historial_selected }" class="logo"
+								src="../assets/icons/historial.svg">
 						</div>
 						<div class="col-10 btnMenu">Historial</div>
 					</div>
@@ -71,7 +74,8 @@
 </template>
 <script setup>
 
-import { ref } from 'vue'
+import { ref, defineEmits } from 'vue'
+
 
 let vistas = ref({
 	dashboard_selected: true,
@@ -79,10 +83,16 @@ let vistas = ref({
 	historial_selected: false,
 })
 
+const outGoingData = defineEmits(
+	['vista']
+)
+
 function showDasboard() {
 	vistas.value.dashboard_selected = true;
 	vistas.value.mapa_selected = false;
 	vistas.value.historial_selected = false;
+
+	outGoingData('vista', 1);
 
 }
 
@@ -91,12 +101,16 @@ function showMapa() {
 	vistas.value.mapa_selected = true;
 	vistas.value.historial_selected = false;
 
+	outGoingData('vista', 2);
+
 }
 
 function showHistorial() {
 	vistas.value.dashboard_selected = false;
 	vistas.value.mapa_selected = false;
 	vistas.value.historial_selected = true;
+
+	outGoingData('vista', 3);
 
 }
 
@@ -203,7 +217,7 @@ function showHistorial() {
 
 }
 
-.iconSeleected{
+.iconSeleected {
 	/*color: #559ebd;*/
 	filter: drop-shadow(16px 16px 20px blue) invert(75%);
 }

@@ -2,14 +2,14 @@
 	<div class="vistaStandar">
 
 		<VistaStandarHeader />
-		<VistaStandarList :vista="2"/>
+		<VistaStandarList :vista="2" />
 
 	</div>
 
 </template>
 <script setup>
-import VistaStandarHeader from './VistaStandarHeader.vue'
-import VistaStandarList from './VistaStandarList.vue'
+import VistaStandarHeader from '@/components/VistaStandarHeader.vue'
+import VistaStandarList from '@/components/VistaStandarList.vue'
 
 </script>
 <style scoped>

@@ -1,33 +1,38 @@
 <template>
 	<div class="DashBoardPage">
 
-		<NewMenu style=" width:15%;" />
-		<AreaTrabajo style=" width: 100%;" />
+		<NewMenu @vista="changeVista" style=" width:15%;" />
 
+		<DashboardPage style=" width: 100%;" v-if="vistaSelected == 1" />
+		<VistaMapaPage style=" width: 100%;" v-if="vistaSelected == 2" />
+		<HistorialPage style=" width: 100%;" v-if="vistaSelected == 3" />
 
 	</div>
 
 </template>
 
 <script>
-//import { ref } from 'vue'
+import { ref } from 'vue'
 
-//import ListadoPage from './ListadoPage.vue'
-import AreaTrabajo from './AreaTrabajo.vue'
-import NewMenu from './NewMenu.vue'
+import DashboardPage from '@/components/Menu/DashboardPage.vue'
+import VistaMapaPage from '@/components/Menu/VistaMapaPage.vue'
+import HistorialPage from '@/components/Menu/HistorialPage.vue'
+
+import NewMenu from '@/components/NewMenu.vue'
 
 
 export default {
 	props: [],
+
 	components: {
-		//MapaPage,
-		AreaTrabajo,
-		NewMenu
-		//ListadoPage
+		DashboardPage,
+		VistaMapaPage,
+		HistorialPage,
+		NewMenu,
 	},
 	setup(props) {
 
-		//let hash = ref("defecto")
+		let vistaSelected = ref(1)
 
 		//const mapaRef = ref(null);
 
@@ -39,6 +44,10 @@ export default {
 		})*/
 
 		//let saludo = "hola mundo"
+		function changeVista(vista_Selected) {
+			/*console.log(vista_Selected)*/
+			vistaSelected.value = vista_Selected
+		}
 
 		/*		function screen(child_info) {
 					console.log(child_info)
@@ -59,8 +68,9 @@ export default {
 
 
 		return {
-			AreaTrabajo, NewMenu
-			//hash, valoresDefectoMapa, mapaRef, screen
+			DashboardPage, HistorialPage,
+			NewMenu, changeVista,
+			VistaMapaPage, vistaSelected
 		}
 	},
 	mounted() {
