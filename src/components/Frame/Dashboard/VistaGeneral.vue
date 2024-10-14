@@ -1,16 +1,43 @@
 <template>
 	<div class="vistaGeneral">
 
-		<VistaGeneralList class="contendorTabla" />
-		<TablaVistaGeneral />
+		<VistaGeneralList @indice="changeIndice" :incomingData="props.incomingData" class="contendorTabla" />
+		<TablaVistaGeneral :indice="indiceSelected" :incomingData="props.incomingData" />
 
 	</div>
 
 </template>
-<script setup>
+<script>
 import VistaGeneralList from '@/components/VistaGeneralList.vue'
 import TablaVistaGeneral from './TablaVistaGeneral.vue'
 
+import { ref } from 'vue';
+
+
+export default {
+	props: ['incomingData'],
+
+	components: {
+		VistaGeneralList,
+		TablaVistaGeneral,
+	
+	},
+	setup(props) {
+
+		let indiceSelected=ref(0)
+
+		function changeIndice(indice_Selected) {
+
+			indiceSelected.value = indice_Selected
+		}
+
+		return {  indiceSelected,  changeIndice, props }
+	},
+	mounted() {
+
+	}
+
+}
 
 
 </script>

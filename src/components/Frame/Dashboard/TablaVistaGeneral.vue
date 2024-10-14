@@ -3,7 +3,7 @@
 
 		<div class="contendorTabla">
 			<TablaHeader class=myTableHeader />
-			<TablaList class="myTable" />
+			<TablaList :indice="incomingData.indice" :transferLnk="incomingData.incomingData" class="myTable" />
 		</div>
 
 	</div>
@@ -12,6 +12,13 @@
 <script setup>
 import TablaHeader from '@/components/TablaHeader.vue'
 import TablaList from '@/components/TablaList.vue'
+
+
+import { defineProps } from 'vue' //onMounted defineExpose ref
+
+const incomingData = defineProps(['incomingData', 'indice']);
+
+
 </script>
 
 <style scoped>

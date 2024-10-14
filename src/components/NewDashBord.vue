@@ -1,7 +1,7 @@
 <template>
 	<div class="DashBoardPage">
 
-		<NewMenu @vista="changeVista" style=" width:15%;" />
+		<NewMenu :LegalName="name" @vista="changeVista" style=" width:15%;" />
 
 		<DashboardPage style=" width: 100%;" v-if="vistaSelected == 1" />
 		<VistaMapaPage style=" width: 100%;" v-if="vistaSelected == 2" />
@@ -20,6 +20,8 @@ import HistorialPage from '@/components/Menu/HistorialPage.vue'
 
 import NewMenu from '@/components/NewMenu.vue'
 
+import { transfers_list } from '@/components/conexion/DataConectorTest.js'
+
 
 export default {
 	props: [],
@@ -32,79 +34,52 @@ export default {
 	},
 	setup(props) {
 
-		let vistaSelected = ref(1)
+		const vistaSelected = ref(1);
 
-		//const mapaRef = ref(null);
+		let name=ref('default name');
 
-		/*let valoresDefectoMapa = ref({
-			center: [18.468025816718264, -69.93920818790205],
-			zoom: 15,
-			lat: 18.468025816718264,
-			lng: -69.95920818790205
-		})*/
 
-		//let saludo = "hola mundo"
 		function changeVista(vista_Selected) {
 			/*console.log(vista_Selected)*/
 			vistaSelected.value = vista_Selected
 		}
 
-		/*		function screen(child_info) {
-					console.log(child_info)
-					const element = document.getElementById('resizeElement');
-		
-					if (element.style.width=='100%') {
-						element.style.width = `0%`;
-		
-					}else{
-						
-						// element.style.maxWidth=`100%`;
-						element.style.width = `100%`;
-					}
-					
-				}
-		*/
-		console.log(props)
+		/*console.log(props)*/
+		let temp=props
+        temp= ' '
+        console.log(temp);
 
 
 		return {
 			DashboardPage, HistorialPage,
 			NewMenu, changeVista,
-			VistaMapaPage, vistaSelected
+			VistaMapaPage, vistaSelected,
+			name
 		}
 	},
 	mounted() {
 
 		//this.hash = this.$route.params.hash
-		console.log(this.$route.params.hash)
+		//console.log(this.$route.params.hash)
 
-		/*
-		let isResizing = false;
-		const element = document.getElementById('resizeElement');
-		const resizeHandle = document.getElementById('resizeHandle');
-		
-		resizeHandle.addEventListener('mousedown', () => {
-			isResizing = true;
-			document.addEventListener('mousemove', resizeElement);
-			document.addEventListener('mouseup', stopResizing);
+		transfers_list(this.$route.params.hash).then(result=>{
+
+			if (result.success) {
+
+				this.name=result.clientFullTransfers.client.name;
+
+			
+			}else{
+				console.log(result)
+			}
+
+			
+			
+		}).catch(error => {
+			console.log(error)
+			console.log("Error al Hacer La peticion")
 		});
-		
-		function resizeElement() {
-			if (isResizing) {
-				const rect = element.getBoundingClientRect();
-				// Calcula el nuevo ancho basado en la posición horizontal del ratón
-				const newWidth = Math.min(event.clientX - rect.left, window.innerWidth);
-				element.style.width = `${newWidth}px`;
-			}
-		}
-		
-		function stopResizing() {
-			if (isResizing) {
-				isResizing = false;
-				document.removeEventListener('mousemove', resizeElement);
-				document.removeEventListener('mouseup', stopResizing);
-			}
-		}*/
+
 
 	}
 

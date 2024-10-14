@@ -22,7 +22,7 @@
 
 				</div>
 
-				<VistaStandarList :vista="1" style="border: none; height: 90%;" />
+				<VistaStandarList @indice="cambiarIndice" :transfers_list="incomingData.incomingData" :vista="1" style="border: none; height: 90%;" />
 
 
 			</div>
@@ -89,7 +89,7 @@
 					</div>
 					<div class="col borderRight">
 						<div>
-							<div>Cancelados</div>
+							<div>D.N.E</div>
 							<div class="statusValue">13</div>
 						</div>
 					</div>
@@ -113,6 +113,20 @@
 
 <script setup>
 import VistaStandarList from '@/components/VistaStandarList.vue'
+import { defineEmits, defineProps } from 'vue'; //ref
+
+const incomingData = defineProps(['incomingData']);
+
+const outGoingData = defineEmits(
+	['indice']
+)
+
+
+
+
+function cambiarIndice(indice_selected) {
+	outGoingData('indice', indice_selected);
+}
 
 
 </script>

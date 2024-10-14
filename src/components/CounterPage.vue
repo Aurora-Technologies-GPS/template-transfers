@@ -132,43 +132,6 @@
 
 
 
-				<div class="headerContainer" :style="{ borderColor: getStatus(7).color }">
-
-					<div class="checkColor">
-						<!--  @click="change('doneIschecked')" -->
-						<img class="icons" src="../assets/icons/canceled.svg">
-
-
-					</div>
-
-					<div class="title">{{ "Cancelados" }}</div>
-					<!-- 					sumarCounters([countList.doneInTime, countList.doneLate]) -->
-					<div class="labelCounter">{{ "13" }}
-						<!-- <sub>{{ '/' + (countList.total || 0)}} </sub> -->
-
-					</div>
-
-
-				</div>
-
-				<!-- <div class="comentario">+30 Desde la Ultima Semana</div> -->
-
-
-
-
-
-			</div>
-
-
-
-		</div>
-		<div class="targeticasContainer">
-
-
-			<div class="targeticas">
-
-
-
 				<div class="headerContainer" :style="{ borderColor: getStatus(10).color }">
 
 					<div class="checkColor">
@@ -211,6 +174,44 @@
 
 
 		</div>
+		<div class="targeticasContainer">
+
+
+			<div class="targeticas">
+
+
+
+				<div class="headerContainer" :style="{ borderColor: getStatus(7).color }">
+
+					<div class="checkColor">
+						<!--  @click="change('doneIschecked')" -->
+						<img class="icons" src="../assets/icons/canceled.svg">
+
+
+					</div>
+
+					<div class="title">{{ "Ubicaciones Erroneas" }}</div>
+					<!-- 					sumarCounters([countList.doneInTime, countList.doneLate]) -->
+					<div class="labelCounter">{{ "13" }}
+						<!-- <sub>{{ '/' + (countList.total || 0)}} </sub> -->
+
+					</div>
+
+
+				</div>
+
+				<!-- <div class="comentario">+30 Desde la Ultima Semana</div> -->
+
+
+
+
+
+			</div>
+
+
+
+		</div>
+		
 
 	</div>
 

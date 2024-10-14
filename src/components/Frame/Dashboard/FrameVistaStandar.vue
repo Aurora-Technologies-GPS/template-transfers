@@ -1,6 +1,6 @@
 <template>
 	<div class="contenedorWorking">
-		<VistaStandar />
+		<VistaStandar :incomingData="incomingData.fullTransfer" />
 
 	</div>
 </template>
@@ -8,6 +8,10 @@
 <script setup>
 
 import VistaStandar from './VistaStandar.vue'
+
+import { defineProps } from 'vue'
+
+const incomingData = defineProps(['fullTransfer']);
 
 </script>
 

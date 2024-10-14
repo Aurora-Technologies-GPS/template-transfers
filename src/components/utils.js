@@ -3,19 +3,22 @@ export function getStatus(estatusN) {
   switch (estatusN) {
 
     case 1:
-      return { label: 'linked', color: '#d8e5e7' }// (gris)          
+      return { label: 'Enlanzado', color: '#d8e5e7' }// (gris)          
 
     case 2:
-      return { label: 'transit', color: 'grey' }
+      return { label: 'En Transito', color: 'grey' }
 
     case 3:
-      return { label: 'Done', color: 'pink' }
+      return { label: 'Realizado', color: 'pink' }
 
     case 4:
-      return { label: 'Canceled', color: 'green' }
+      return { label: 'no va', color: 'green' }
 
     case 5:
-      return { label: 'Expired', color: '#ecec7a' } // (amarillo)
+      return { label: 'Expirado', color: '#ecec7a' } // (amarillo)
+    
+    case 6:
+      return { label: 'Ubicacion Erronea', color: '#ecec7a' }
 
     default:
       return { label: 'Expired', color: '#ecec7a' }

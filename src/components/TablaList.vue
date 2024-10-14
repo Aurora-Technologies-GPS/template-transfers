@@ -17,23 +17,23 @@
 			</thead>
 
 			<tbody>
-				<tr v-for=" (dato, index) in [1,1,1,1,1,1,1,1,1 ]" :key="index"
+				<tr v-for=" (dato, index) in incomingData.transferLnk[incomingData.indice].transferLnk" :key="index"
 					class="hovertabla">
-					<td class="datoTable text-center">1234567899</td>
-					<td class="datoTable text-center">022456545</td>
-					<td class="datoTable text-center">1/10/2024 00:00PM</td>
-					<td class="datoTable text-center">1/10/2024 00:00PM</td>
+					<td class="datoTable text-center">{{dato.container}}</td>
+					<td class="datoTable text-center">{{dato.deviceId}}</td>
+					<td class="datoTable text-center">{{dato.timeLinked}}</td>
+					<td class="datoTable text-center">{{incomingData.transferLnk[incomingData.indice].transfer.timeTravelEst}}</td>
 
 					<td class="datoTable text-center">
-						<span>Puerto Causedo</span>
+						<span>{{ incomingData.transferLnk[incomingData.indice].transfer.startPlace.label }}</span>
 						<img style="height: 25px; margin-left: 5px; margin-right: 5px;"
 							src="../assets/icons/flechaNegra.svg">
-						<span>Maritima Dominicana (MARDOM)</span>
+						<span>{{ incomingData.transferLnk[incomingData.indice].transfer.endPlace.label }}</span>
 					</td>
 
 					<td class="datoTable text-center">
 						<span class="text-center estatusTable">
-							En Transito
+							{{getStatus(dato.currentState).label}}
 						</span>
 					</td>
 				</tr>
@@ -47,6 +47,19 @@
 </template>
 
 <script setup>
+
+import { defineProps } from 'vue'
+
+import { getStatus } from '@/components/utils.js'
+
+
+
+const incomingData = defineProps(['transferLnk', 'indice']);
+
+console.log(incomingData.transferLnk[incomingData.indice])
+
+/*console.log(incomingData.transfers_list[indice.value].transferLnk)*/
+
 
 
 </script>

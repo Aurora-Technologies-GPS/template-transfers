@@ -8,12 +8,12 @@
 		<div class="menuItem">
 			<div class="contents">
 
-				<div class="titleMenu">Maritima Dominicana (MARDOM)</div>
+				<div class="titleMenu"> {{ incomingData.LegalName }}</div>
 
 				<div class="userInfo">
 					<div class="bola"></div>
 					<div class="userInfoText">
-						Maritima Dominicana (MARDOM)
+						{{ incomingData.LegalName }}
 					</div>
 
 
@@ -74,7 +74,7 @@
 </template>
 <script setup>
 
-import { ref, defineEmits } from 'vue'
+import { ref, defineProps, defineEmits } from 'vue'
 
 
 let vistas = ref({
@@ -82,6 +82,10 @@ let vistas = ref({
 	mapa_selected: false,
 	historial_selected: false,
 })
+
+const incomingData = defineProps(
+	['LegalName']
+)
 
 const outGoingData = defineEmits(
 	['vista']

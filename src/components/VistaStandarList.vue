@@ -1,7 +1,7 @@
 <template>
 	<div class="vistaStandarList">
 
-		<div class="listaTabla" v-for=" (dato, index) in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]" :key="index">
+		<div class="listaTabla" v-for=" (dato, index) in incomingData.transfers_list" :key="index">
 
 			<div @click="toggleCollapse(index)" :class="{ 'listaSelected': isOpen(index) }" class="targeticas ">
 				<!-- targeticas -->
@@ -9,17 +9,16 @@
 				<div class="rowInfo">
 					<div>
 						<div style="font-size: 9px;">Bill of Lading</div>
-						<strong>1234567812ABCVB</strong>
+						<strong>{{dato.transfer.bl}}</strong>
 
 						<div>
 							<i class="bi bi-circle-fill vineta" style="color: #72c9eb;"></i><span
-								class="miniLetra">Puerto caucedo</span>
+								class="miniLetra">{{dato.transfer.startPlace.label}}</span>
 							<img style="height: 25px; margin-left: 5px;" src="../assets/icons/flechaAzul.svg">
 
 
 
-							<i class="bi bi-circle-fill vineta"></i><span class="miniLetra">Maritima Dominicana
-								(MARDOM)</span>
+							<i class="bi bi-circle-fill vineta"></i><span class="miniLetra">{{dato.transfer.endPlace.label}}</span>
 						</div>
 
 
@@ -29,7 +28,7 @@
 
 					<div class="infoRows">
 
-						<div class="cuadroCounter">{{ dato }}</div>
+						<div class="cuadroCounter">{{ (dato.transferLnk).length || 0 }}</div>
 						<img style="height: 55px;" src="../assets/hombrecito.svg">
 
 					</div>
@@ -42,9 +41,9 @@
 
 				<TablaHeader />
 
-
-				<TablaList class="myTable" />
-
+ 
+				<TablaList :indice="index" :transferLnk=" incomingData.transfers_list " class="myTable" />
+ 
 
 
 			</div>
@@ -59,27 +58,33 @@ import { ref } from 'vue'
 import TablaList from './TablaList.vue'
 import TablaHeader from './TablaHeader.vue'
 
-import {defineProps } from 'vue' //onMounted defineExpose ref
+import {defineProps, defineEmits  } from 'vue' //onMounted defineExpose ref
 
-const incomingData = defineProps(['vista']);
+const incomingData = defineProps(['vista', 'transfers_list']);
 
-
-
+const outGoingData = defineEmits(
+	['indice']
+)
 
 let openIndex = ref()
 
 
+
+
+
 function toggleCollapse(index) {
 
-	console.log("toggleCollapse")
+	//console.log("toggleCollapse")
 
 	openIndex.value = openIndex.value === index ? null : index;
+
+	outGoingData('indice', index);
 
 }
 
 function isOpen(index) {
 
-	console.log("isOpen")
+	//console.log("isOpen")
 
 	return openIndex.value === index;
 }
