@@ -16,7 +16,7 @@ export function getStatus(estatusN) {
 
     case 5:
       return { label: 'Expirado', color: '#ecec7a' } // (amarillo)
-    
+
     case 6:
       return { label: 'Ubicacion Erronea', color: '#ecec7a' }
 

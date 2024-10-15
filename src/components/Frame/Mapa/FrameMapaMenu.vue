@@ -1,12 +1,30 @@
 <template>
 	<div class="vistaGeneral">
-		<div class="titleMapa">Mapa Online</div>
-			
+
+		<div class="rowMenu">
+
+			<div>
+				<img class="icons" src="@/components/../assets/icons/bl.svg">
+				<span class="titleMapa">Mapa Online </span>
+			</div>
+
+			<div class="softBorders">
+				<input placeholder="Buscar..." type="text" class="textInput">
+			</div>
+
+		</div>
+
+
+		<TablaListMapa class="contenedorTablaMapa mt-2" />
+
 
 	</div>
 
 </template>
 <script setup>
+
+import TablaListMapa from '@/components/TablaListMapa.vue'
+
 
 
 </script>
@@ -16,10 +34,55 @@
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	padding-top: 10px;
 }
 
-.titleMapa{
+.titleMapa {
 	font-weight: 700;
+	padding-left: 5px;
+	width: 100%;
 }
 
+.icons {
+	width: 27px;
+	border: solid 1px;
+	border-color: #80808030;
+	padding: 2px;
+	padding-left: 0px;
+	border-radius: 6px 6px 6px 6px;
+}
+
+.rowMenu {
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	margin-left: auto;
+	/*justify-content: space-around;*/
+}
+
+.softBorders {
+	width: 45%;
+	border: solid 1px;
+	height: 30px;
+	margin-left: 5px;
+	border-color: #80808030;
+	border-radius: 7px 7px 7px 7px;
+}
+
+.textInput {
+	margin-left: 5px;
+	background-color: transparent;
+	height: 22px;
+	color: grey;
+	/*color: #cacaca;*/
+	outline: none;
+	width: auto;
+	border: none
+}
+
+.contenedorTablaMapa {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
 </style>

@@ -36,7 +36,7 @@ export default {
 
 		const vistaSelected = ref(1);
 
-		let name=ref('default name');
+		let name = ref('default name');
 
 
 		function changeVista(vista_Selected) {
@@ -45,9 +45,9 @@ export default {
 		}
 
 		/*console.log(props)*/
-		let temp=props
-        temp= ' '
-        console.log(temp);
+		let temp = props
+		temp = ' '
+		console.log(temp);
 
 
 		return {
@@ -62,19 +62,19 @@ export default {
 		//this.hash = this.$route.params.hash
 		//console.log(this.$route.params.hash)
 
-		transfers_list(this.$route.params.hash).then(result=>{
+		transfers_list(this.$route.params.hash).then(result => {
 
 			if (result.success) {
 
-				this.name=result.clientFullTransfers.client.name;
+				this.name = result.clientFullTransfers.client.name;
 
-			
-			}else{
+
+			} else {
 				console.log(result)
 			}
 
-			
-			
+
+
 		}).catch(error => {
 			console.log(error)
 			console.log("Error al Hacer La peticion")

@@ -6,7 +6,7 @@ module.exports = defineConfig({
         allowedHosts: 'all'
     }
 /*    devServer:{
-      proxy:'http://shuttle.dev2.rastreo.gs:9000'
+      proxy:'http://yourBackEnd.com:9000'
     }
 */
 })

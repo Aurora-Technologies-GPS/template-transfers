@@ -19,21 +19,27 @@
 			<tbody>
 				<tr v-for=" (dato, index) in incomingData.transferLnk[incomingData.indice].transferLnk" :key="index"
 					class="hovertabla">
-					<td class="datoTable text-center">{{dato.container}}</td>
-					<td class="datoTable text-center">{{dato.deviceId}}</td>
-					<td class="datoTable text-center">{{dato.timeLinked}}</td>
-					<td class="datoTable text-center">{{incomingData.transferLnk[incomingData.indice].transfer.timeTravelEst}}</td>
+					<td class="datoTable text-center">{{ dato.container }}</td>
+					<td class="datoTable text-center">{{ dato.deviceId }}</td>
+					<td class="datoTable text-center">{{ dato.timeLinked }}</td>
+					<td class="datoTable text-center">
+						{{ incomingData.transferLnk[incomingData.indice].transfer.timeTravelEst }}</td>
 
 					<td class="datoTable text-center">
-						<span>{{ incomingData.transferLnk[incomingData.indice].transfer.startPlace.label }}</span>
+						<span v-if="incomingData.transferLnk[incomingData.indice].transfer.startPlace">{{
+							incomingData.transferLnk[incomingData.indice].transfer.startPlace.label }}</span>
+
+						<span v-else>{{ "N/A" }}</span>
 						<img style="height: 25px; margin-left: 5px; margin-right: 5px;"
 							src="../assets/icons/flechaNegra.svg">
-						<span>{{ incomingData.transferLnk[incomingData.indice].transfer.endPlace.label }}</span>
+						<span v-if="incomingData.transferLnk[incomingData.indice].transfer.endPlace">{{
+							incomingData.transferLnk[incomingData.indice].transfer.endPlace.label }}</span>
+						<span v-else>{{ " N/A" }}</span>
 					</td>
 
 					<td class="datoTable text-center">
 						<span class="text-center estatusTable">
-							{{getStatus(dato.currentState).label}}
+							{{ getStatus(dato.currentState).label }}
 						</span>
 					</td>
 				</tr>
@@ -55,10 +61,6 @@ import { getStatus } from '@/components/utils.js'
 
 
 const incomingData = defineProps(['transferLnk', 'indice']);
-
-console.log(incomingData.transferLnk[incomingData.indice])
-
-/*console.log(incomingData.transfers_list[indice.value].transferLnk)*/
 
 
 

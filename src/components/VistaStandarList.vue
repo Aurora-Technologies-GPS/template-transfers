@@ -9,16 +9,22 @@
 				<div class="rowInfo">
 					<div>
 						<div style="font-size: 9px;">Bill of Lading</div>
-						<strong>{{dato.transfer.bl}}</strong>
+						<strong>{{ dato.transfer.bl }}</strong>
 
 						<div>
-							<i class="bi bi-circle-fill vineta" style="color: #72c9eb;"></i><span
-								class="miniLetra">{{dato.transfer.startPlace.label}}</span>
+							<i class="bi bi-circle-fill vineta" style="color: #72c9eb;"></i>
+
+							<span v-if="dato.transfer.startPlace"
+								class="miniLetra">{{ dato.transfer.startPlace.label }}</span>
+							<span v-else class="miniLetra">{{ "N/A" }}</span>
 							<img style="height: 25px; margin-left: 5px;" src="../assets/icons/flechaAzul.svg">
 
 
 
-							<i class="bi bi-circle-fill vineta"></i><span class="miniLetra">{{dato.transfer.endPlace.label}}</span>
+							<i class="bi bi-circle-fill vineta"></i>
+							<span v-if="dato.transfer.endPlace"
+								class="miniLetra">{{ dato.transfer.endPlace.label }}</span>
+							<span v-else class="miniLetra">{{ "N/A" }}</span>
 						</div>
 
 
@@ -41,9 +47,9 @@
 
 				<TablaHeader />
 
- 
-				<TablaList :indice="index" :transferLnk=" incomingData.transfers_list " class="myTable" />
- 
+
+				<TablaList :indice="index" :transferLnk="incomingData.transfers_list" class="myTable" />
+
 
 
 			</div>
@@ -58,7 +64,7 @@ import { ref } from 'vue'
 import TablaList from './TablaList.vue'
 import TablaHeader from './TablaHeader.vue'
 
-import {defineProps, defineEmits  } from 'vue' //onMounted defineExpose ref
+import { defineProps, defineEmits } from 'vue' //onMounted defineExpose ref
 
 const incomingData = defineProps(['vista', 'transfers_list']);
 

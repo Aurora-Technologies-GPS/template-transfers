@@ -91,5 +91,6 @@ import FrameMapa from '@/components/Frame/Mapa/FrameMapa.vue'
 .miMapa {
 	border-bottom: solid 1px;
 	border-color: #80808030;
+	/*height: 100%;*/
 }
 </style>

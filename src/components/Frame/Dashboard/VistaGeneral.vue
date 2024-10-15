@@ -20,18 +20,18 @@ export default {
 	components: {
 		VistaGeneralList,
 		TablaVistaGeneral,
-	
+
 	},
 	setup(props) {
 
-		let indiceSelected=ref(0)
+		let indiceSelected = ref(0)
 
 		function changeIndice(indice_Selected) {
 
 			indiceSelected.value = indice_Selected
 		}
 
-		return {  indiceSelected,  changeIndice, props }
+		return { indiceSelected, changeIndice, props }
 	},
 	mounted() {
 

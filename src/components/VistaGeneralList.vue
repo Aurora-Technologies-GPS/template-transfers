@@ -22,7 +22,8 @@
 
 				</div>
 
-				<VistaStandarList @indice="cambiarIndice" :transfers_list="incomingData.incomingData" :vista="1" style="border: none; height: 90%;" />
+				<VistaStandarList @indice="cambiarIndice" :transfers_list="incomingData.incomingData" :vista="1"
+					style="border: none; height: 90%;" />
 
 
 			</div>
