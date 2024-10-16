@@ -1,10 +1,10 @@
 <template>
 	<div class="DashBoardPage">
 
-		<NewMenu :LegalName="name" @vista="changeVista" style=" width:15%;" />
+		<NewMenu :vistaSelected="vistaSelectedCode" :LegalName="name" @vista="changeVista" style=" width:15%;" />
 
-		<DashboardPage style=" width: 100%;" v-if="vistaSelected == 1" />
-		<VistaMapaPage style=" width: 100%;" v-if="vistaSelected == 2" />
+		<DashboardPage @transfer_id="changeIndiceMapa" style=" width: 100%;" v-if="vistaSelected == 1" />
+		<VistaMapaPage :transfer_id="transfer_id_selected" style=" width: 100%;" v-if="vistaSelected == 2" />
 		<HistorialPage style=" width: 100%;" v-if="vistaSelected == 3" />
 
 	</div>
@@ -34,7 +34,10 @@ export default {
 	},
 	setup(props) {
 
-		const vistaSelected = ref(1);
+		let vistaSelected = ref(1);
+		let vistaSelectedCode=1;
+
+		let transfer_id_selected=ref(0)
 
 		let name = ref('default name');
 
@@ -42,6 +45,13 @@ export default {
 		function changeVista(vista_Selected) {
 			/*console.log(vista_Selected)*/
 			vistaSelected.value = vista_Selected
+		}
+
+		function changeIndiceMapa(transfer_id) {
+
+			vistaSelected.value=2;
+			vistaSelectedCode=3
+			transfer_id_selected.value = transfer_id
 		}
 
 		/*console.log(props)*/
@@ -54,7 +64,9 @@ export default {
 			DashboardPage, HistorialPage,
 			NewMenu, changeVista,
 			VistaMapaPage, vistaSelected,
-			name
+			name,transfer_id_selected,
+			changeIndiceMapa,
+			vistaSelectedCode
 		}
 	},
 	mounted() {

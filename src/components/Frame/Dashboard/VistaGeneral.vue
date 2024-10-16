@@ -1,7 +1,7 @@
 <template>
 	<div class="vistaGeneral">
 
-		<VistaGeneralList @indice="changeIndice" :incomingData="props.incomingData" class="contendorTabla" />
+		<VistaGeneralList @indice="changeIndice"  :incomingData="props.incomingData" class="contendorTabla" />
 		<TablaVistaGeneral :indice="indiceSelected" :incomingData="props.incomingData" />
 
 	</div>

@@ -122,6 +122,38 @@ export async function transfers_list(hash) {
                         timeLinked: "2024-09-16 13:02:00"
                     }
                 ]
+            },
+                {
+                transfer: {
+                    id: 47760,
+                    clientId: 25,
+                    bl: "SMLU8219893A",
+                    startPlace: {
+                        id: 1190063,
+                        label: "Puerto Haina",
+                        radius: 400,
+                        latitude: 18.42351187,
+                        longitude: -70.01320839,
+                        address: "18.423512, -70.013208"
+                    },
+                    endPlace: null,
+                    address: "SANTO DOMINGO, False",
+                    city: "Santo Domingo",
+                    note: "",
+                    timeTravelEst: "2024-09-18 00:00:00",
+                    timeRequest: "2024-09-17 15:19:02"
+                },
+                transferLnk: [
+                    {
+                        id: 99,
+                        transferId: 47760,
+                        deviceId: 3083111,
+                        container: "SMLU8219893A - SMLU3105511",
+                        currentState: 6,
+                        timeLinked: "2024-09-17 15:19:02",
+                        lastBlitTime: null
+                    }
+                ]
             }
         
     ]

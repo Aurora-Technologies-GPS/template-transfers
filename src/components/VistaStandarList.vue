@@ -35,7 +35,7 @@
 					<div class="infoRows">
 
 						<div class="cuadroCounter">{{ (dato.transferLnk).length || 0 }}</div>
-						<img style="height: 55px;" src="../assets/hombrecito.svg">
+						<img @click="sendId(dato.transfer.id)" style="height: 55px;" src="../assets/hombrecito.svg">
 
 					</div>
 
@@ -69,7 +69,7 @@ import { defineProps, defineEmits } from 'vue' //onMounted defineExpose ref
 const incomingData = defineProps(['vista', 'transfers_list']);
 
 const outGoingData = defineEmits(
-	['indice']
+	['indice','transfer_id']
 )
 
 let openIndex = ref()
@@ -93,6 +93,10 @@ function isOpen(index) {
 	//console.log("isOpen")
 
 	return openIndex.value === index;
+}
+
+function sendId(id){
+	outGoingData('transfer_id', id);
 }
 
 

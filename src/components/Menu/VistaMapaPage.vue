@@ -3,9 +3,9 @@
 		<div class="mainTitulo"><strong>Dashboard</strong></div>
 
 
-		<HeaderComun />
+		<HeaderComun class="disabled"/>
 		<CounterPage />
-		<FrameMapa class="miMapa" />
+		<FrameMapa :transfer_id="incomingData.transfer_id"  class="miMapa" />
 
 	</div>
 </template>
@@ -15,9 +15,12 @@ import CounterPage from '@/components/CounterPage.vue'
 
 import FrameMapa from '@/components/Frame/Mapa/FrameMapa.vue'
 
+import { defineProps } from 'vue';
 
 
-/*import { ref } from 'vue';*/
+
+const incomingData = defineProps([ 'transfer_id']);
+
 
 
 </script>
@@ -92,5 +95,10 @@ import FrameMapa from '@/components/Frame/Mapa/FrameMapa.vue'
 	border-bottom: solid 1px;
 	border-color: #80808030;
 	/*height: 100%;*/
+}
+
+.disabled {
+    pointer-events: none; /* Deshabilita interacciones */
+    opacity: 0.5; /* Aplica un efecto de transparencia */
 }
 </style>

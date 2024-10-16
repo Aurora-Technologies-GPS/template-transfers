@@ -1,6 +1,6 @@
 <template>
 	<div class="contenedorWorking">
-		<VistaStandar :incomingData="incomingData.fullTransfer" />
+		<VistaStandar @transfer_id="toMapa" :incomingData="incomingData.fullTransfer" />
 
 	</div>
 </template>
@@ -9,9 +9,18 @@
 
 import VistaStandar from './VistaStandar.vue'
 
-import { defineProps } from 'vue'
+import { defineProps, defineEmits } from 'vue'
 
 const incomingData = defineProps(['fullTransfer']);
+
+const outGoingData = defineEmits(['transfer_id']);
+
+
+function toMapa(transfer_id){
+
+	outGoingData('transfer_id', transfer_id);
+}
+
 
 </script>
 

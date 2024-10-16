@@ -1,7 +1,7 @@
 <template>
-	<div class="tablaListMapa">
+	<div  class="tablaListMapa">
 
-		<div v-for=" (dato, index) in [1, 2, 3, 4, 5, 4, 4, 4, 4, 4, 4, 4]" :key="index" class="targeticas">
+		<div  v-for=" (dato, index) in incomingData.transferLnk[incomingData.indice].transferLnk" :key="index" class="targeticas">
 
 			<div class="rowMenu">
 
@@ -9,25 +9,42 @@
 					<div class="fontPeq"> BL(Bill of Lading)</div>
 					<div class="titleMapa">12345678899ACDF </div>
 					<div class="fontPeq">ID Container</div>
-					<div class="titleMapa">123456 </div>
+					<div class="titleMapa">{{dato.container}} </div>
 
 					<div class="fontPeq">ID Precinto</div>
-					<div class="titleMapa">123456 </div>
+					<div class="titleMapa">{{dato.deviceId}} </div>
 				</div>
 
 
 				<img width="100" src="@/components/../assets/camionCerrado.svg">
 
+				<i  @click="toggleCollapse(index)" class="bi bi-chevron-bar-expand" style="color:#66b9d9; position:absolute; right:0px; bottom: 0px;">
+				</i>
+
+
+
+
 			</div>
-			<hr class="divisor">
+
+
+			<div v-show="isOpen(index)" >
+
+				<hr class="divisor">
 
 			<div><i class="bi bi-circle-fill vineta" style="color: #72c9eb;"></i>
-				<span class="destinos">Puerto Caucedo</span>
+				<span v-if="incomingData.transferLnk[incomingData.indice].transfer.startPlace" class="destinos">{{incomingData.transferLnk[incomingData.indice].transfer.startPlace.label}}</span>
+				<span v-else>{{ " N/A" }}</span>
 			</div>
 
 			<div><i class="bi bi-circle-fill vineta"></i>
-				<span class="destinos">Maritima Dominicana (MARDON)</span>
+				<span v-if="incomingData.transferLnk[incomingData.indice].transfer.endPlace" class="destinos">{{incomingData.transferLnk[incomingData.indice].transfer.endPlace.label}}</span>
+				<span v-else>{{ " N/A" }}</span>
 			</div>
+
+
+				
+			</div>
+
 
 		</div>
 
@@ -36,9 +53,34 @@
 
 <script setup>
 
+	import { ref, defineProps } from 'vue'
+	let openIndex = ref()
+
+
+const incomingData = defineProps(['transferLnk', 'indice']);
+
+
+function toggleCollapse(index) {
+
+	//console.log("toggleCollapse")
+
+	openIndex.value = openIndex.value === index ? null : index;
+
+
+}
+
+function isOpen(index) {
+
+	return openIndex.value === index;
+}
+
+
+
 </script>
 
 <style scoped>
+
+
 .tablaListMapa {
 	width: 100%;
 	height: 100%;
@@ -65,6 +107,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	position: relative;
 }
 
 .titleMapa {

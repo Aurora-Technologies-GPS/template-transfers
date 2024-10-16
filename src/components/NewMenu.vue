@@ -84,12 +84,33 @@ let vistas = ref({
 })
 
 const incomingData = defineProps(
-	['LegalName']
+	['LegalName', 'vistaSelected']
 )
 
 const outGoingData = defineEmits(
 	['vista']
 )
+
+
+switch (incomingData.vistaSelected) {
+
+	case 1:
+		showDasboard();
+		break;
+
+	case 2:
+		showMapa();
+		break;
+
+	case 3:
+		showHistorial()
+		break;
+
+	default:
+		showDasboard();
+		break;
+}
+
 
 function showDasboard() {
 	vistas.value.dashboard_selected = true;
