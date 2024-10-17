@@ -9,7 +9,7 @@
 			</div>
 
 			<div class="softBorders">
-				<input v-model="search.text" @keyup="onPress"  placeholder="Buscar..." type="text" class="textInput">
+				<input v-model="search.text" @keyup="onPress" placeholder="Buscar..." type="text" class="textInput">
 			</div>
 
 		</div>
@@ -26,7 +26,7 @@
 
 import TablaListMapa from '@/components/TablaListMapa.vue'
 
-import { defineProps,defineEmits, ref } from 'vue'
+import { defineProps, defineEmits, ref } from 'vue'
 
 const incomingData = defineProps(['transferLnk', 'transfer_id']);
 
@@ -54,11 +54,11 @@ const onPress = (e) => {
 function buscar() {
 
 	if (!search.value.text || search.value.text == " ") {
-			console.log("Campos Vacios")
-		
-	}else{
+		console.log("Campos Vacios")
 
-		outGoingData('buscar',search.value.text);
+	} else {
+
+		outGoingData('buscar', search.value.text);
 		console.log(search.value.text)
 	}
 }

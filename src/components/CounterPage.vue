@@ -11,7 +11,7 @@
 
 
 
-				<div class="headerContainer" :style="{ borderColor: getStatus(4).color }">
+				<div class="headerContainer">
 
 					<div class="checkColor">
 
@@ -23,11 +23,11 @@
 
 					</div>
 
-					<div class="title">{{ "Enlazados" }}</div>
+					<div class="title">{{ "Enlazados" }} <i class="bi bi-info-circle infoIcon"></i></div>
 
 					<!-- sumarCounters([countList.inTime, countList.warning, countList.overdue]) -->
 
-					<div class="labelCounter">{{ "13" }}
+					<div class="labelCounter">{{ incomingData.countersGeneral.linked }}
 						<!-- <sub>{{ '/' + (countList.total || 0)}} </sub> -->
 
 					</div>
@@ -54,7 +54,7 @@
 
 
 
-				<div class="headerContainer" :style="{ borderColor: getStatus(1).color }">
+				<div class="headerContainer">
 
 					<div class="checkColor">
 						<!--  @click="change('pendIschecked')"  -->
@@ -64,11 +64,11 @@
 
 					<!-- getStatus(1).label -->
 
-					<div class="title">{{ "En Transito" }}</div>
+					<div class="title">{{ "En Transito" }} <i class="bi bi-info-circle infoIcon"></i></div>
 
 					<!-- (countList.pending || 0)  -->
 
-					<div class="labelCounter">{{ "13" }}
+					<div class="labelCounter">{{ incomingData.countersGeneral.in_transit }}
 						<!-- <sub>{{ '/' + (countList.total || 0)}} </sub> -->
 
 					</div>
@@ -92,9 +92,11 @@
 
 			<div class="targeticas">
 
+				<!-- :style="{ borderColor: getStatus(3).color }" -->
 
 
-				<div class="headerContainer" :style="{ borderColor: getStatus(3).color }">
+
+				<div class="headerContainer">
 
 					<div class="checkColor">
 						<!--  @click="change('checkIschecked')" -->
@@ -103,10 +105,10 @@
 
 					</div>
 
-					<div class="title">{{ "Completados" }}</div>
+					<div class="title">{{ "Completados" }} <i class="bi bi-info-circle infoIcon"></i></div>
 					<!-- countList.checkin-->
 					<!-- 					sumarCounters([countList.preCheckin, countList.lateCheckin]) -->
-					<div class="labelCounter">{{ "13" }}
+					<div class="labelCounter">{{ incomingData.countersGeneral.done }}
 						<!-- 						<sub>{{ '/' + (countList.total || 0)}} </sub> -->
 
 					</div>
@@ -132,7 +134,7 @@
 
 
 
-				<div class="headerContainer" :style="{ borderColor: getStatus(10).color }">
+				<div class="headerContainer">
 
 					<div class="checkColor">
 						<!-- @click="change('cancelIschecked')" -->
@@ -153,9 +155,9 @@
 
 					</div>
 
-					<div class="title">{{ "Expirados" }}</div>
+					<div class="title">{{ "Expirados" }} <i class="bi bi-info-circle infoIcon"></i></div>
 					<!-- sumarCounters([countList.expired, countList.cancelled]) -->
-					<div class="labelCounter">{{ "13" }}
+					<div class="labelCounter">{{ incomingData.countersGeneral.expired }}
 						<!-- 	<sub>{{ '/' + (countList.total  || 0)}} </sub> -->
 
 					</div>
@@ -181,7 +183,7 @@
 
 
 
-				<div class="headerContainer" :style="{ borderColor: getStatus(7).color }">
+				<div class="headerContainer">
 
 					<div class="checkColor">
 						<!--  @click="change('doneIschecked')" -->
@@ -190,9 +192,9 @@
 
 					</div>
 
-					<div class="title">{{ "Ubicaciones Erroneas" }}</div>
+					<div class="title">{{ "Ubicaciones Erroneas" }} <i class="bi bi-info-circle infoIcon"></i></div>
 					<!-- 					sumarCounters([countList.doneInTime, countList.doneLate]) -->
-					<div class="labelCounter">{{ "13" }}
+					<div class="labelCounter">{{ incomingData.countersGeneral.start_end_error }}
 						<!-- <sub>{{ '/' + (countList.total || 0)}} </sub> -->
 
 					</div>
@@ -228,8 +230,13 @@
 <script setup>
 
 
-//import { ref } from 'vue' //defineEmits, defineProps 
-import { getStatus, } from './utils.js' //sumarCounters
+import { defineProps } from 'vue' //defineEmits, defineProps 
+
+const incomingData = defineProps(['countersGeneral']);
+
+
+
+//import { getStatus, } from './utils.js' //sumarCounters
 
 
 
@@ -313,6 +320,11 @@ const outGoingData = defineEmits(
 	border: solid 1px;
 	border-color: #80808030;
 	border-radius: 10px 10px 10px 10px;
+}
+
+.infoIcon {
+	font-size: 10px;
+	cursor: pointer
 }
 
 

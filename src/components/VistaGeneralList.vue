@@ -22,8 +22,8 @@
 
 				</div>
 
-				<VistaStandarList @indice="cambiarIndice" :transfers_list="incomingData.incomingData" :vista="1"
-					style="border: none; height: 90%;" />
+				<VistaStandarList @indice="cambiarIndice" @contarStatus="contarEstados"
+					:transfers_list="incomingData.incomingData" :vista="1" style="border: none; height: 90%;" />
 
 
 			</div>
@@ -71,7 +71,7 @@
 					<div class="col borderRight">
 						<div>
 							<div>Enlazado</div>
-							<div class="statusValue">13</div>
+							<div class="statusValue">{{ incomingData.counterTransferLnk.linked }}</div>
 
 						</div>
 					</div>
@@ -79,25 +79,25 @@
 					<div class="col borderRight">
 						<div>
 							<div>Transito</div>
-							<div class="statusValue">13</div>
+							<div class="statusValue">{{ incomingData.counterTransferLnk.in_transit }}</div>
 						</div>
 					</div>
 					<div class="col borderRight">
 						<div>
 							<div>Completado</div>
-							<div class="statusValue">13</div>
+							<div class="statusValue">{{ incomingData.counterTransferLnk.done }}</div>
 						</div>
 					</div>
 					<div class="col borderRight">
 						<div>
 							<div>D.N.E</div>
-							<div class="statusValue">13</div>
+							<div class="statusValue">{{ incomingData.counterTransferLnk.start_end_error }}</div>
 						</div>
 					</div>
 					<div class="col borderRightLast">
 						<div>
 							<div>Expirado</div>
-							<div class="statusValue">13</div>
+							<div class="statusValue">{{ incomingData.counterTransferLnk.expired }}</div>
 						</div>
 					</div>
 
@@ -116,10 +116,10 @@
 import VistaStandarList from '@/components/VistaStandarList.vue'
 import { defineEmits, defineProps } from 'vue'; //ref
 
-const incomingData = defineProps(['incomingData']);
+const incomingData = defineProps(['incomingData', 'counterTransferLnk']);
 
 const outGoingData = defineEmits(
-	['indice']
+	['indice', 'contarStatus']
 )
 
 
@@ -128,6 +128,11 @@ const outGoingData = defineEmits(
 function cambiarIndice(indice_selected) {
 	outGoingData('indice', indice_selected);
 }
+
+function contarEstados(transfer_id) {
+	outGoingData('contarStatus', transfer_id)
+}
+
 
 
 </script>

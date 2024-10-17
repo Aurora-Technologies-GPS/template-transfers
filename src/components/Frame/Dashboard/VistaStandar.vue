@@ -11,13 +11,13 @@
 import VistaStandarHeader from '@/components/VistaStandarHeader.vue'
 import VistaStandarList from '@/components/VistaStandarList.vue'
 
-import { defineProps,defineEmits } from 'vue'
+import { defineProps, defineEmits } from 'vue'
 
 const incomingData = defineProps(['incomingData']);
 
 const outGoingData = defineEmits(['transfer_id']);
 
-function toMapa(transfer_id){
+function toMapa(transfer_id) {
 	outGoingData('transfer_id', transfer_id);
 }
 

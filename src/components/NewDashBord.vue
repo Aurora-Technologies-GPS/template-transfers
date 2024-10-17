@@ -3,8 +3,10 @@
 
 		<NewMenu :vistaSelected="vistaSelectedCode" :LegalName="name" @vista="changeVista" style=" width:15%;" />
 
-		<DashboardPage @transfer_id="changeIndiceMapa" style=" width: 100%;" v-if="vistaSelected == 1" />
-		<VistaMapaPage :transfer_id="transfer_id_selected" style=" width: 100%;" v-if="vistaSelected == 2" />
+		<DashboardPage :countersGeneral="countersGeneral" @transfer_id="changeIndiceMapa" style=" width: 100%;"
+			v-if="vistaSelected == 1" />
+		<VistaMapaPage :countersGeneral="countersGeneral" :transfer_id="transfer_id_selected" style=" width: 100%;"
+			v-if="vistaSelected == 2" />
 		<HistorialPage style=" width: 100%;" v-if="vistaSelected == 3" />
 
 	</div>
@@ -22,6 +24,7 @@ import NewMenu from '@/components/NewMenu.vue'
 
 import { transfers_list } from '@/components/conexion/DataConectorTest.js'
 
+import { counterGeneral } from '@/components/conexion/DataConectorTest.js'
 
 export default {
 	props: [],
@@ -35,11 +38,22 @@ export default {
 	setup(props) {
 
 		let vistaSelected = ref(1);
-		let vistaSelectedCode=1;
+		let vistaSelectedCode = 1;
 
-		let transfer_id_selected=ref(0)
+		let transfer_id_selected = ref(0)
 
 		let name = ref('default name');
+
+		let countersGeneral = ref({
+
+			linked: 13,
+			in_transit: 13,
+			done: 13,
+			canceled: 10,
+			expired: 13,
+			start_end_error: 13
+
+		})
 
 
 		function changeVista(vista_Selected) {
@@ -49,8 +63,8 @@ export default {
 
 		function changeIndiceMapa(transfer_id) {
 
-			vistaSelected.value=2;
-			vistaSelectedCode=3
+			vistaSelected.value = 2;
+			vistaSelectedCode = 3
 			transfer_id_selected.value = transfer_id
 		}
 
@@ -64,8 +78,8 @@ export default {
 			DashboardPage, HistorialPage,
 			NewMenu, changeVista,
 			VistaMapaPage, vistaSelected,
-			name,transfer_id_selected,
-			changeIndiceMapa,
+			name, transfer_id_selected,
+			changeIndiceMapa, countersGeneral,
 			vistaSelectedCode
 		}
 	},
@@ -73,6 +87,17 @@ export default {
 
 		//this.hash = this.$route.params.hash
 		//console.log(this.$route.params.hash)
+
+		counterGeneral(this.$route.params.hash).then(resultCounter => {
+
+			this.countersGeneral = resultCounter
+
+		}).catch(error => {
+			console.log(error)
+			console.log("Error al Hacer La peticion")
+		});
+
+
 
 		transfers_list(this.$route.params.hash).then(result => {
 

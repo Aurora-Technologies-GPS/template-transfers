@@ -4,7 +4,8 @@
 		<div class="contenedorMapa_Menu">
 
 			<div class="MenuMapa">
-				<FrameMapaMenu @buscar="Busqueda"  :transfer_id="incomingData.transfer_id"  :transferLnk="transfersList" />
+				<FrameMapaMenu @buscar="Busqueda" :transfer_id="incomingData.transfer_id"
+					:transferLnk="transfersList" />
 			</div>
 
 			<div class="mapa">
@@ -40,22 +41,22 @@ let transfersList = ref([
 			id: 0,
 			clientId: 0,
 			bl: "BL",
-/*			startPlace: {
-									id: 0,
-									label: "INICIO",
-									radius: 0,
-									latitude: 18.42351187,
-									longitude: -70.01320839,
-									address: "18.423512, -70.013208"
-								},
-								endPlace: {
-									id: null,
-									label: "FIN",
-									radius: null,
-									latitude: null,
-									longitude:null,
-									address: "null"
-								},*/
+			/*			startPlace: {
+												id: 0,
+												label: "INICIO",
+												radius: 0,
+												latitude: 18.42351187,
+												longitude: -70.01320839,
+												address: "18.423512, -70.013208"
+											},
+											endPlace: {
+												id: null,
+												label: "FIN",
+												radius: null,
+												latitude: null,
+												longitude:null,
+												address: "null"
+											},*/
 			address: "N/A",
 			city: "N/A",
 			note: "",
@@ -78,38 +79,38 @@ let transfersList = ref([
 
 
 
-function Busqueda(texto){
+function Busqueda(texto) {
 
-	let text_buscar=texto || false
+	let text_buscar = texto || false
 
 	if (!text_buscar) {
-		text_buscar=incomingData.transfer_id
+		text_buscar = incomingData.transfer_id
 	}
 
-	if (text_buscar !=0) {
+	if (text_buscar != 0) {
 		console.log("voy a buscar", text_buscar)
 
 		transfers_list(route.params.hash).then(result => {
 
 
-	if (result.success) {
+			if (result.success) {
 
-		console.log(result.clientFullTransfers.fullTransfer)
+				console.log(result.clientFullTransfers.fullTransfer)
 
 
-		transfersList.value = result.clientFullTransfers.fullTransfer
+				transfersList.value = result.clientFullTransfers.fullTransfer
 
+			} else {
+				console.log(result)
+			}
+
+
+
+		}).catch(error => {
+			console.log(error)
+			console.log("Error al Hacer La peticion")
+		});
 	} else {
-		console.log(result)
-	}
-
-
-
-}).catch(error => {
-	console.log(error)
-	console.log("Error al Hacer La peticion")
-});
-	}else{
 		console.log("valor invalido")
 	}
 }

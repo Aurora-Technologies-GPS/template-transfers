@@ -16,7 +16,7 @@ const incomingData = defineProps(['fullTransfer']);
 const outGoingData = defineEmits(['transfer_id']);
 
 
-function toMapa(transfer_id){
+function toMapa(transfer_id) {
 
 	outGoingData('transfer_id', transfer_id);
 }

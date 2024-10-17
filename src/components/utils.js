@@ -3,25 +3,25 @@ export function getStatus(estatusN) {
   switch (estatusN) {
 
     case 1:
-      return { label: 'Enlanzado', color: '#d8e5e7' }// (gris)          
+      return { label: 'Enlanzado', color: '#def0fc', colorText: '#43a6de' }// (gris)          
 
     case 2:
-      return { label: 'En Transito', color: 'grey' }
+      return { label: 'En Transito', color: '#d5c8e2', colorText: '#161a83' }
 
     case 3:
-      return { label: 'Realizado', color: 'pink' }
+      return { label: 'Completado', color: '#f1f7f2', colorText: '#2a9643' }
 
     case 4:
-      return { label: 'no va', color: 'green' }
+      return { label: 'no va', color: '#f1f7f2', colorText: '#2a9643' }
 
     case 5:
-      return { label: 'Expirado', color: '#ecec7a' } // (amarillo)
+      return { label: 'Expirado', color: '#f7f2e5', colorText: '#eda041' } // (amarillo)
 
     case 6:
-      return { label: 'Ubicacion Erronea', color: '#ecec7a' }
+      return { label: 'Ubicacion Erronea', color: '#ebcdcc', colorText: '#dd3a35' }
 
     default:
-      return { label: 'Expired', color: '#ecec7a' }
+      return { label: 'Expired', color: '#f1f7f2', colorText: '#2a9643' }
 
   }
 }

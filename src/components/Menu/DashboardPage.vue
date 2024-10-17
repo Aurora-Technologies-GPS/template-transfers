@@ -6,7 +6,7 @@
 		<HeaderComun @vistaGeneral="cambiarvistaGeneral" @vistaStandar="cambiarVistaStandar" />
 
 
-		<CounterPage />
+		<CounterPage :countersGeneral="incomingData.countersGeneral" />
 		<FrameVistaGeneral :fullTransfer="transfersList" v-if="vistaGeneral" />
 
 		<FrameVistaStandar @transfer_id="toMapa" :fullTransfer="transfersList" v-if="!vistaGeneral" />
@@ -25,12 +25,14 @@ import { transfers_list } from '@/components/conexion/DataConectorTest.js'
 
 import { useRoute } from 'vue-router';
 
-import { ref, defineEmits } from 'vue';
+import { ref, defineEmits, defineProps } from 'vue';
+
+const incomingData = defineProps(['countersGeneral']);
 
 const outGoingData = defineEmits(['transfer_id']);
 
 
-function toMapa(transfer_id){
+function toMapa(transfer_id) {
 
 	outGoingData('transfer_id', transfer_id);
 }

@@ -201,32 +201,6 @@ export async function counterGeneral(hash) {
     return data
 }
 
-export async function counterSingle(hash, transfer_id) {
-
-    await console.log("se consulto Counter Singular", hash, transfer_id);
-
-    let data = {
-
-        linked: 33,
-        in_transit: 33,
-        done: 33,
-        canceled: 33,
-        expired: 33,
-        start_end_error: 33
-
-    }
-
-    // hash 0123456789abcdef
-
-    /*    await axios.get(api + `/v1/transfers/list'/${hash}`).then(response => {
-            data = response.data
-        }).catch(error => {
-            console.log(error)
-        });*/
-
-    return data
-}
-
 
 
 

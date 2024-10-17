@@ -20,7 +20,12 @@
 				<tr v-for=" (dato, index) in incomingData.transferLnk[incomingData.indice].transferLnk" :key="index"
 					class="hovertabla">
 					<td class="datoTable text-center">{{ dato.container }}</td>
-					<td class="datoTable text-center">{{ dato.deviceId }}</td>
+					<td class="datoTable text-center">
+
+						<span>{{ dato.deviceId }}</span>
+						<i class="bi bi-circle-fill vineta"></i>
+
+					</td>
 					<td class="datoTable text-center">{{ dato.timeLinked }}</td>
 					<td class="datoTable text-center">
 						{{ incomingData.transferLnk[incomingData.indice].transfer.timeTravelEst }}</td>
@@ -38,7 +43,9 @@
 					</td>
 
 					<td class="datoTable text-center">
-						<span class="text-center estatusTable">
+						<span
+							:style="{ backgroundColor: getStatus(dato.currentState).color, color: getStatus(dato.currentState).colorText }"
+							class="text-center estatusTable">
 							{{ getStatus(dato.currentState).label }}
 						</span>
 					</td>
@@ -81,6 +88,12 @@ const incomingData = defineProps(['transferLnk', 'indice']);
 	border-radius: 8px 8px 0px 0px;*/
 	padding: 10px;
 
+}
+
+.vineta {
+	font-size: 11px;
+	color: #3aaa35;
+	padding: 5px;
 }
 
 
@@ -132,7 +145,8 @@ const incomingData = defineProps(['transferLnk', 'indice']);
 	padding-right: 15px;
 	padding-left: 15px;
 	font-weight: 700;
-	color: red;
+	border: solid 0.1px;
+	border-color: #80808030;
 }
 
 

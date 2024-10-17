@@ -3,9 +3,9 @@
 		<div class="mainTitulo"><strong>Dashboard</strong></div>
 
 
-		<HeaderComun class="disabled"/>
-		<CounterPage />
-		<FrameMapa :transfer_id="incomingData.transfer_id"  class="miMapa" />
+		<HeaderComun class="disabled" />
+		<CounterPage :countersGeneral="incomingData.countersGeneral" />
+		<FrameMapa :transfer_id="incomingData.transfer_id" class="miMapa" />
 
 	</div>
 </template>
@@ -19,7 +19,7 @@ import { defineProps } from 'vue';
 
 
 
-const incomingData = defineProps([ 'transfer_id']);
+const incomingData = defineProps(['transfer_id', 'countersGeneral']);
 
 
 
@@ -98,7 +98,9 @@ const incomingData = defineProps([ 'transfer_id']);
 }
 
 .disabled {
-    pointer-events: none; /* Deshabilita interacciones */
-    opacity: 0.5; /* Aplica un efecto de transparencia */
+	pointer-events: none;
+	/* Deshabilita interacciones */
+	opacity: 0.5;
+	/* Aplica un efecto de transparencia */
 }
 </style>

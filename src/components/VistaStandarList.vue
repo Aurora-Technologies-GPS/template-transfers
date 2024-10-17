@@ -3,7 +3,8 @@
 
 		<div class="listaTabla" v-for=" (dato, index) in incomingData.transfers_list" :key="index">
 
-			<div @click="toggleCollapse(index)" :class="{ 'listaSelected': isOpen(index) }" class="targeticas ">
+			<div @click="toggleCollapse(index, dato.transfer.id)" :class="{ 'listaSelected': isOpen(index) }"
+				class="targeticas ">
 				<!-- targeticas -->
 
 				<div class="rowInfo">
@@ -14,16 +15,16 @@
 						<div>
 							<i class="bi bi-circle-fill vineta" style="color: #72c9eb;"></i>
 
-							<span v-if="dato.transfer.startPlace"
-								class="miniLetra">{{ dato.transfer.startPlace.label }}</span>
+							<span v-if="dato.transfer.startPlace" class="miniLetra">{{ dato.transfer.startPlace.label
+								}}</span>
 							<span v-else class="miniLetra">{{ "N/A" }}</span>
 							<img style="height: 25px; margin-left: 5px;" src="../assets/icons/flechaAzul.svg">
 
 
 
 							<i class="bi bi-circle-fill vineta"></i>
-							<span v-if="dato.transfer.endPlace"
-								class="miniLetra">{{ dato.transfer.endPlace.label }}</span>
+							<span v-if="dato.transfer.endPlace" class="miniLetra">{{ dato.transfer.endPlace.label
+								}}</span>
 							<span v-else class="miniLetra">{{ "N/A" }}</span>
 						</div>
 
@@ -69,7 +70,7 @@ import { defineProps, defineEmits } from 'vue' //onMounted defineExpose ref
 const incomingData = defineProps(['vista', 'transfers_list']);
 
 const outGoingData = defineEmits(
-	['indice','transfer_id']
+	['indice', 'transfer_id', 'contarStatus']
 )
 
 let openIndex = ref()
@@ -78,11 +79,13 @@ let openIndex = ref()
 
 
 
-function toggleCollapse(index) {
+function toggleCollapse(index, tranfer_id) {
 
 	//console.log("toggleCollapse")
 
 	openIndex.value = openIndex.value === index ? null : index;
+
+	outGoingData('contarStatus', tranfer_id);
 
 	outGoingData('indice', index);
 
@@ -95,7 +98,7 @@ function isOpen(index) {
 	return openIndex.value === index;
 }
 
-function sendId(id){
+function sendId(id) {
 	outGoingData('transfer_id', id);
 }
 
