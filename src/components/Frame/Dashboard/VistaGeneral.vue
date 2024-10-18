@@ -33,16 +33,38 @@ export default {
 
 		const route = useRoute();
 
-		let counters = ref({
-
-			linked: 3,
-			in_transit: 3,
-			done: 3,
-			canceled: 3,
-			expired: 3,
-			start_end_error: 3
-
-		})
+		let counters = ref([
+        {
+            id: 1,
+            name: "Enlazado",
+            count: 0
+        },
+        {
+            id: 2,
+            name: "Transito",
+            count: 0
+        },
+        {
+            id: 3,
+            name: "Completado",
+            count: 0
+        },
+        {
+            id: 4,
+            name: "CANCELED",
+            count: 0
+        },
+        {
+            id: 5,
+            name: "Expirado",
+            count: 0
+        },
+        {
+            id: 6,
+            name: "UBI-ERR",
+            count: 0
+        }
+    ])
 
 		function changeIndice(indice_Selected) {
 
@@ -54,7 +76,14 @@ export default {
 
 			counterSingle(route.params.hash, tranfer_id).then(result => {
 
-				counters.value = result
+
+
+				if (result.success) {
+					counters.value = result.states
+				} else {
+					console.log(result)
+				}
+
 
 			}).catch(error => {
 				console.log(error)

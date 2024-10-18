@@ -26,6 +26,34 @@ export function getStatus(estatusN) {
   }
 }
 
+export function traducir_estatus(estatusN) {
+
+  switch (estatusN) {
+
+    case 'LINKED':
+      return 'Enlazado '      
+
+    case 'IN_TRANSIT':
+      return 'Transito'
+
+    case 'DONE':
+      return 'Completado'
+
+    case 'CANCELED':
+      return 'Cancelado'
+
+    case 'EXPIRED':
+      return 'Expirado'
+
+    case 'START_END_ERROR':
+      return 'UBI-ERR'
+
+    default:
+      return estatusN
+
+  }
+}
+
 
 export function ten(i) {
 

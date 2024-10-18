@@ -203,26 +203,58 @@ export async function counterGeneral(hash) {
 
 export async function counterSingle(hash, transfer_id) {
 
-    await console.log("se consulto Counter Singular", hash, transfer_id);
+    let hoy=new Date()
+    let ayer=new Date(hoy.getTime()-24*60*60*1000) 
+
+    await console.log("se consulto Counter Singular", hash, transfer_id,ayer.toISOString(),hoy.toISOString());
 
     let data = {
+    success: true,
+    states: [
+        {
+            id: 1,
+            name: "LINKED",
+            count: 0
+        },
+        {
+            id: 2,
+            name: "IN_TRANSIT",
+            count: 1
+        },
+        {
+            id: 3,
+            name: "DONE",
+            count: 0
+        },
+        {
+            id: 4,
+            name: "CANCELED",
+            count: 0
+        },
+        {
+            id: 5,
+            name: "EXPIRED",
+            count: 0
+        },
+        {
+            id: 6,
+            name: "START_END_ERROR",
+            count: 0
+        }
+    ]
+}
 
-        linked: 33,
-        in_transit: 33,
-        done: 33,
-        canceled: 33,
-        expired: 33,
-        start_end_error: 33
 
-    }
+    /*   
 
-    // hash 0123456789abcdef
-
-    /*    await axios.get(api + `/v1/transfers/list'/${hash}`).then(response => {
+           await axios.get(`http://10.0.0.172:9000/v1/states/count/${hash}/${transfer_id}/${from}/${to}`).then(response => {
             data = response.data
         }).catch(error => {
             console.log(error)
-        });*/
+        });
+
+
+    */
 
     return data
 }

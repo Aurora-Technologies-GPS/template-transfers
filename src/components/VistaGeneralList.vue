@@ -68,36 +68,12 @@
 
 						</div>
 					</div>
-					<div class="col borderRight">
+					<div  v-for=" (dato, index) in incomingData.counterTransferLnk" :key="index"
+					class="col borderRight" v-show="dato.name!='CANCELED'">
 						<div>
-							<div>Enlazado</div>
-							<div class="statusValue">{{ incomingData.counterTransferLnk.linked }}</div>
+							<div>{{traducir_estatus(dato.name)}}</div>
+							<div class="statusValue">{{ dato.count }}</div>
 
-						</div>
-					</div>
-
-					<div class="col borderRight">
-						<div>
-							<div>Transito</div>
-							<div class="statusValue">{{ incomingData.counterTransferLnk.in_transit }}</div>
-						</div>
-					</div>
-					<div class="col borderRight">
-						<div>
-							<div>Completado</div>
-							<div class="statusValue">{{ incomingData.counterTransferLnk.done }}</div>
-						</div>
-					</div>
-					<div class="col borderRight">
-						<div>
-							<div>D.N.E</div>
-							<div class="statusValue">{{ incomingData.counterTransferLnk.start_end_error }}</div>
-						</div>
-					</div>
-					<div class="col borderRightLast">
-						<div>
-							<div>Expirado</div>
-							<div class="statusValue">{{ incomingData.counterTransferLnk.expired }}</div>
 						</div>
 					</div>
 
@@ -114,6 +90,7 @@
 
 <script setup>
 import VistaStandarList from '@/components/VistaStandarList.vue'
+import { traducir_estatus } from '@/components/utils.js'
 import { defineEmits, defineProps } from 'vue'; //ref
 
 const incomingData = defineProps(['incomingData', 'counterTransferLnk']);
