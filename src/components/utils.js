@@ -54,11 +54,7 @@ export function traducir_estatus(estatusN) {
   }
 }
 
-export function convertirStatus(){
-
-let estados =[
-
-    ]
+export function convertirStatus(estados){
 
 
 let result = estados.reduce((acumulador, element) => {
@@ -92,13 +88,9 @@ let result = estados.reduce((acumulador, element) => {
     start_end_error:0
 });
 
-console.log(result);
+return result
 
 }
-
-
- convertirStatus()
-
 
 
 export function ten(i) {
