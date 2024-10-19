@@ -28,7 +28,7 @@ export function getStatus(estatusN) {
 
 export function traducir_estatus(estatusN) {
 
-  switch (estatusN) {
+  switch (estatusN.toUpperCase()) {
 
     case 'LINKED':
       return 'Enlazado '      
@@ -53,6 +53,52 @@ export function traducir_estatus(estatusN) {
 
   }
 }
+
+export function convertirStatus(){
+
+let estados =[
+
+    ]
+
+
+let result = estados.reduce((acumulador, element) => {
+
+    if (element.name.toUpperCase() == "LINKED") {
+        acumulador.linked = element.count;
+
+    } else if (element.name.toUpperCase() == "IN_TRANSIT") {
+        acumulador.in_transit = element.count;
+
+    } else if (element.name.toUpperCase() == "DONE") {
+        acumulador.done = element.count;
+    }
+    else if (element.name.toUpperCase() == "CANCELED") {
+        acumulador.canceled = element.count;
+    }
+    else if (element.name.toUpperCase() == "EXPIRED") {
+        acumulador.expired = element.count;
+    }
+    else if (element.name.toUpperCase() == "START_END_ERROR") {
+        acumulador.start_end_error = element.count;
+    }
+    return acumulador;
+
+}, {
+    linked: 0,
+    in_transit: 0,
+    done: 0,
+    canceled:0,
+    expired:0,
+    start_end_error:0
+});
+
+console.log(result);
+
+}
+
+
+ convertirStatus()
+
 
 
 export function ten(i) {

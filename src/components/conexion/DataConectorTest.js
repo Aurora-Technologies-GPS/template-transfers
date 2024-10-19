@@ -180,20 +180,49 @@ export async function counterGeneral(hash) {
     await console.log("se consulto Counter", hash);
 
     let data = {
+    success: true,
+    states: [
+        {
+            id: 1,
+            name: "LINKED",
+            count: 0
+        },
+        {
+            id: 2,
+            name: "IN_TRANSIT",
+            count: 1
+        },
+        {
+            id: 3,
+            name: "DONE",
+            count: 3
+        },
+        {
+            id: 4,
+            name: "CANCELED",
+            count: 0
+        },
+        {
+            id: 5,
+            name: "EXPIRED",
+            count: 0
+        },
+        {
+            id: 6,
+            name: "START_END_ERROR",
+            count: 0
+        }
+    ]
+}
 
-        linked: 23,
-        in_transit: 23,
-        done: 23,
-        canceled: 23,
-        expired: 23,
-        start_end_error: 23
+/*    await axios.get(`http://10.0.0.172:9000/v1/states/count/34fbfb4eb05085ed8c27b3be3dd949dc`).then(response => {
+        // data = response.data
+        //console.log(response.data.success)
 
-    }
+       // if (response.data.success) data = response.data
 
-    // hash 0123456789abcdef
+        console.log(response.data)
 
-    /*    await axios.get(api + `/v1/transfers/list'/${hash}`).then(response => {
-            data = response.data
         }).catch(error => {
             console.log(error)
         });*/
@@ -204,9 +233,9 @@ export async function counterGeneral(hash) {
 export async function counterSingle(hash, transfer_id) {
 
     let hoy=new Date()
-    let ayer=new Date(hoy.getTime()-24*60*60*1000) 
+    let ayer=new Date(hoy.getTime()-(24*60*60*1000)*30) 
 
-    await console.log("se consulto Counter Singular", hash, transfer_id,ayer.toISOString(),hoy.toISOString());
+    console.log("se consulto Counter Singular", hash, transfer_id,ayer.toISOString(),hoy.toISOString());
 
     let data = {
     success: true,
@@ -224,7 +253,7 @@ export async function counterSingle(hash, transfer_id) {
         {
             id: 3,
             name: "DONE",
-            count: 0
+            count: 3
         },
         {
             id: 4,
@@ -245,16 +274,24 @@ export async function counterSingle(hash, transfer_id) {
 }
 
 
-    /*   
+/*    await axios.get(`http://10.0.0.172:9000/v1/states/count/34fbfb4eb05085ed8c27b3be3dd949dc/36365/${ayer.toISOString()}/${hoy.toISOString()}`).then(response => {
+   // await axios.get(`http://10.0.0.172:9000/v1/states/count/${hash}/${transfer_id}/${ayer.toISOString()}/${hoy.toISOString()}`).then(response => {
+           // data = response.data
 
-           await axios.get(`http://10.0.0.172:9000/v1/states/count/${hash}/${transfer_id}/${from}/${to}`).then(response => {
-            data = response.data
+        if (response.data.success) {
+           // data = response.data
+            console.log("se consulto ", response.data)
+
+        }
+
+       // console.log(response.data)
+
         }).catch(error => {
             console.log(error)
-        });
+        });*/
 
 
-    */
+    
 
     return data
 }
@@ -272,7 +309,6 @@ export async function counterSingle(hash, transfer_id) {
     });
     return data
 }*/
-
 
 
 
