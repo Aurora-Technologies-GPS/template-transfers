@@ -48,7 +48,7 @@
 							<div class="text-center">
 
 								<div class="cuadroTextoTitle">Contenedores</div>
-								<div class="cuadroTextoValue">13</div>
+								<div class="cuadroTextoValue">{{ incomingData.totalContenedores }}</div>
 
 							</div>
 
@@ -68,40 +68,40 @@
 
 						</div>
 					</div>
-					<div  class="col borderRight">
+					<div class="col borderRight">
 						<div>
 							<div>Enlazado</div>
-							<div class="statusValue">{{ counters.linked }}</div>
+							<div class="statusValue">{{ incomingData.counterTransferLnk.linked }}</div>
 
 						</div>
 					</div>
 
-					<div  class="col borderRight">
+					<div class="col borderRight">
 						<div>
 							<div>Transito</div>
-							<div class="statusValue">{{ counters.in_transit }}</div>
+							<div class="statusValue">{{ incomingData.counterTransferLnk.in_transit }}</div>
 
 						</div>
 					</div>
 
-					<div  class="col borderRight">
+					<div class="col borderRight">
 						<div>
 							<div>Completado</div>
-							<div class="statusValue">{{ counters.done }}</div>
+							<div class="statusValue">{{ incomingData.counterTransferLnk.done }}</div>
 
 						</div>
 					</div>
-					<div  class="col borderRight">
+					<div class="col borderRight">
 						<div>
 							<div>Expirado</div>
-							<div class="statusValue">{{ counters.expired }}</div>
+							<div class="statusValue">{{ incomingData.counterTransferLnk.expired }}</div>
 
 						</div>
 					</div>
-					<div  class="col borderRight">
+					<div class="col borderRight">
 						<div>
 							<div>UBI ER</div>
-							<div class="statusValue">{{ counters.start_end_error }}</div>
+							<div class="statusValue">{{ incomingData.counterTransferLnk.start_end_error }}</div>
 
 						</div>
 					</div>
@@ -119,15 +119,10 @@
 
 <script setup>
 import VistaStandarList from '@/components/VistaStandarList.vue'
-import { convertirStatus  } from '@/components/utils.js' //traducir_estatus
+
 import { defineEmits, defineProps } from 'vue'; //ref
 
-const incomingData = defineProps(['incomingData', 'counterTransferLnk']);
-
-
-let counters=convertirStatus(incomingData.counterTransferLnk)
-
-console.log(counters.value)
+const incomingData = defineProps(['incomingData', 'counterTransferLnk', 'totalContenedores']);
 
 const outGoingData = defineEmits(
 	['indice', 'contarStatus']

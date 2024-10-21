@@ -7,7 +7,7 @@
 
 
 		<CounterPage :countersGeneral="incomingData.countersGeneral" />
-		<FrameVistaGeneral :fullTransfer="transfersList" v-if="vistaGeneral" />
+		<FrameVistaGeneral :contenedoresCount="contenedoresCount" :fullTransfer="transfersList" v-if="vistaGeneral" />
 
 		<FrameVistaStandar @transfer_id="toMapa" :fullTransfer="transfersList" v-if="!vistaGeneral" />
 
@@ -81,6 +81,8 @@ let transfersList = ref([
 
 ]);
 
+let contenedoresCount = ref(0);
+
 let vistaGeneral = ref(true)
 
 
@@ -98,6 +100,9 @@ transfers_list(route.params.hash).then(result => {
 
 	if (result.success) {
 
+		if (result.clientFullTransfers.fullTransfer) {
+			contenedoresCount.value = result.clientFullTransfers.fullTransfer.length || 99
+		}
 
 		transfersList.value = result.clientFullTransfers.fullTransfer
 

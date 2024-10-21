@@ -48,6 +48,7 @@
 							class="text-center estatusTable">
 							{{ getStatus(dato.currentState).label }}
 						</span>
+						<i class="bi bi-geo-alt-fill gotoMapIcon"></i>
 					</td>
 				</tr>
 			</tbody>
@@ -160,13 +161,20 @@ const incomingData = defineProps(['transferLnk', 'indice']);
 	border-radius: 6px 6px 6px 6px;
 }
 
+.gotoMapIcon {
+	margin-right: 2px;
+	color: #e46564;
+	font-size: 15px;
+	cursor: pointer;
+	float: right;
+}
 
 .expandible {
 	/*border: solid 1px;*/
 	/*padding: 10px;*/
 
 	/*border-color: #80808030;*/
-	cursor: pointer;
+
 	/*	min-height: 65px;*/
 	/*border-radius: 8px 8px 8px 8px;*/
 }

@@ -1,8 +1,9 @@
 <template>
 	<div class="vistaGeneral">
 
-		<VistaGeneralList :counterTransferLnk="counters" @contarStatus="contarEstados" @indice="changeIndice"
-			:incomingData="props.incomingData" class="contendorTabla" />
+		<VistaGeneralList :totalContenedores="props.contenedoresCount" :counterTransferLnk="counters"
+			@contarStatus="contarEstados" @indice="changeIndice" :incomingData="props.incomingData"
+			class="contendorTabla" />
 		<TablaVistaGeneral :indice="indiceSelected" :incomingData="props.incomingData" />
 
 	</div>
@@ -13,6 +14,7 @@ import VistaGeneralList from '@/components/VistaGeneralList.vue'
 import TablaVistaGeneral from './TablaVistaGeneral.vue'
 
 import { counterSingle } from '@/components/conexion/DataConectorTest.js'
+import { convertirStatus } from '@/components/utils.js' //traducir_estatus
 
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
@@ -20,7 +22,7 @@ import { useRoute } from 'vue-router';
 
 
 export default {
-	props: ['incomingData'],
+	props: ['incomingData', 'contenedoresCount'],
 
 	components: {
 		VistaGeneralList,
@@ -33,38 +35,18 @@ export default {
 
 		const route = useRoute();
 
-		let counters = ref([
-        {
-            id: 1,
-            name: "Enlazado",
-            count: 0
-        },
-        {
-            id: 2,
-            name: "Transito",
-            count: 0
-        },
-        {
-            id: 3,
-            name: "Completado",
-            count: 0
-        },
-        {
-            id: 4,
-            name: "CANCELED",
-            count: 0
-        },
-        {
-            id: 5,
-            name: "Expirado",
-            count: 0
-        },
-        {
-            id: 6,
-            name: "UBI-ERR",
-            count: 0
-        }
-    ])
+
+		let counters = ref({
+			linked: 0,
+			in_transit: 0,
+			done: 0,
+			canceled: 0,
+			expired: 0,
+			start_end_error: 0
+		})
+
+
+
 
 		function changeIndice(indice_Selected) {
 
@@ -72,14 +54,12 @@ export default {
 		}
 
 		function contarEstados(tranfer_id) {
-			console.log("voy a consultar los estatus de :", tranfer_id)
+			/*console.log("voy a consultar los estatus de :", tranfer_id)*/
 
 			counterSingle(route.params.hash, tranfer_id).then(result => {
 
-
-
 				if (result.success) {
-					counters.value = result.states
+					counters.value = convertirStatus(result.states)
 				} else {
 					console.log(result)
 				}
@@ -96,6 +76,10 @@ export default {
 		return { indiceSelected, changeIndice, props, counters, contarEstados }
 	},
 	mounted() {
+
+		//console.log(this.props.incomingData)
+
+
 
 	}
 

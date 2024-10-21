@@ -26,6 +26,8 @@ import { transfers_list } from '@/components/conexion/DataConectorTest.js'
 
 import { counterGeneral } from '@/components/conexion/DataConectorTest.js'
 
+import { convertirStatus } from '@/components/utils.js' //
+
 export default {
 	props: [],
 
@@ -44,15 +46,14 @@ export default {
 
 		let name = ref('default name');
 
+
 		let countersGeneral = ref({
-
-			linked: 13,
-			in_transit: 13,
-			done: 13,
-			canceled: 10,
-			expired: 13,
-			start_end_error: 13
-
+			linked: 0,
+			in_transit: 0,
+			done: 0,
+			canceled: 0,
+			expired: 0,
+			start_end_error: 0
 		})
 
 
@@ -85,12 +86,13 @@ export default {
 	},
 	mounted() {
 
-		//this.hash = this.$route.params.hash
-		//console.log(this.$route.params.hash)
+		counterGeneral(this.$route.params.hash).then(result => {
 
-		counterGeneral(this.$route.params.hash).then(resultCounter => {
-
-			this.countersGeneral = resultCounter
+			if (result.success) {
+				this.countersGeneral = convertirStatus(result.states)
+			} else {
+				console.log(result)
+			}
 
 		}).catch(error => {
 			console.log(error)

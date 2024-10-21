@@ -1,6 +1,6 @@
 <template>
 	<div class="contenedorWorking">
-		<VistaGeneral :incomingData="incomingData.fullTransfer" />
+		<VistaGeneral :contenedoresCount="incomingData.contenedoresCount" :incomingData="incomingData.fullTransfer" />
 
 	</div>
 </template>
@@ -11,7 +11,7 @@ import VistaGeneral from './VistaGeneral.vue'
 
 import { defineProps } from 'vue'
 
-const incomingData = defineProps(['fullTransfer']);
+const incomingData = defineProps(['fullTransfer', 'contenedoresCount']);
 
 
 </script>
