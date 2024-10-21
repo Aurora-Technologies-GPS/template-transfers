@@ -22,7 +22,7 @@
 
 				</div>
 
-				<VistaStandarList @indice="cambiarIndice" @contarStatus="contarEstados"
+				<VistaStandarList @transfer_id="toMapa" @indice="cambiarIndice" @contarStatus="contarEstados"
 					:transfers_list="incomingData.incomingData" :vista="1" style="border: none; height: 90%;" />
 
 
@@ -125,9 +125,13 @@ import { defineEmits, defineProps } from 'vue'; //ref
 const incomingData = defineProps(['incomingData', 'counterTransferLnk', 'totalContenedores']);
 
 const outGoingData = defineEmits(
-	['indice', 'contarStatus']
+	['indice', 'contarStatus','transfer_id']
 )
 
+function toMapa(transfer_id) {
+
+	outGoingData('transfer_id', transfer_id);
+}
 
 
 

@@ -21,9 +21,12 @@ import { Loader } from '@googlemaps/js-api-loader'
 // })
 const map = ref();
 let center = ref();
+
+let trace_ADN=ref([])
 //let motorIcon = ref();
 //let testMarker=ref();
 let update_motorIcon = ref(null);
+/*let clearMap = ref(null);*/
 let trace = ref(null)
 let locations = ref(null)
 
@@ -35,9 +38,20 @@ crearMarker.value = (datos) => {
 	console.log(datos)
 }
 
+function clearMap() {
+	trace_ADN.value.forEach(marker => {
+		marker.setMap(null); 
+	});
+
+}
+
 
 update_motorIcon.value = (datosActuales) => {
 	console.log(datosActuales)
+}
+
+clearMap.value=()=> {
+console.log(" ")
 }
 
 trace.value = (Coordinates) => {
@@ -54,6 +68,8 @@ const loader = new Loader({
 })
 
 const incomingData = defineProps(['inputData']);
+
+
 
 onMounted(async () => {
 
@@ -190,7 +206,7 @@ onMounted(async () => {
 
 
 			let startPlacePath = new google.maps.Marker({
-				position: new google.maps.LatLng(startPlace.lat, startPlace.lng),
+				position: new google.maps.LatLng(startPlace.latitude, startPlace.longitude),
 				map: map.value,
 				opacity: 1,
 				//animation: google.maps.Animation.DROP,
@@ -216,7 +232,7 @@ onMounted(async () => {
 
 		trace.value = (PlanCoordinates) => {
 
-			let flightPath = new google.maps.Polyline({
+			const traces = new google.maps.Polyline({
 				path: PlanCoordinates,
 				geodesic: true,
 				strokeColor: '#dc207d',
@@ -228,9 +244,12 @@ onMounted(async () => {
 			});
 
 			// Add the polyline to the map
-			flightPath.setMap(map.value);
+			traces.setMap(map.value);
+
+			trace_ADN.value.push(traces);
 
 		}
+
 
 		/*		map.value.addListener("click", () => {
 				//doclickClose();
@@ -240,9 +259,10 @@ onMounted(async () => {
 
 
 	})
+
 })
 
-defineExpose({ update_motorIcon, trace, locations });
+defineExpose({ update_motorIcon, trace, locations, clearMap });
 
 </script>
 

@@ -41,9 +41,7 @@ const incomingData = defineProps(['transfer_id', 'countersGeneral']);
 	width: auto;
 	display: flex;
 	flex-direction: column;
-
-	/*background-color: pink;*/
-
+	/*height: 100%;*/
 }
 
 .selectorVistaContainer {
@@ -94,7 +92,7 @@ const incomingData = defineProps(['transfer_id', 'countersGeneral']);
 .miMapa {
 	border-bottom: solid 1px;
 	border-color: #80808030;
-	/*height: 100%;*/
+	height: 100%;
 }
 
 .disabled {

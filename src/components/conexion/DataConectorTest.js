@@ -1,6 +1,6 @@
 //import axios from 'axios';
 
-import { statesCountGeneral, statesCount, transfersList } from './fakeAPI.js'
+import { statesCountGeneral, statesCount, transfersList, transferBlitslist } from './fakeAPI.js'
 
 //const backEnd = process.env.VUE_APP_API;
 //const backEnd= "http://10.0.0.172:9000";
@@ -76,6 +76,26 @@ export async function counterSingle(hash, transfer_id) {
 }
 
 
+export async function blitsTranfers(hash, transfer_id) {
+
+    let data = { success: false };
+
+    // await axios.get(backEnd + `/v1/states/count/${hash}/${transfer_id}/${ayer.toISOString()}/${hoy.toISOString()}`).then(response => {
+    await transferBlitslist(hash, transfer_id).then(response => {
+        // data = response.data
+
+        if (response.data.success) {
+            data = response.data
+        }
+
+        // console.log(response.data)
+
+    }).catch(error => {
+        console.log(error)
+    });
+
+    return data
+}
 
 
 /*export async function transfers_list(params) {

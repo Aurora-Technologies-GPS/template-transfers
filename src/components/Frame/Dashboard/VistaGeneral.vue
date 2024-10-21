@@ -1,7 +1,7 @@
 <template>
 	<div class="vistaGeneral">
 
-		<VistaGeneralList :totalContenedores="props.contenedoresCount" :counterTransferLnk="counters"
+		<VistaGeneralList @transfer_id="toMapa" :totalContenedores="props.contenedoresCount" :counterTransferLnk="counters"
 			@contarStatus="contarEstados" @indice="changeIndice" :incomingData="props.incomingData"
 			class="contendorTabla" />
 		<TablaVistaGeneral :indice="indiceSelected" :incomingData="props.incomingData" />
@@ -22,6 +22,7 @@ import { useRoute } from 'vue-router';
 
 
 export default {
+	emits: ['transfer_id'], 
 	props: ['incomingData', 'contenedoresCount'],
 
 	components: {
@@ -29,7 +30,7 @@ export default {
 		TablaVistaGeneral,
 
 	},
-	setup(props) {
+	setup(props, { emit }) {
 
 		let indiceSelected = ref(0)
 
@@ -45,8 +46,9 @@ export default {
 			start_end_error: 0
 		})
 
-
-
+		function toMapa(transfer_id) {
+			emit('transfer_id', transfer_id);
+		}
 
 		function changeIndice(indice_Selected) {
 
@@ -73,7 +75,7 @@ export default {
 
 		}
 
-		return { indiceSelected, changeIndice, props, counters, contarEstados }
+		return { indiceSelected, changeIndice, props, counters, contarEstados, toMapa }
 	},
 	mounted() {
 

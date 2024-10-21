@@ -1,6 +1,6 @@
 <template>
 	<div class="contenedorWorking">
-		<VistaGeneral :contenedoresCount="incomingData.contenedoresCount" :incomingData="incomingData.fullTransfer" />
+		<VistaGeneral @transfer_id="toMapa" :contenedoresCount="incomingData.contenedoresCount" :incomingData="incomingData.fullTransfer" />
 
 	</div>
 </template>
@@ -9,9 +9,17 @@
 
 import VistaGeneral from './VistaGeneral.vue'
 
-import { defineProps } from 'vue'
+import { defineProps, defineEmits } from 'vue'
 
 const incomingData = defineProps(['fullTransfer', 'contenedoresCount']);
+
+const outGoingData = defineEmits(['transfer_id']);
+
+function toMapa(transfer_id) {
+
+	outGoingData('transfer_id', transfer_id);
+}
+
 
 
 </script>

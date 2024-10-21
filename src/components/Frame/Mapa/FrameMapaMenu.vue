@@ -15,7 +15,7 @@
 		</div>
 
 
-		<TablaListMapa :indice="0" :transferLnk="incomingData.transferLnk" class="contenedorTablaMapa mt-2" />
+		<TablaListMapa @traces="showTrace" :transferBlits="incomingData.transferBlits" class="contenedorTablaMapa mt-2" />
 
 
 
@@ -28,10 +28,10 @@ import TablaListMapa from '@/components/TablaListMapa.vue'
 
 import { defineProps, defineEmits, ref } from 'vue'
 
-const incomingData = defineProps(['transferLnk', 'transfer_id']);
+const incomingData = defineProps(['transferBlits', 'transfer_id']);
 
 const outGoingData = defineEmits(
-	['buscar']
+	['buscar', 'traces']
 )
 
 let search = ref({
@@ -39,6 +39,12 @@ let search = ref({
 	loading: false,
 	isFilter: false
 })
+
+function showTrace(blits){
+
+	outGoingData('traces', blits);
+
+}
 
 
 const onPress = (e) => {

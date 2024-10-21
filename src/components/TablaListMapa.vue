@@ -1,19 +1,19 @@
 <template>
 	<div class="tablaListMapa">
 
-		<div v-for=" (dato, index) in incomingData.transferLnk[incomingData.indice].transferLnk" :key="index"
+		<div @click="showTrace(dato.transferBlits)" v-for=" (dato, index) in incomingData.transferBlits.transferLnkBlits" :key="index"
 			class="targeticas">
 
 			<div class="rowMenu">
 
 				<div>
 					<div class="fontPeq"> BL(Bill of Lading)</div>
-					<div class="titleMapa">12345678899ACDF </div>
+					<div class="titleMapa">{{ incomingData.transferBlits.transfer.bl}} </div>
 					<div class="fontPeq">ID Container</div>
-					<div class="titleMapa">{{ dato.container }} </div>
+					<div class="titleMapa">{{dato.transferLinked.container }} </div>
 
 					<div class="fontPeq">ID Precinto</div>
-					<div class="titleMapa">{{ dato.deviceId }} </div>
+					<div class="titleMapa">{{dato.transferLinked.deviceId}} </div>
 				</div>
 
 
@@ -34,20 +34,20 @@
 				<hr class="divisor">
 
 				<div><i class="bi bi-circle-fill vineta" style="color: #72c9eb;"></i>
-					<span v-if="incomingData.transferLnk[incomingData.indice].transfer.startPlace" class="destinos">{{
-						incomingData.transferLnk[incomingData.indice].transfer.startPlace.label }}</span>
+					<span v-if="incomingData.transferBlits.transfer.startPlace" class="destinos">{{
+						incomingData.transferBlits.transfer.startPlace.label }}</span>
 					<span v-else>{{ " N/A" }}</span>
 				</div>
 
 				<div><i class="bi bi-circle-fill vineta"></i>
-					<span v-if="incomingData.transferLnk[incomingData.indice].transfer.endPlace" class="destinos">{{
-						incomingData.transferLnk[incomingData.indice].transfer.endPlace.label }}</span>
+					<span v-if="incomingData.transferBlits.transfer.endPlace" class="destinos">{{
+						incomingData.transferBlits.transfer.endPlace.label }}</span>
 					<span v-else>{{ " N/A" }}</span>
 				</div>
 
 
 
-			</div>
+			</div> 
 
 
 		</div>
@@ -57,11 +57,12 @@
 
 <script setup>
 
-import { ref, defineProps } from 'vue'
+import { ref, defineProps, defineEmits } from 'vue'
 let openIndex = ref()
 
 
-const incomingData = defineProps(['transferLnk', 'indice']);
+const incomingData = defineProps(['transferBlits', 'indice']);
+const outGoingData = defineEmits(['traces'] )
 
 
 function toggleCollapse(index) {
@@ -70,6 +71,12 @@ function toggleCollapse(index) {
 
 	openIndex.value = openIndex.value === index ? null : index;
 
+
+}
+
+function showTrace(blits){
+
+	outGoingData('traces', blits);
 
 }
 
