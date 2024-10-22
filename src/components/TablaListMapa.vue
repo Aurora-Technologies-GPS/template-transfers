@@ -33,17 +33,18 @@
 
 				<hr class="divisor">
 
-				<div><i class="bi bi-circle-fill vineta" style="color: #72c9eb;"></i>
+				<BarraPorcentaje :porcentaje=" ultimoElemento(dato.transferBlits).completed || 0" />
+				<span><i class="bi bi-circle-fill vineta" style="color: #72c9eb;"></i>
 					<span v-if="incomingData.transferBlits.transfer.startPlace" class="destinos">{{
 						incomingData.transferBlits.transfer.startPlace.label }}</span>
 					<span v-else>{{ " N/A" }}</span>
-				</div>
+				</span>
 
-				<div><i class="bi bi-circle-fill vineta"></i>
+				<span style="float: right;"><i class="bi bi-circle-fill vineta"></i>
 					<span v-if="incomingData.transferBlits.transfer.endPlace" class="destinos">{{
 						incomingData.transferBlits.transfer.endPlace.label }}</span>
 					<span v-else>{{ " N/A" }}</span>
-				</div>
+				</span>
 
 
 
@@ -58,6 +59,8 @@
 <script setup>
 
 import { ref, defineProps, defineEmits } from 'vue'
+import BarraPorcentaje from '@/components/BarraPorcentaje.vue'
+import { ultimoElemento } from '@/components/utils.js'
 let openIndex = ref()
 
 
@@ -67,10 +70,8 @@ const outGoingData = defineEmits(['traces'])
 
 function toggleCollapse(index) {
 
-	//console.log("toggleCollapse")
-
+	//console.log("toggleCollapse")	
 	openIndex.value = openIndex.value === index ? null : index;
-
 
 }
 

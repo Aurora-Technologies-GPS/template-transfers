@@ -54,6 +54,12 @@ export function traducir_estatus(estatusN) {
   }
 }
 
+export function ultimoElemento(listado){
+
+    return (listado[listado.length - 1]) || listado[0]
+
+}
+
 export function convertirStatus(estados) {
 
 
