@@ -1,6 +1,7 @@
 <template>
 	<div class="contenedorWorking">
-		<VistaGeneral @transfer_id="toMapa" :contenedoresCount="incomingData.contenedoresCount" :incomingData="incomingData.fullTransfer" />
+		<VistaGeneral @transfer_id="toMapa" :contenedoresCount="incomingData.contenedoresCount"
+			:incomingData="incomingData.fullTransfer" />
 
 	</div>
 </template>

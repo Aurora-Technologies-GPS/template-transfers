@@ -15,7 +15,8 @@
 		</div>
 
 
-		<TablaListMapa @traces="showTrace" :transferBlits="incomingData.transferBlits" class="contenedorTablaMapa mt-2" />
+		<TablaListMapa @traces="showTrace" :transferBlits="incomingData.transferBlits"
+			class="contenedorTablaMapa mt-2" />
 
 
 
@@ -40,7 +41,7 @@ let search = ref({
 	isFilter: false
 })
 
-function showTrace(blits){
+function showTrace(blits) {
 
 	outGoingData('traces', blits);
 

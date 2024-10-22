@@ -1,19 +1,19 @@
 <template>
 	<div class="tablaListMapa">
 
-		<div @click="showTrace(dato.transferBlits)" v-for=" (dato, index) in incomingData.transferBlits.transferLnkBlits" :key="index"
-			class="targeticas">
+		<div @click="showTrace(dato.transferBlits)"
+			v-for=" (dato, index) in incomingData.transferBlits.transferLnkBlits" :key="index" class="targeticas">
 
 			<div class="rowMenu">
 
 				<div>
 					<div class="fontPeq"> BL(Bill of Lading)</div>
-					<div class="titleMapa">{{ incomingData.transferBlits.transfer.bl}} </div>
+					<div class="titleMapa">{{ incomingData.transferBlits.transfer.bl }} </div>
 					<div class="fontPeq">ID Container</div>
-					<div class="titleMapa">{{dato.transferLinked.container }} </div>
+					<div class="titleMapa">{{ dato.transferLinked.container }} </div>
 
 					<div class="fontPeq">ID Precinto</div>
-					<div class="titleMapa">{{dato.transferLinked.deviceId}} </div>
+					<div class="titleMapa">{{ dato.transferLinked.deviceId }} </div>
 				</div>
 
 
@@ -47,7 +47,7 @@
 
 
 
-			</div> 
+			</div>
 
 
 		</div>
@@ -62,7 +62,7 @@ let openIndex = ref()
 
 
 const incomingData = defineProps(['transferBlits', 'indice']);
-const outGoingData = defineEmits(['traces'] )
+const outGoingData = defineEmits(['traces'])
 
 
 function toggleCollapse(index) {
@@ -74,7 +74,7 @@ function toggleCollapse(index) {
 
 }
 
-function showTrace(blits){
+function showTrace(blits) {
 
 	outGoingData('traces', blits);
 

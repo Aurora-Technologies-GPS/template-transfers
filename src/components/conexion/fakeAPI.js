@@ -48,49 +48,24 @@ export async function transfersList(hash) {
                         },
                         transferLnk: [
                             {
-                                id: 353,
-                                transferId: 47931,
-                                deviceId: 1007830,
-                                container: "TSAC20241123 - MRKU3406511",
-                                currentState: 2,
-                                timeLinked: "2024-09-21 13:37:40",
-                                lastBlitTime: "2024-09-21 12:44:39"
+                                id: 353, transferId: 47931, deviceId: 1007830, container: "TSAC20241123 - MRKU3406511",
+                                currentState: 2, timeLinked: "2024-09-21 13:37:40", lastBlitTime: "2024-09-21 12:44:39"
                             },
                             {
-                                id: 354,
-                                transferId: 47931,
-                                deviceId: 3031660,
-                                container: "TSAC20241123 - MRKU5736390",
-                                currentState: 2,
-                                timeLinked: "2024-09-21 13:37:40",
-                                lastBlitTime: "2024-09-23 18:23:45"
+                                id: 354, transferId: 47931, deviceId: 3031660, container: "TSAC20241123 - MRKU5736390",
+                                currentState: 2, timeLinked: "2024-09-21 13:37:40", lastBlitTime: "2024-09-23 18:23:45"
                             },
                             {
-                                id: 355,
-                                transferId: 47931,
-                                deviceId: 2895717,
-                                container: "TSAC20241123 - MRKU6305530",
-                                currentState: 3,
-                                timeLinked: "2024-09-21 13:37:40",
-                                lastBlitTime: "2024-09-21 13:07:44"
+                                id: 355, transferId: 47931, deviceId: 2895717, container: "TSAC20241123 - MRKU6305530",
+                                currentState: 3, timeLinked: "2024-09-21 13:37:40", lastBlitTime: "2024-09-21 13:07:44"
                             },
                             {
-                                id: 356,
-                                transferId: 47931,
-                                deviceId: 865539,
-                                container: "TSAC20241123 - MRSU3479254",
-                                currentState: 1,
-                                timeLinked: "2024-09-21 13:37:40",
-                                lastBlitTime: null
+                                id: 356, transferId: 47931, deviceId: 865539, container: "TSAC20241123 - MRSU3479254",
+                                currentState: 1, timeLinked: "2024-09-21 13:37:40", lastBlitTime: null
                             },
                             {
-                                id: 363,
-                                transferId: 47931,
-                                deviceId: 3076352,
-                                container: "TSAC20241123 - TEMU6882874",
-                                currentState: 3,
-                                timeLinked: "2024-09-21 13:37:40",
-                                lastBlitTime: "2024-09-21 13:12:31"
+                                id: 363, transferId: 47931, deviceId: 3076352, container: "TSAC20241123 - TEMU6882874",
+                                currentState: 3, timeLinked: "2024-09-21 13:37:40", lastBlitTime: "2024-09-21 13:12:31"
                             }
                         ]
                     },
@@ -122,32 +97,17 @@ export async function transfersList(hash) {
                             timeRequest: "2024-09-23 11:23:12"
                         },
                         transferLnk: [
-                            {
-                                id: 386,
-                                transferId: 47955,
-                                deviceId: 1076519,
-                                container: "BQEGMXM058375 - FSCU8216715",
-                                currentState: 3,
-                                timeLinked: "2024-09-23 11:23:12",
-                                lastBlitTime: "2024-09-23 13:34:22"
+                            { 
+                                id: 386, transferId: 47955, deviceId: 1076519, container: "BQEGMXM058375 - FSCU8216715", 
+                                currentState: 3, timeLinked: "2024-09-23 11:23:12", lastBlitTime: "2024-09-23 13:34:22"
                             },
                             {
-                                id: 387,
-                                transferId: 47955,
-                                deviceId: 1076520,
-                                container: "BQEGMXM058375 - FSCU8216654",
-                                currentState: 2,
-                                timeLinked: "2024-09-23 10:19:12",
-                                lastBlitTime: "2024-09-23 12:34:22"
+                                id: 387, transferId: 47955, deviceId: 1076520, container: "BQEGMXM058375 - FSCU8216654",
+                                currentState: 2, timeLinked: "2024-09-23 10:19:12", lastBlitTime: "2024-09-23 12:34:22"
                             },
                             {
-                                id: 388,
-                                transferId: 47955,
-                                deviceId: 1076521,
-                                container: "BQEGMXM058375 - FSCU821459",
-                                currentState: 5,
-                                timeLinked: "2024-09-23 09:20:12",
-                                lastBlitTime: "2024-09-23 11:34:22"
+                                id: 388, transferId: 47955, deviceId: 1076521, container: "BQEGMXM058375 - FSCU821459",
+                                currentState: 5, timeLinked: "2024-09-23 09:20:12", lastBlitTime: "2024-09-23 11:34:22"
                             }
                         ]
                     },
@@ -180,13 +140,8 @@ export async function transfersList(hash) {
                         },
                         transferLnk: [
                             {
-                                id: 409,
-                                transferId: 48091,
-                                deviceId: 3076397,
-                                container: "ABT56S021136  - HLBU9982876",
-                                currentState: 1,
-                                timeLinked: "2024-09-23 15:08:33",
-                                lastBlitTime: null
+                                id: 409, transferId: 48091, deviceId: 3076397, container: "ABT56S021136  - HLBU9982876",
+                                currentState: 1, timeLinked: "2024-09-23 15:08:33", lastBlitTime: null
                             }
                         ]
                     },
@@ -219,13 +174,8 @@ export async function transfersList(hash) {
                         },
                         transferLnk: [
                             {
-                                id: 695,
-                                transferId: 48542,
-                                deviceId: 3076463,
-                                container: "HLCULIV2407APFZ9 - TGHU5211111",
-                                currentState: 2,
-                                timeLinked: "2024-10-01 09:47:42",
-                                lastBlitTime: "2024-10-01 09:46:27"
+                                id: 695, transferId: 48542, deviceId: 3076463, container: "HLCULIV2407APFZ9 - TGHU5211111",
+                                currentState: 2, timeLinked: "2024-10-01 09:47:42", lastBlitTime: "2024-10-01 09:46:27"
                             }
                         ]
                     },
@@ -258,22 +208,12 @@ export async function transfersList(hash) {
                         },
                         transferLnk: [
                             {
-                                id: 1391,
-                                transferId: 49479,
-                                deviceId: 2907740,
-                                container: "BWLESP24001509 - MSNU7031174",
-                                currentState: 1,
-                                timeLinked: "2024-10-12 10:41:32",
-                                lastBlitTime: null
+                                id: 1391, transferId: 49479, deviceId: 2907740, container: "BWLESP24001509 - MSNU7031174",
+                                currentState: 1, timeLinked: "2024-10-12 10:41:32", lastBlitTime: null
                             },
                             {
-                                id: 1392,
-                                transferId: 49479,
-                                deviceId: 3076359,
-                                container: "BWLESP24001509 - UETU6093661",
-                                currentState: 2,
-                                timeLinked: "2024-10-12 10:41:32",
-                                lastBlitTime: "2024-10-12 11:06:27"
+                                id: 1392, transferId: 49479, deviceId: 3076359, container: "BWLESP24001509 - UETU6093661",
+                                currentState: 2, timeLinked: "2024-10-12 10:41:32", lastBlitTime: "2024-10-12 11:06:27"
                             }
                         ]
                     }
@@ -294,40 +234,19 @@ export async function statesCountGeneral(hash) {
 
     const output = {
         data: {
-
-
             success: true,
             states: [
-                {
-                    id: 1,
-                    name: "LINKED",
-                    count: 3
-                },
-                {
-                    id: 2,
-                    name: "IN_TRANSIT",
-                    count: 5
-                },
-                {
-                    id: 3,
-                    name: "DONE",
-                    count: 3
-                },
-                {
-                    id: 4,
-                    name: "CANCELED",
-                    count: 0
-                },
-                {
-                    id: 5,
-                    name: "EXPIRED",
-                    count: 1
-                },
-                {
-                    id: 6,
-                    name: "START_END_ERROR",
-                    count: 0
-                }
+                { id: 1, name: "LINKED", count: 3 },
+
+                { id: 2, name: "IN_TRANSIT", count: 5 },
+
+                { id: 3, name: "DONE", count: 3 },
+
+                { id: 4, name: "CANCELED", count: 0 },
+
+                { id: 5, name: "EXPIRED", count: 1 },
+
+                { id: 6, name: "START_END_ERROR", count: 0 }
             ]
         }
     }
@@ -338,86 +257,42 @@ export async function statesCountGeneral(hash) {
 
 export async function statesCount(hash, transfer_id, from, to) {
 
-
     console.log("********************* API statesCount ***************", hash, transfer_id, from, to);
-
 
     const output = {
         data: {
-
-
             success: true,
             states: [
-                {
-                    id: 1,
-                    name: "LINKED",
-                    count: 0
-                },
-                {
-                    id: 2,
-                    name: "IN_TRANSIT",
-                    count: 0
-                },
-                {
-                    id: 3,
-                    name: "DONE",
-                    count: 0
-                },
-                {
-                    id: 4,
-                    name: "CANCELED",
-                    count: 0
-                },
-                {
-                    id: 5,
-                    name: "EXPIRED",
-                    count: 0
-                },
-                {
-                    id: 6,
-                    name: "START_END_ERROR",
-                    count: 0
-                }
+                { id: 1, name: "LINKED", count: 0 },
+
+                { id: 2, name: "IN_TRANSIT", count: 0 },
+
+                { id: 3, name: "DONE", count: 0 },
+
+                { id: 4, name: "CANCELED", count: 0 },
+
+                { id: 5, name: "EXPIRED", count: 0 },
+
+                { id: 6, name: "START_END_ERROR", count: 0 }
             ]
         }
     }
 
     const output2 = {
         data: {
-
-
             success: true,
             states: [
-                {
-                    id: 1,
-                    name: "LINKED",
-                    count: 0
-                },
-                {
-                    id: 2,
-                    name: "IN_TRANSIT",
-                    count: 1
-                },
-                {
-                    id: 3,
-                    name: "DONE",
-                    count: 1
-                },
-                {
-                    id: 4,
-                    name: "CANCELED",
-                    count: 0
-                },
-                {
-                    id: 5,
-                    name: "EXPIRED",
-                    count: 1
-                },
-                {
-                    id: 6,
-                    name: "START_END_ERROR",
-                    count: 0
-                }
+                { id: 1, name: "LINKED", count: 0 },
+
+                { id: 2, name: "IN_TRANSIT", count: 1 },
+
+                { id: 3, name: "DONE", count: 1 },
+
+                { id: 4, name: "CANCELED", count: 0 },
+
+                { id: 5, name: "EXPIRED", count: 1 },
+
+                { id: 6, name: "START_END_ERROR", count: 0 }
             ]
         }
     }
@@ -425,160 +300,76 @@ export async function statesCount(hash, transfer_id, from, to) {
 
     const output4 = {
         data: {
-
-
             success: true,
             states: [
-                {
-                    id: 1,
-                    name: "LINKED",
-                    count: 1
-                },
-                {
-                    id: 2,
-                    name: "IN_TRANSIT",
-                    count: 0
-                },
-                {
-                    id: 3,
-                    name: "DONE",
-                    count: 0
-                },
-                {
-                    id: 4,
-                    name: "CANCELED",
-                    count: 0
-                },
-                {
-                    id: 5,
-                    name: "EXPIRED",
-                    count: 0
-                },
-                {
-                    id: 6,
-                    name: "START_END_ERROR",
-                    count: 0
-                }
+                {  id: 1, name: "LINKED", count: 1  },
+
+                {  id: 2, name: "IN_TRANSIT", count: 0 },
+
+                {  id: 3, name: "DONE", count: 0 },
+
+                {  id: 4, name: "CANCELED", count: 0 },
+
+                {  id: 5, name: "EXPIRED", count: 0},
+
+                {  id: 6, name: "START_END_ERROR", count: 0 }
             ]
         }
     }
 
     const output5 = {
         data: {
-
-
             success: true,
             states: [
-                {
-                    id: 1,
-                    name: "LINKED",
-                    count: 0
-                },
-                {
-                    id: 2,
-                    name: "IN_TRANSIT",
-                    count: 1
-                },
-                {
-                    id: 3,
-                    name: "DONE",
-                    count: 0
-                },
-                {
-                    id: 4,
-                    name: "CANCELED",
-                    count: 0
-                },
-                {
-                    id: 5,
-                    name: "EXPIRED",
-                    count: 0
-                },
-                {
-                    id: 6,
-                    name: "START_END_ERROR",
-                    count: 0
-                }
+                { id: 1, name: "LINKED", count: 0 },
+
+                { id: 2, name: "IN_TRANSIT",count: 1 },
+
+                { id: 3, name: "DONE", count: 0 },
+
+                { id: 4, name: "CANCELED", count: 0 },
+
+                { id: 5, name: "EXPIRED", count: 0 },
+
+                { id: 6, name: "START_END_ERROR", count: 0 }
             ]
         }
     }
 
     const output6 = {
         data: {
-
-
             success: true,
             states: [
-                {
-                    id: 1,
-                    name: "LINKED",
-                    count: 1
-                },
-                {
-                    id: 2,
-                    name: "IN_TRANSIT",
-                    count: 1
-                },
-                {
-                    id: 3,
-                    name: "DONE",
-                    count: 0
-                },
-                {
-                    id: 4,
-                    name: "CANCELED",
-                    count: 0
-                },
-                {
-                    id: 5,
-                    name: "EXPIRED",
-                    count: 0
-                },
-                {
-                    id: 6,
-                    name: "START_END_ERROR",
-                    count: 0
-                }
+                { id: 1, name: "LINKED", count: 1 },
+
+                { id: 2, name: "IN_TRANSIT",count: 1 },
+
+                { id: 3, name: "DONE", count: 0 },
+
+                { id: 4, name: "CANCELED", count: 0 },
+
+                { id: 5, name: "EXPIRED", count: 0 },
+
+                { id: 6, name: "START_END_ERROR", count: 0 }
             ]
         }
     }
 
     const output7 = {
         data: {
-
-
             success: true,
             states: [
-                {
-                    id: 1,
-                    name: "LINKED",
-                    count: 1
-                },
-                {
-                    id: 2,
-                    name: "IN_TRANSIT",
-                    count: 2
-                },
-                {
-                    id: 3,
-                    name: "DONE",
-                    count: 2
-                },
-                {
-                    id: 4,
-                    name: "CANCELED",
-                    count: 0
-                },
-                {
-                    id: 5,
-                    name: "EXPIRED",
-                    count: 0
-                },
-                {
-                    id: 6,
-                    name: "START_END_ERROR",
-                    count: 0
-                }
+                { id: 1, name: "LINKED", count: 1 },
+
+                { id: 2, name: "IN_TRANSIT", count: 2 },
+
+                { id: 3, name: "DONE", count: 2 },
+
+                { id: 4, name: "CANCELED", count: 0 },
+
+                { id: 5, name: "EXPIRED", count: 0 },
+
+                { id: 6, name: "START_END_ERROR", count: 0 }
             ]
         }
     }
@@ -619,7 +410,7 @@ export async function transferBlitslist(hash, transfer_id) {
 
     console.log("********************* API transferBlitslist ***************", hash, transfer_id);
 
-const output={
+const output1={
     data:{
         success:true,
         clientFullTransferBlits:{
@@ -634,20 +425,20 @@ const output={
             },
             fullTransferBlits:{
                 transfer:{
-                    id:36365,
+                    id:47955,
                     clientId:6,
-                    bl:"PYRR2408280",
+                    bl:"BQEGMXM058375",
                     startPlace:{
                         id:2388925,
-                        label:"Puerto de Santo Domingo",
+                        label:"Puerto Haina",
                         radius:101,
                         latitude:18.4691788,
                         longitude:-69.9566977,
-                        address:"Dirección General de Aduanas Puerto de Sans Soucí, Paseo Padre Billini, Santo Domingo de Guzmán, Distrito Nacional, República Dominicana, 10210"
+                        address:"Dirección General de Aduanas Puerto de Sans Soucí, República Dominicana, 10210"
                     },
                     endPlace:{
                         id:2388926,
-                        label:"Piisa",
+                        label:"Maritima Dominicana Caucedo",
                         radius:670,
                         latitude:18.50135,
                         longitude:-69.7791422,
@@ -663,98 +454,139 @@ const output={
                     {
                         transferLinked:{
                             id:581,
-                            transferId:36365,
+                            transferId:47955,
                             deviceId:1073543,
-                            container:"CXDU2193240",
-                            currentState:2,
+                            container:"FSCU821459",
+                            currentState:5,
                             timeLinked:"2024-09-27 16:23:41",
                             lastBlitTime:"2024-09-30 17:20:14"
                         },
                         transferBlits:[
                             //{   id:465036,trLnkId:581, transferId:36365, deviceId:1073543, blitTime:"2024-09-27 16:35:33", lat:18.4581316,lng:-69.71066, heading:0, speed:0,distance:30420, distanceRemain:45976, travelTime:4141, timeRemain:2567, statusId:2, completed:0 },
-                            {deviceId: 875156, lat: 18.4669766, lng:-69.9561822, heading:347, completed:  8 },
-                            {deviceId: 875156, lat: 18.4676822, lng:-69.9563688, heading:348, completed: 20 },
-                            {deviceId: 875156, lat: 18.46829,   lng:-69.9564977, heading:346, completed: 30 },
-                            {deviceId: 875156, lat: 18.46858,   lng:-69.9565733, heading:344, completed: 35 },
-                            {deviceId: 875156, lat: 18.4691788, lng:-69.9566977, heading:350, completed: 45 },
-                            {deviceId: 875156, lat: 18.4695111, lng:-69.9567866, heading:348, completed: 50 },
-                            {deviceId: 875156, lat: 18.4698166, lng:-69.9568577, heading:346, completed: 55 },
-                            {deviceId: 875156, lat: 18.4702011, lng:-69.9569466, heading:347, completed: 61 },
-                            {deviceId: 875156, lat: 18.4707566, lng:-69.9570711, heading:349, completed: 71 },
-                            {deviceId: 875156, lat: 18.4714377, lng:-69.9572222, heading:347, completed: 82 },
-                            {deviceId: 875156, lat: 18.4724488, lng:-69.9574666, heading:351, completed:100 }
+                            { statusId:2, deviceId: 875156, lat: 18.4669766, lng:-69.9561822, heading:347, completed:  8 },
+                            { statusId:2, deviceId: 875156, lat: 18.4676822, lng:-69.9563688, heading:348, completed: 20 },
+                            { statusId:2, deviceId: 875156, lat: 18.46829,   lng:-69.9564977, heading:346, completed: 30 },
+                            { statusId:2, deviceId: 875156, lat: 18.46858,   lng:-69.9565733, heading:344, completed: 35 },
+                            { statusId:2, deviceId: 875156, lat: 18.4691788, lng:-69.9566977, heading:350, completed: 45 },
+                            { statusId:2, deviceId: 875156, lat: 18.4695111, lng:-69.9567866, heading:348, completed: 50 },
+                            { statusId:2, deviceId: 875156, lat: 18.4698166, lng:-69.9568577, heading:346, completed: 55 },
+                            { statusId:2, deviceId: 875156, lat: 18.4702011, lng:-69.9569466, heading:347, completed: 61 },
+                            { statusId:2, deviceId: 875156, lat: 18.4707566, lng:-69.9570711, heading:349, completed: 71 },
+                            { statusId:2, deviceId: 875156, lat: 18.4714377, lng:-69.9572222, heading:347, completed: 82 },
+                            { statusId:2, deviceId: 875156, lat: 18.4724488, lng:-69.9574666, heading:351, completed:100 }
+                        ]
+                    },
+
+                                        {
+                        transferLinked:{
+                            id:581,
+                            transferId:47955,
+                            deviceId:1073543,
+                            container:"FSCU821459",
+                            currentState:5,
+                            timeLinked:"2024-09-27 16:23:41",
+                            lastBlitTime:"2024-09-30 17:20:14"
+                        },
+                        transferBlits:[
+                            //{   id:465036,trLnkId:581, transferId:36365, deviceId:1073543, blitTime:"2024-09-27 16:35:33", lat:18.4581316,lng:-69.71066, heading:0, speed:0,distance:30420, distanceRemain:45976, travelTime:4141, timeRemain:2567, statusId:2, completed:0 },
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat:   18.47439, lng: -69.9172266, heading:0, completed:  0},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4755344, lng:   -69.91564, heading:0, completed:  0},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4762777, lng: -69.9135955, heading:0, completed:  0},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4762533, lng: -69.9112088, heading:0, completed:  0},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4759344, lng: -69.9088577, heading:0, completed:  0},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4765033, lng: -69.9048977, heading:0, completed: 19},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4860455, lng: -69.8778222, heading:0, completed: 37},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4855733, lng: -69.8739111, heading:0, completed: 39},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4854333, lng:   -69.87208, heading:0, completed: 40},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4845711, lng:    -69.8612, heading:0, completed: 46},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4844433, lng: -69.8594266, heading:0, completed: 47},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4843811, lng: -69.8575422, heading:0, completed: 48},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4845088, lng: -69.8556133, heading:0, completed: 50},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4848266, lng: -69.8535822, heading:0, completed: 51},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat:   18.48481, lng:   -69.85144, heading:0, completed: 52},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4848955, lng: -69.8451688, heading:0, completed: 53},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4841611, lng: -69.8414444, heading:0, completed: 55},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4840466, lng: -69.8393333, heading:0, completed: 53},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4832211, lng: -69.8281422, heading:0, completed: 61},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4826788, lng: -69.8099511, heading:0, completed: 68},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4827922, lng: -69.8042533, heading:0, completed: 71},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat:   18.48307, lng: -69.7904488, heading:0, completed: 79},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4827766, lng: -69.7783422, heading:0, completed: 86},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat:   18.48309, lng: -69.7777022, heading:0, completed: 78},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4841077, lng: -69.7779377, heading:0, completed: 87},
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.5023444, lng:   -69.77556, heading:0, completed:100}
                         ]
                     },
                     {
                         transferLinked:{
                             id:581,
-                            transferId:36366,
+                            transferId:47955,
                             deviceId:1073543,
-                            container:"CXDU2193350",
-                            currentState:2,
+                            container:"FSCU8216715",
+                            currentState:3,
                             timeLinked:"2024-09-27 16:23:41",
                             lastBlitTime:"2024-09-30 17:20:14"
                         },
                         transferBlits:[
                             //{   id:465036,trLnkId:581, transferId:36365, deviceId:1073543, blitTime:"2024-09-27 16:35:33", lat:18.4581316,lng:-69.71066, heading:0, speed:0,distance:30420, distanceRemain:45976, travelTime:4141, timeRemain:2567, statusId:2, completed:0 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4691788, lng: -69.9566977,  heading: 350, completed:  2 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4695111, lng: -69.9567866,  heading: 348, completed:  2 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4702011, lng: -69.9569466,  heading: 347, completed:  2 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4707566, lng: -69.9570711,  heading: 349, completed:  2 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4714377, lng: -69.9572222,  heading: 347, completed:  3 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4724488, lng: -69.9574666,  heading: 351, completed:  2 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4721655, lng: -69.9574266,  heading: 164, completed:  3 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4716211, lng: -69.9573066,  heading: 165, completed:  3 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4709722, lng: -69.9571466,  heading: 168, completed:  2 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.47035,   lng: -69.9570177,  heading: 167, completed:  2 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4697155, lng: -69.95688,    heading: 166, completed:  2 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4692822, lng: -69.9567644,  heading: 168, completed:  2 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4660411, lng: -69.9539777,  heading: 167, completed: 11 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.46439,   lng: -69.9539955,  heading: 175, completed: 12 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4636588, lng: -69.9537066,  heading: 159, completed: 12 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4631577, lng: -69.9535155,  heading: 160, completed: 12 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4623677, lng: -69.9532177,  heading: 160, completed: 13 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4615555, lng: -69.95292,    heading: 160, completed: 13 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4612444, lng: -69.9524666,  heading:  68, completed: 14 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4615455, lng: -69.9517155,  heading:  69, completed: 14 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4617877, lng: -69.9510666,  heading:  71, completed: 14 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4620555, lng: -69.9502711,  heading:  70, completed: 15 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4622844, lng: -69.9495333,  heading:  70, completed: 15 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4619422, lng: -69.9493333,  heading: 160, completed: 15 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4612711, lng: -69.94908,    heading: 159, completed: 15 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4607433, lng: -69.9488755,  heading: 159, completed: 16 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4603555, lng: -69.9487288,  heading: 158, completed: 16 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4598366, lng: -69.9485155,  heading: 153, completed: 16 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4597566, lng: -69.9484711,  heading: 150, completed: 16 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.45945,   lng: -69.9483555,  heading: 160, completed: 16 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4588866, lng: -69.9481422,  heading: 161, completed: 17 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.45805,   lng: -69.9478311,  heading: 162, completed: 17 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4576888, lng: -69.9476177,  heading:  87, completed: 17 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4579333, lng: -69.9468711,  heading:  71, completed: 18 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4582822, lng: -69.9457866,  heading:  72, completed: 18 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4587044, lng: -69.9444711,  heading:  71, completed: 19 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4591422, lng: -69.9430711,  heading:  72, completed: 19 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4613955, lng: -69.9384444,  heading:  61, completed: 22 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4685666, lng: -69.9242844,  heading:  61, completed: 29 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4724677, lng: -69.9193511,  heading:  45, completed: 32 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4762633, lng: -69.9117822,  heading:  96, completed: 35 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4768911, lng: -69.9042666,  heading:  54, completed: 39 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4820233, lng: -69.8961999,  heading:  38, completed: 43 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4859922, lng: -69.8883111,  heading:  53, completed: 47 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4859788, lng: -69.8784177,  heading:  95, completed: 52 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4845922, lng: -69.8617777,  heading:  94, completed: 59 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4848744, lng: -69.8516844,  heading: 108, completed: 63 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4854777, lng:  -69.84292,   heading:  75, completed: 67 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.48679,   lng: -69.8349688,  heading:  74, completed: 71 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4881055, lng: -69.8299466,  heading:  72, completed: 73 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4894066, lng: -69.8249511,  heading:  74, completed: 75 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4918955, lng: -69.81536,    heading:  73, completed: 80 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4934311, lng: -69.8095866,  heading:  73, completed: 83 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.49548,   lng: -69.8016666,  heading:  75, completed: 86 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4969366, lng: -69.7958755,  heading:  74, completed: 89 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4993111, lng: -69.7868177,  heading:  71, completed: 93 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.50135,   lng: -69.7791422,  heading:  76, completed: 96 },
-                            { id:614790, trLnkId:581,  deviceId:  875156, lat: 18.5019877, lng: -69.7767644,  heading:  75, completed:100 }
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4691788, lng: -69.9566977,  heading: 350, completed:  2 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4695111, lng: -69.9567866,  heading: 348, completed:  2 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4702011, lng: -69.9569466,  heading: 347, completed:  2 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4707566, lng: -69.9570711,  heading: 349, completed:  2 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4714377, lng: -69.9572222,  heading: 347, completed:  3 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4724488, lng: -69.9574666,  heading: 351, completed:  2 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4721655, lng: -69.9574266,  heading: 164, completed:  3 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4716211, lng: -69.9573066,  heading: 165, completed:  3 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4709722, lng: -69.9571466,  heading: 168, completed:  2 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.47035,   lng: -69.9570177,  heading: 167, completed:  2 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4697155, lng: -69.95688,    heading: 166, completed:  2 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4692822, lng: -69.9567644,  heading: 168, completed:  2 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4660411, lng: -69.9539777,  heading: 167, completed: 11 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.46439,   lng: -69.9539955,  heading: 175, completed: 12 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4636588, lng: -69.9537066,  heading: 159, completed: 12 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4631577, lng: -69.9535155,  heading: 160, completed: 12 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4623677, lng: -69.9532177,  heading: 160, completed: 13 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4615555, lng: -69.95292,    heading: 160, completed: 13 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4612444, lng: -69.9524666,  heading:  68, completed: 14 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4615455, lng: -69.9517155,  heading:  69, completed: 14 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4617877, lng: -69.9510666,  heading:  71, completed: 14 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4620555, lng: -69.9502711,  heading:  70, completed: 15 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4622844, lng: -69.9495333,  heading:  70, completed: 15 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4619422, lng: -69.9493333,  heading: 160, completed: 15 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4612711, lng: -69.94908,    heading: 159, completed: 15 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4607433, lng: -69.9488755,  heading: 159, completed: 16 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4603555, lng: -69.9487288,  heading: 158, completed: 16 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4598366, lng: -69.9485155,  heading: 153, completed: 16 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4597566, lng: -69.9484711,  heading: 150, completed: 16 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.45945,   lng: -69.9483555,  heading: 160, completed: 16 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4588866, lng: -69.9481422,  heading: 161, completed: 17 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.45805,   lng: -69.9478311,  heading: 162, completed: 17 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4576888, lng: -69.9476177,  heading:  87, completed: 17 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4579333, lng: -69.9468711,  heading:  71, completed: 18 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4582822, lng: -69.9457866,  heading:  72, completed: 18 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4587044, lng: -69.9444711,  heading:  71, completed: 19 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4591422, lng: -69.9430711,  heading:  72, completed: 19 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4613955, lng: -69.9384444,  heading:  61, completed: 22 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4685666, lng: -69.9242844,  heading:  61, completed: 29 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4724677, lng: -69.9193511,  heading:  45, completed: 32 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4762633, lng: -69.9117822,  heading:  96, completed: 35 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4768911, lng: -69.9042666,  heading:  54, completed: 39 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4820233, lng: -69.8961999,  heading:  38, completed: 43 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4859922, lng: -69.8883111,  heading:  53, completed: 47 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4859788, lng: -69.8784177,  heading:  95, completed: 52 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4845922, lng: -69.8617777,  heading:  94, completed: 59 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4848744, lng: -69.8516844,  heading: 108, completed: 63 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4854777, lng:  -69.84292,   heading:  75, completed: 67 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.48679,   lng: -69.8349688,  heading:  74, completed: 71 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4881055, lng: -69.8299466,  heading:  72, completed: 73 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4894066, lng: -69.8249511,  heading:  74, completed: 75 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4918955, lng: -69.81536,    heading:  73, completed: 80 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4934311, lng: -69.8095866,  heading:  73, completed: 83 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.49548,   lng: -69.8016666,  heading:  75, completed: 86 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4969366, lng: -69.7958755,  heading:  74, completed: 89 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.4993111, lng: -69.7868177,  heading:  71, completed: 93 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.50135,   lng: -69.7791422,  heading:  76, completed: 96 },
+                            { statusId:2, id:614790, trLnkId:581,  deviceId:  875156, lat: 18.5019877, lng: -69.7767644,  heading:  75, completed:100 }
 
                         ]
                     },
@@ -766,8 +598,255 @@ const output={
  
 
 }
+const output2={
+    data:{
+        success:true,
+        clientFullTransferBlits:{
+            client:{
+                id:6,
+                name:"CUTLER HAMMER INDUSTRIES LTD",
+                contact:"CUTLER HAMMER INDUSTRIES LTD",
+                rncIdcard:"False",
+                email:"yanguillenlyl@gmail.com",
+                phone:"1",
+                hash:"34fbfb4eb05085ed8c27b3be3dd949dc"
+            },
+            fullTransferBlits:{
+                transfer:{
+                    id:48091,
+                    clientId:6,
+                    bl:"ABT56S021136",
+                    startPlace:{
+                        id:2388925,
+                        label:"Puerto Caucedo",
+                        radius:101,
+                        latitude:18.4669766,
+                        longitude:-69.9561822,
+                        address:"Dirección General de Aduanas Puerto de Sans Soucí, República Dominicana, 10210"
+                    },
+                    endPlace:{
+                        id:2388926,
+                        label:"Maritima Dominicana Haina",
+                        radius:670,
+                        latitude:18.50135,
+                        longitude:-69.7791422,
+                        address:"Calle Lateral 5, Parque Industrial Itabo, San Gregorio de Nigua, San Cristóbal, República Dominicana, 00809"
+                    },
+                    address:"SANTO DOMINGO, False",
+                    city:"San Cristóbal",
+                    note:"",
+                    timeTravelEst:"2024-03-23 00:00:00",
+                    timeRequest:"2024-09-27 16:23:41"
+                },
+                transferLnkBlits:[
+                    {
+                        transferLinked:{
+                            id:581,
+                            transferId:48091,
+                            deviceId:1073543,
+                            container:"HLBU9982876",
+                            currentState:1,
+                            timeLinked:"2024-09-27 16:23:41",
+                            lastBlitTime:"2024-09-30 17:20:14"
+                        },
+                        transferBlits:[
+                            //{   id:465036,trLnkId:581, transferId:36365, deviceId:1073543, blitTime:"2024-09-27 16:35:33", lat:18.4581316,lng:-69.71066, heading:0, speed:0,distance:30420, distanceRemain:45976, travelTime:4141, timeRemain:2567, statusId:2, completed:0 },
+                            { statusId:2, deviceId: 875156, lat: 18.4669766, lng:-69.9561822, heading:347, completed:  8 },
+                            { statusId:2, deviceId: 875156, lat: 18.4676822, lng:-69.9563688, heading:348, completed: 20 },
+                            { statusId:2, deviceId: 875156, lat: 18.46829,   lng:-69.9564977, heading:346, completed: 30 },
+                            { statusId:2, deviceId: 875156, lat: 18.46858,   lng:-69.9565733, heading:344, completed: 35 },
+                            { statusId:2, deviceId: 875156, lat: 18.4691788, lng:-69.9566977, heading:350, completed: 45 },
+                            { statusId:2, deviceId: 875156, lat: 18.4695111, lng:-69.9567866, heading:348, completed: 50 },
+                            { statusId:2, deviceId: 875156, lat: 18.4698166, lng:-69.9568577, heading:346, completed: 55 },
+                            { statusId:2, deviceId: 875156, lat: 18.4702011, lng:-69.9569466, heading:347, completed: 61 },
+                            { statusId:2, deviceId: 875156, lat: 18.4707566, lng:-69.9570711, heading:349, completed: 71 },
+                            { statusId:2, deviceId: 875156, lat: 18.4714377, lng:-69.9572222, heading:347, completed: 82 },
+                            { statusId:2, deviceId: 875156, lat: 18.4724488, lng:-69.9574666, heading:351, completed:100 }
+                        ]
+                    },
 
-return output
+                                        
+
+                ]
+            }
+        }
+    }
+ 
+
+}
+
+const output3={
+    data:{
+        success:true,
+        clientFullTransferBlits:{
+            client:{
+                id:6,
+                name:"CUTLER HAMMER INDUSTRIES LTD",
+                contact:"CUTLER HAMMER INDUSTRIES LTD",
+                rncIdcard:"False",
+                email:"yanguillenlyl@gmail.com",
+                phone:"1",
+                hash:"34fbfb4eb05085ed8c27b3be3dd949dc"
+            },
+            fullTransferBlits:{
+                transfer:{
+                    id:49479,
+                    clientId:6,
+                    bl:"BWLESP24001509",
+                    startPlace:{
+                        id:2388925,
+                        label:"Puerto Caucedo",
+                        radius:101,
+                        latitude:18.4669766,
+                        longitude:-69.9561822,
+                        address:"Dirección General de Aduanas Puerto de Sans Soucí, República Dominicana, 10210"
+                    },
+                    endPlace:{
+                        id:2388926,
+                        label:"Maritima Dominicana Caucedo",
+                        radius:670,
+                        latitude:18.50135,
+                        longitude:-69.7791422,
+                        address:"Calle Lateral 5, Parque Industrial Itabo, San Gregorio de Nigua, San Cristóbal, República Dominicana, 00809"
+                    },
+                    address:"SANTO DOMINGO, False",
+                    city:"San Cristóbal",
+                    note:"",
+                    timeTravelEst:"2024-03-23 00:00:00",
+                    timeRequest:"2024-09-27 16:23:41"
+                },
+                transferLnkBlits:[
+                    {
+                        transferLinked:{
+                            id:581,
+                            transferId:49479,
+                            deviceId:1073543,
+                            container:"MSNU7031174",
+                            currentState:1,
+                            timeLinked:"2024-09-27 16:23:41",
+                            lastBlitTime:"2024-09-30 17:20:14"
+                        },
+                        transferBlits:[
+                            //{   id:465036,trLnkId:581, transferId:36365, deviceId:1073543, blitTime:"2024-09-27 16:35:33", lat:18.4581316,lng:-69.71066, heading:0, speed:0,distance:30420, distanceRemain:45976, travelTime:4141, timeRemain:2567, statusId:2, completed:0 },
+                            { statusId:2, deviceId: 875156, lat: 18.4662666, lng: -69.9561022, heading: 125, completed:   0}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4662666, lng: -69.9561022, heading: 125, completed:   0}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4669766, lng: -69.9561822, heading: 347, completed:   8}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4676822, lng: -69.9563688, heading: 348, completed:  20}, 
+                            { statusId:2, deviceId: 875156, lat: 18.46829,   lng: -69.9564977, heading: 346, completed:  30}, 
+                            { statusId:2, deviceId: 875156, lat: 18.46858,   lng: -69.9565733, heading: 344, completed:  35}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4691788, lng: -69.9566977, heading: 350, completed:  45}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4695111, lng: -69.9567866, heading: 348, completed:  50}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4698166, lng: -69.9568577, heading: 346, completed:  55}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4702011, lng: -69.9569466, heading: 347, completed:  61}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4707566, lng: -69.9570711, heading: 349, completed:  71}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4714377, lng: -69.9572222, heading: 347, completed:  82}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4724488, lng: -69.9574666, heading: 351, completed: 100} 
+
+                        ]
+                    },
+                    {
+                        transferLinked:{
+                            id:581,
+                            transferId:49479,
+                            deviceId:1073543,
+                            container:"UETU6093661",
+                            currentState:2,
+                            timeLinked:"2024-09-27 16:23:41",
+                            lastBlitTime:"2024-09-30 17:20:14"
+                        },
+                        transferBlits:[
+                            //{   id:465036,trLnkId:581, transferId:36365, deviceId:1073543, blitTime:"2024-09-27 16:35:33", lat:18.4581316,lng:-69.71066, heading:0, speed:0,distance:30420, distanceRemain:45976, travelTime:4141, timeRemain:2567, statusId:2, completed:0 },
+                            { statusId:2, deviceId:875156, lat: 18.4612444, lng: -69.9524666, heading:  68, completed: 14},
+                            { statusId:2, deviceId:875156, lat: 18.4615455, lng: -69.9517155, heading:  69, completed: 14},
+                            { statusId:2, deviceId:875156, lat: 18.4617877, lng: -69.9510666, heading:  71, completed: 14},
+                            { statusId:2, deviceId:875156, lat: 18.4620555, lng: -69.9502711, heading:  70, completed: 15},
+                            { statusId:2, deviceId:875156, lat: 18.4622844, lng: -69.9495333, heading:  70, completed: 15},
+                            { statusId:2, deviceId:875156, lat: 18.4619422, lng: -69.9493333, heading: 160, completed: 15},
+                            { statusId:2, deviceId:875156, lat: 18.4612711, lng:   -69.94908, heading: 159, completed: 15},
+                            { statusId:2, deviceId:875156, lat: 18.4607433, lng: -69.9488755, heading: 159, completed: 16},
+                            { statusId:2, deviceId:875156, lat: 18.4603555, lng: -69.9487288, heading: 158, completed: 16},
+                            { statusId:2, deviceId:875156, lat: 18.4598366, lng: -69.9485155, heading: 153, completed: 16},
+                            { statusId:2, deviceId:875156, lat: 18.4597566, lng: -69.9484711, heading: 150, completed: 16},
+                            { statusId:2, deviceId:875156, lat:   18.45945, lng: -69.9483555, heading: 160, completed: 16},
+                            { statusId:2, deviceId:875156, lat: 18.4588866, lng: -69.9481422, heading: 161, completed: 17},
+                            { statusId:2, deviceId:875156, lat:   18.45805, lng: -69.9478311, heading: 162, completed: 17},
+                            { statusId:2, deviceId:875156, lat: 18.4576888, lng: -69.9476177, heading:  87, completed: 17},
+                            { statusId:2, deviceId:875156, lat: 18.4579333, lng: -69.9468711, heading:  71, completed: 18},
+                            { statusId:2, deviceId:875156, lat: 18.4582822, lng: -69.9457866, heading:  72, completed: 18},
+                            { statusId:2, deviceId:875156, lat: 18.4587044, lng: -69.9444711, heading:  71, completed: 19},
+                            { statusId:2, deviceId:875156, lat: 18.4591422, lng: -69.9430711, heading:  72, completed: 19},
+                            { statusId:2, deviceId:875156, lat: 18.4613955, lng: -69.9384444, heading:  61, completed: 22},
+                            { statusId:2, deviceId:875156, lat: 18.4685666, lng: -69.9242844, heading:  61, completed: 29},
+                            { statusId:2, deviceId:875156, lat: 18.4724677, lng: -69.9193511, heading:  45, completed: 32},
+                            { statusId:2, deviceId:875156, lat: 18.4762633, lng: -69.9117822, heading:  96, completed: 35},
+                            { statusId:2, deviceId:875156, lat: 18.4768911, lng: -69.9042666, heading:  54, completed: 39},
+                            { statusId:2, deviceId:875156, lat: 18.4820233, lng: -69.8961999, heading:  38, completed: 43},
+                            { statusId:2, deviceId:875156, lat: 18.4859922, lng: -69.8883111, heading:  53, completed: 47},
+                            { statusId:2, deviceId:875156, lat: 18.4859788, lng: -69.8784177, heading:  95, completed: 52},
+                            { statusId:2, deviceId:875156, lat: 18.4845922, lng: -69.8617777, heading:  94, completed: 59},
+                            { statusId:2, deviceId:875156, lat: 18.4848744, lng: -69.8516844, heading: 108, completed: 63},
+                            { statusId:2, deviceId:875156, lat: 18.4854777, lng:   -69.84292, heading:  75, completed: 67},
+                            { statusId:2, deviceId:875156, lat:   18.48679, lng: -69.8349688, heading:  74, completed: 71},
+                            { statusId:2, deviceId:875156, lat: 18.4881055, lng: -69.8299466, heading:  72, completed: 73},
+                            { statusId:2, deviceId:875156, lat: 18.4894066, lng: -69.8249511, heading:  74, completed: 75},
+                            { statusId:2, deviceId:875156, lat: 18.4918955, lng:   -69.81536, heading:  73, completed: 80},
+                            { statusId:2, deviceId:875156, lat: 18.4934311, lng: -69.8095866, heading:  73, completed: 83},
+                            { statusId:2, deviceId:875156, lat:   18.49548, lng: -69.8016666, heading:  75, completed: 86},
+                            { statusId:2, deviceId:875156, lat: 18.4969366, lng: -69.7958755, heading:  74, completed: 89},
+                            { statusId:2, deviceId:875156, lat: 18.4993111, lng: -69.7868177, heading:  71, completed: 93},
+                            { statusId:2, deviceId:875156, lat:   18.50135, lng: -69.7791422, heading:  76, completed: 96},
+                            { statusId:2, deviceId:875156, lat: 18.5019877, lng: -69.7767644, heading:  75, completed: 100}
+                        ]
+                    },
+
+                                        
+
+                ]
+            }
+        }
+    }
+ 
+
+}
+
+
+    let salida = { data: { success: false } }
+
+    switch (transfer_id) {
+
+        case 47955:
+            salida = output1;
+            break;
+
+        case 47931:
+
+            var temp=output1
+
+            output3.data.clientFullTransferBlits.fullTransferBlits.transferLnkBlits.forEach(elem=>{
+                 temp.data.clientFullTransferBlits.fullTransferBlits.transferLnkBlits.push(elem)
+            })        
+
+            salida = temp;
+
+            break;
+
+        case 48091:
+            salida = output2;
+            break;
+
+        case 48542:
+            salida = output2;
+            break;
+        case 49479:
+            salida = output3; //aqui 2
+            break;
+
+        default:
+            salida = output2;
+            break;
+    }
+
+    return salida
 
 }
 /*

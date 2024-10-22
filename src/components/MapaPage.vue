@@ -22,10 +22,13 @@ import { Loader } from '@googlemaps/js-api-loader'
 const map = ref();
 let center = ref();
 
-let trace_ADN=ref([])
+const incomingData = defineProps(['inputData']);
+
+let trace_ADN = ref([])
 //let motorIcon = ref();
 //let testMarker=ref();
 let update_motorIcon = ref(null);
+let updateTrace = ref(null);
 /*let clearMap = ref(null);*/
 let trace = ref(null)
 let locations = ref(null)
@@ -34,15 +37,20 @@ let crearMarker = ref(null)
 
 let truck_Marker = ref([])
 
+
 crearMarker.value = (datos) => {
 	console.log(datos)
 }
 
 function clearMap() {
 	trace_ADN.value.forEach(marker => {
-		marker.setMap(null); 
+		marker.setMap(null);
 	});
 
+}
+
+function setCenter(centro) {
+	map.value.setCenter(centro)
 }
 
 
@@ -50,8 +58,12 @@ update_motorIcon.value = (datosActuales) => {
 	console.log(datosActuales)
 }
 
-clearMap.value=()=> {
-console.log(" ")
+updateTrace.value = (datosActuales) => {
+	console.log(datosActuales)
+}
+
+clearMap.value = () => {
+	console.log(" ")
 }
 
 trace.value = (Coordinates) => {
@@ -67,7 +79,7 @@ const loader = new Loader({
 	version: 'weekly'
 })
 
-const incomingData = defineProps(['inputData']);
+
 
 
 
@@ -177,58 +189,6 @@ onMounted(async () => {
 
 		})
 
-		/*		testMarker.value= new google.maps.Marker({
-					position: new google.maps.LatLng(incomingData.inputData.lat, incomingData.inputData.lng),
-					map: map.value,
-					opacity: 1,
-				});
-		*/
-
-
-
-
-		update_motorIcon.value = (datosActuales) => {
-			console.log(datosActuales)
-
-			truck_Marker.value.forEach((element) => {
-				element.setPosition({ lat: datosActuales.lat, lng: datosActuales.lng })
-
-
-				const icon_anterior = element.getIcon();
-
-				icon_anterior.rotation = datosActuales.heading;
-				element.setIcon(icon_anterior);
-			})
-
-		}
-
-		locations.value = (startPlace, endPlace) => {
-
-
-			let startPlacePath = new google.maps.Marker({
-				position: new google.maps.LatLng(startPlace.latitude, startPlace.longitude),
-				map: map.value,
-				opacity: 1,
-				//animation: google.maps.Animation.DROP,
-				//label:{ text: '1', fontSize: '12px', color: 'white', },
-				icon: { url: require('../assets/traceStart.png'), scaledSize: new google.maps.Size(16, 16) },
-				title: startPlace.name, //sombra 
-			});
-
-			let endPlacePath = new google.maps.Marker({
-				position: new google.maps.LatLng(endPlace.lat, endPlace.lng),
-				map: map.value,
-				opacity: 1,
-				//animation: google.maps.Animation.DROP,
-				//label:{ text: '1', fontSize: '12px', color: 'white', },
-				icon: { url: require('../assets/traceEnd.png'), scaledSize: new google.maps.Size(30, 30) },
-				title: endPlace.name, //sombra 
-			});
-			// Add the polyline to the map
-			startPlacePath.setMap(map.value);
-			endPlacePath.setMap(map.value)
-
-		}
 
 		trace.value = (PlanCoordinates) => {
 
@@ -250,19 +210,93 @@ onMounted(async () => {
 
 		}
 
+		trace.value([{ lat: 18.4691788, lng: -69.9566977 }, { lat: 18.4691788, lng: -69.9566977 }])
+
+		/*		testMarker.value= new google.maps.Marker({
+					position: new google.maps.LatLng(incomingData.inputData.lat, incomingData.inputData.lng),
+					map: map.value,
+					opacity: 1,
+				});
+		*/
+
+		update_motorIcon.value = (datosActuales) => {
+
+			truck_Marker.value[0].setPosition({ lat: datosActuales.lat, lng: datosActuales.lng })
+			const icon_anterior = truck_Marker.value[0].getIcon();
+
+			icon_anterior.rotation = datosActuales.heading;
+			truck_Marker.value[0].setIcon(icon_anterior);
+			truck_Marker.value[0].setTitle(datosActuales.deviceId.toString() || "N/A")
+
+
+			/*	truck_Marker.value.forEach((element) => {
+				element.setPosition({ lat: datosActuales.lat, lng: datosActuales.lng })
+				const icon_anterior = element.getIcon();
+				icon_anterior.rotation = datosActuales.heading;
+				element.setIcon(icon_anterior);
+				element.setTitle(datosActuales.deviceId.toString() || "N/A")
+			})*/
+
+		}
+
+		locations.value = (startPlace, endPlace) => {
+
+
+			let startPlacePath = new google.maps.Marker({
+				position: new google.maps.LatLng(startPlace.latitude, startPlace.longitude),
+				map: map.value,
+				opacity: 1,
+				//animation: google.maps.Animation.DROP,
+				//label:{ text: '1', fontSize: '12px', color: 'white', },
+				icon: { url: require('../assets/traceStart.png'), scaledSize: new google.maps.Size(16, 16) },
+				title: startPlace.name, //sombra 
+			});
+
+
+			let endPlacePath = new google.maps.Marker({
+				position: new google.maps.LatLng(endPlace.latitude, endPlace.longitude),
+				map: map.value,
+				opacity: 1,
+				//animation: google.maps.Animation.DROP,
+				//label:{ text: '1', fontSize: '12px', color: 'white', },
+				icon: { url: require('../assets/traceEnd.png'), scaledSize: new google.maps.Size(30, 30) },
+				title: endPlace.name, //sombra 
+			});
+			// Add the polyline to the map
+			startPlacePath.setMap(map.value);
+			endPlacePath.setMap(map.value)
+
+		}
+
+
+
+		updateTrace.value = (PlanCoordinates) => {
+
+			trace_ADN.value[0].setPath(PlanCoordinates)
+			/*			trace_ADN.value[0].strokeColor = 'blue';*/
+
+
+			/*			trace_ADN.value.forEach((element) => {
+							element.setMap(map.value); 
+							element.setPath(PlanCoordinates)
+						})
+			*/
+
+		}
+
 
 		/*		map.value.addListener("click", () => {
 				//doclickClose();
 					map.value.setZoom(14);
 					map.value.setCenter(center.value);
-				});*/
+		});*/
 
 
 	})
 
 })
 
-defineExpose({ update_motorIcon, trace, locations, clearMap });
+defineExpose({ update_motorIcon, locations, clearMap, updateTrace, setCenter });
 
 </script>
 

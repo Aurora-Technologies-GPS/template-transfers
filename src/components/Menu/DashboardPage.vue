@@ -7,7 +7,8 @@
 
 
 		<CounterPage :countersGeneral="incomingData.countersGeneral" />
-		<FrameVistaGeneral  @transfer_id="toMapa" :contenedoresCount="contenedoresCount" :fullTransfer="transfersList" v-if="vistaGeneral" />
+		<FrameVistaGeneral @transfer_id="toMapa" :contenedoresCount="contenedoresCount" :fullTransfer="transfersList"
+			v-if="vistaGeneral" />
 
 		<FrameVistaStandar @transfer_id="toMapa" :fullTransfer="transfersList" v-if="!vistaGeneral" />
 

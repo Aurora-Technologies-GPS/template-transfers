@@ -125,7 +125,7 @@ import { defineEmits, defineProps } from 'vue'; //ref
 const incomingData = defineProps(['incomingData', 'counterTransferLnk', 'totalContenedores']);
 
 const outGoingData = defineEmits(
-	['indice', 'contarStatus','transfer_id']
+	['indice', 'contarStatus', 'transfer_id']
 )
 
 function toMapa(transfer_id) {

@@ -1,9 +1,9 @@
 <template>
 	<div class="vistaGeneral">
 
-		<VistaGeneralList @transfer_id="toMapa" :totalContenedores="props.contenedoresCount" :counterTransferLnk="counters"
-			@contarStatus="contarEstados" @indice="changeIndice" :incomingData="props.incomingData"
-			class="contendorTabla" />
+		<VistaGeneralList @transfer_id="toMapa" :totalContenedores="props.contenedoresCount"
+			:counterTransferLnk="counters" @contarStatus="contarEstados" @indice="changeIndice"
+			:incomingData="props.incomingData" class="contendorTabla" />
 		<TablaVistaGeneral :indice="indiceSelected" :incomingData="props.incomingData" />
 
 	</div>
@@ -22,7 +22,7 @@ import { useRoute } from 'vue-router';
 
 
 export default {
-	emits: ['transfer_id'], 
+	emits: ['transfer_id'],
 	props: ['incomingData', 'contenedoresCount'],
 
 	components: {

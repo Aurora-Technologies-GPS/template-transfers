@@ -9,7 +9,7 @@
 			</div>
 
 			<div class="mapa">
-				<MapaPage v-if="true" :inputData="valoresDefectoMapa" ref="mapaRef" />
+				<MapaPage v-if="mapaListo" :inputData="valoresDefectoMapa" ref="mapaRef" />
 			</div>
 
 		</div>
@@ -34,85 +34,95 @@ const route = useRoute();
 
 const incomingData = defineProps(['transfer_id']);
 
+let mapaListo = ref(false)
+
 
 let transferBlits = ref({
 
-                transfer:{
-                    id:36365,
-                    clientId:6,
-                    bl:"PYRR2408280",
-                    startPlace:{
-                        id:2388925,
-                        label:"Puerto de Santo Domingo",
-                        radius:101,
-                        latitude:18.4691788,
-                        longitude:-69.9566977,
-                        address:"Dirección General de Aduanas Puerto de Sans Soucí, Paseo Padre Billini, Santo Domingo de Guzmán, Distrito Nacional, República Dominicana, 10210"
-                    },
-                    endPlace:{
-                        id:2388926,
-                        label:"Piisa",
-                        radius:670,
-                        latitude:18.50135,
-                        longitude:-69.7791422,
-                        address:"Calle Lateral 5, Parque Industrial Itabo, San Gregorio de Nigua, San Cristóbal, República Dominicana, 00809"
-                    },
-                    address:"SANTO DOMINGO, False",
-                    city:"San Cristóbal",
-                    note:"",
-                    timeTravelEst:"2024-03-23 00:00:00",
-                    timeRequest:"2024-09-27 16:23:41"
-                },
-                transferLnkBlits:[
-/*                    {
-                        transferLinked:{
-                            id:581,
-                            transferId:36365,
-                            deviceId:1073543,
-                            container:"CXDU2193240",
-                            currentState:2,
-                            timeLinked:"2024-09-27 16:23:41",
-                            lastBlitTime:"2024-09-30 17:20:14"
-                        },
-                        transferBlits:[
-                            { 
-                                id:215,
-                                trLnkId:581,
-                                transferId:36365,
-                                deviceId:1073543,
-                                blitTime:"2024-09-27 15:26:32",
-                                lat:18.4717183,
-                                lng:-69.8810183,
-                                heading:0,
-                                speed:0,
-                                distance:0,
-                                distanceRemain:25039,
-                                travelTime:0,
-                                timeRemain:1578,
-                                statusId:2,
-                                completed:1
-                            }
-                        ]
-                    }*/
-                ]
-            }
+	transfer: {
+		id: 36365,
+		clientId: 6,
+		bl: "PYRR2408280",
+		startPlace: {
+			id: 2388925,
+			label: "Puerto de Santo Domingo",
+			radius: 101,
+			latitude: 18.4691788,
+			longitude: -69.9566977,
+			address: "Dirección General de Aduanas Puerto de Sans Soucí, Paseo Padre Billini, Santo Domingo de Guzmán, Distrito Nacional, República Dominicana, 10210"
+		},
+		endPlace: {
+			id: 2388926,
+			label: "Piisa",
+			radius: 670,
+			latitude: 18.50135,
+			longitude: -69.7791422,
+			address: "Calle Lateral 5, Parque Industrial Itabo, San Gregorio de Nigua, San Cristóbal, República Dominicana, 00809"
+		},
+		address: "SANTO DOMINGO, False",
+		city: "San Cristóbal",
+		note: "",
+		timeTravelEst: "2024-03-23 00:00:00",
+		timeRequest: "2024-09-27 16:23:41"
+	},
+	transferLnkBlits: [
+		/*                    {
+								transferLinked:{
+									id:581,
+									transferId:36365,
+									deviceId:1073543,
+									container:"CXDU2193240",
+									currentState:2,
+									timeLinked:"2024-09-27 16:23:41",
+									lastBlitTime:"2024-09-30 17:20:14"
+								},
+								transferBlits:[
+									{ 
+										id:215,
+										trLnkId:581,
+										transferId:36365,
+										deviceId:1073543,
+										blitTime:"2024-09-27 15:26:32",
+										lat:18.4717183,
+										lng:-69.8810183,
+										heading:0,
+										speed:0,
+										distance:0,
+										distanceRemain:25039,
+										travelTime:0,
+										timeRemain:1578,
+										statusId:2,
+										completed:1
+									}
+								]
+							}*/
+	]
+}
 );
 
 
-function showTrace(blits){
+function showTrace(blits) {
+
+	/*	mapaListo.value=false
+		mapaListo.value=true*/
+
+	const medioIndex = Math.floor(blits.length / 2);
+
+
+	mapaRef.value.setCenter(blits[medioIndex])
+
+	//console.log((blits[blits.length - 1]))
 
 
 
 	mapaRef.value.locations(transferBlits.value.transfer.startPlace, transferBlits.value.transfer.endPlace)
 
-	mapaRef.value.clearMap()
+	/*	mapaRef.value.clearMap()*/
 
+	mapaRef.value.update_motorIcon((blits[blits.length - 1]) || blits[0])
 
-
-
-	mapaRef.value.update_motorIcon(blits[0])
-
-	mapaRef.value.trace(blits)
+	/*mapaRef.value.trace(blits)*/
+	mapaRef.value.updateTrace(blits)
 
 }
 
@@ -136,10 +146,14 @@ function Busqueda(texto) {
 
 			if (result.success) {
 
-				console.log(result.clientFullTransferBlits.fullTransferBlits)
+				/*console.log(result.clientFullTransferBlits.fullTransferBlits)*/
 
 
 				transferBlits.value = result.clientFullTransferBlits.fullTransferBlits
+
+				valoresDefectoMapa.value.center = [transferBlits.value.transfer.startPlace.latitude, transferBlits.value.transfer.startPlace.longitude]
+
+				mapaListo.value = true
 
 			} else {
 				console.log(result)
@@ -162,7 +176,7 @@ const mapaRef = ref(null);
 
 let valoresDefectoMapa = ref({
 	center: [18.468025816718264, -69.93920818790205],
-	zoom: 15,
+	zoom: 13,
 	lat: 18.468025816718264,
 	lng: -69.95920818790205
 })
