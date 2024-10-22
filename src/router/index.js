@@ -4,7 +4,7 @@ import ClientPage from '@/components/ClientPage.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/:hash',
     name: 'home',
     component: HomeView
   },

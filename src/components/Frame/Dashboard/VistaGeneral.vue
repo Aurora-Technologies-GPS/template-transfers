@@ -13,7 +13,7 @@
 import VistaGeneralList from '@/components/VistaGeneralList.vue'
 import TablaVistaGeneral from './TablaVistaGeneral.vue'
 
-import { counterSingle } from '@/components/conexion/DataConectorTest.js'
+import { counterSingle } from '@/components/conexion/DataConector.js'
 import { convertirStatus } from '@/components/utils.js' //traducir_estatus
 
 import { ref } from 'vue';

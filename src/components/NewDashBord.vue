@@ -22,9 +22,7 @@ import HistorialPage from '@/components/Menu/HistorialPage.vue'
 
 import NewMenu from '@/components/NewMenu.vue'
 
-import { transfers_list } from '@/components/conexion/DataConectorTest.js'
-
-import { counterGeneral } from '@/components/conexion/DataConectorTest.js'
+import { transfers_list, counterGeneral } from '@/components/conexion/DataConector.js'
 
 import { convertirStatus } from '@/components/utils.js' //
 

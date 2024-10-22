@@ -22,7 +22,7 @@ import HeaderComun from '@/components/HeaderComun.vue'
 import FrameVistaGeneral from '@/components/Frame/Dashboard/FrameVistaGeneral.vue'
 import FrameVistaStandar from '@/components/Frame/Dashboard/FrameVistaStandar.vue'
 
-import { transfers_list } from '@/components/conexion/DataConectorTest.js'
+import { transfers_list } from '@/components/conexion/DataConector.js'
 
 import { useRoute } from 'vue-router';
 

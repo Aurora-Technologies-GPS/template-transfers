@@ -10,6 +10,10 @@
 
 			<div class="mapa">
 				<MapaPage v-if="mapaListo" :inputData="valoresDefectoMapa" ref="mapaRef" />
+				<div  class="text-center" v-else>
+					<h2 style="padding: 20px; color: #58bbda;">No Tiene Ruta Disponible</h2>
+
+			</div>
 			</div>
 
 		</div>
@@ -23,7 +27,7 @@ import FrameMapaMenu from './FrameMapaMenu.vue'
 
 import MapaPage from '@/components/MapaPage.vue'
 
-import { blitsTranfers } from '@/components/conexion/DataConectorTest.js'
+import { blitsTranfers } from '@/components/conexion/DataConector.js'
 
 import { ref, defineProps } from 'vue'
 
@@ -106,23 +110,26 @@ function showTrace(blits) {
 	/*	mapaListo.value=false
 		mapaListo.value=true*/
 
-	const medioIndex = Math.floor(blits.length / 2);
 
+	if (transferBlits.value.transfer.startPlace && transferBlits.value.transfer.endPlace) {
 
-	mapaRef.value.setCenter(blits[medioIndex])
+		mapaListo.value=true
 
-	//console.log((blits[blits.length - 1]))
+		const medioIndex = Math.floor(blits.length / 2);
 
+		mapaRef.value.setCenter(blits[medioIndex])
+		//console.log((blits[blits.length - 1]))
 
+		mapaRef.value.locations(transferBlits.value.transfer.startPlace, transferBlits.value.transfer.endPlace)
 
-	mapaRef.value.locations(transferBlits.value.transfer.startPlace, transferBlits.value.transfer.endPlace)
+		/*	mapaRef.value.clearMap()*/
+		mapaRef.value.update_motorIcon((blits[blits.length - 1]) || blits[0])
+		/*mapaRef.value.trace(blits)*/
+		mapaRef.value.updateTrace(blits)
 
-	/*	mapaRef.value.clearMap()*/
-
-	mapaRef.value.update_motorIcon((blits[blits.length - 1]) || blits[0])
-
-	/*mapaRef.value.trace(blits)*/
-	mapaRef.value.updateTrace(blits)
+	}else{
+		mapaListo.value=false
+	}
 
 }
 
