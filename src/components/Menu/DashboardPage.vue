@@ -22,7 +22,7 @@ import HeaderComun from '@/components/HeaderComun.vue'
 import FrameVistaGeneral from '@/components/Frame/Dashboard/FrameVistaGeneral.vue'
 import FrameVistaStandar from '@/components/Frame/Dashboard/FrameVistaStandar.vue'
 
-import { transfers_list } from '@/components/conexion/DataConector.js'
+import { transfers_list, counterGeneral } from '@/components/conexion/DataConector.js'
 
 import { useRoute } from 'vue-router';
 
@@ -82,7 +82,7 @@ let transfersList = ref([
 
 ]);
 
-let contenedoresCount = ref(0);
+let contenedoresCount = ref({count:0, date:'1/10/2024; 00:00PM'});
 
 let vistaGeneral = ref(true)
 
@@ -101,15 +101,38 @@ transfers_list(route.params.hash).then(result => {
 
 	if (result.success) {
 
-		if (result.clientFullTransfers.fullTransfer) {
-			contenedoresCount.value = result.clientFullTransfers.fullTransfer.length || 99
-		}
-
 		transfersList.value = result.clientFullTransfers.fullTransfer
 
 	} else {
 		console.log(result)
 	}
+
+	counterGeneral(route.params.hash).then(result_count => {
+
+		if (result_count.success) {
+
+			contenedoresCount.value.count=0
+
+			result_count.states.forEach(elem=>{
+				if(elem.name.toUpperCase() =='CANCELED' ){
+
+					console.log("No se cuenta ")
+
+				}else{
+					contenedoresCount.value.date=`${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString('en-US')}`
+					contenedoresCount.value.count=contenedoresCount.value.count+elem.count	|| 0	
+					/*console.log(elem)	*/
+				}
+			})
+	
+		} else {
+		console.log(result)
+	}
+
+	}).catch(error2 => {
+		console.log(error2)
+		console.log("Error al Hacer La peticion Counter")
+	});
 
 
 

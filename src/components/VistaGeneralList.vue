@@ -30,7 +30,7 @@
 
 			<div class="contenedorRigth">
 
-				<div class="text-right mb-1">1/10/2024; 00:00PM</div>
+				<div class="text-right mb-1">{{incomingData.totalContenedores.date}}</div>
 				<div class="cuadro">
 
 					<div class="row" style="height: 100%;">
@@ -48,7 +48,7 @@
 							<div class="text-center">
 
 								<div class="cuadroTextoTitle">Contenedores</div>
-								<div class="cuadroTextoValue">{{ incomingData.totalContenedores }}</div>
+								<div class="cuadroTextoValue">{{ incomingData.totalContenedores.count }}</div>
 
 							</div>
 
