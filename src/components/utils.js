@@ -100,8 +100,54 @@ export function convertirStatus(estados) {
 
 export function ultimoElemento(listado){
 
-    return (listado[listado.length - 1]) || listado[0]
+  let salida={
+    id: 0,
+    trLnkId: 0,
+    transferId: 0,
+    deviceId: 0,
+    blitTime: "2024-10-07 15:25:18",
+    lat: 18.4492466,
+    lng: -69.65743,
+    heading: 0,
+    speed: 0,
+    distance: 0,
+    distanceRemain: 0,
+    travelTime: 0,
+    timeRemain: 0,
+    statusId: 6,
+    completed: 0
+}
 
+  if (listado.length === 0) {
+    console.log("El array está vacío");
+
+  } else {
+       /* console.log("El array no está vacío");*/
+
+    salida=(listado[listado.length - 1]) || salida
+
+}
+
+    return salida
+}
+
+
+
+export function ultimoElementoGeneral(listado){
+
+  let salida;
+
+
+  if (listado.length === 0) {
+    console.log("El array está vacío");
+
+  } else {
+       /* console.log("El array no está vacío");*/
+    salida=(listado[listado.length - 1]) || salida
+}
+
+
+    return salida
 }
 
 
