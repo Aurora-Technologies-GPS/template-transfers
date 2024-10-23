@@ -33,6 +33,8 @@
 
 				<hr class="divisor">
 
+				<BarraPorcentaje :porcentaje=" ultimoElemento(dato.transferBlits).completed || 0" />
+
 				<div><i class="bi bi-circle-fill vineta" style="color: #72c9eb;"></i>
 					<span v-if="incomingData.transferBlits.transfer.startPlace" class="destinos">{{
 						incomingData.transferBlits.transfer.startPlace.label }}</span>
@@ -58,6 +60,9 @@
 <script setup>
 
 import { ref, defineProps, defineEmits } from 'vue'
+import BarraPorcentaje from '@/components/BarraPorcentaje.vue'
+import { ultimoElemento } from '@/components/utils.js'
+
 let openIndex = ref()
 
 

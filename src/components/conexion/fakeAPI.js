@@ -473,7 +473,7 @@ const output1={
                             { statusId:2, deviceId: 875156, lat: 18.4702011, lng:-69.9569466, heading:347, completed: 61 },
                             { statusId:2, deviceId: 875156, lat: 18.4707566, lng:-69.9570711, heading:349, completed: 71 },
                             { statusId:2, deviceId: 875156, lat: 18.4714377, lng:-69.9572222, heading:347, completed: 82 },
-                            { statusId:2, deviceId: 875156, lat: 18.4724488, lng:-69.9574666, heading:351, completed:100 }
+                            { statusId:2, deviceId: 875156, lat: 18.4724488, lng:-69.9574666, heading:351, completed: 83 }
                         ]
                     },
 
@@ -514,7 +514,7 @@ const output1={
                             { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4827766, lng: -69.7783422, heading:0, completed: 86},
                             { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat:   18.48309, lng: -69.7777022, heading:0, completed: 78},
                             { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.4841077, lng: -69.7779377, heading:0, completed: 87},
-                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.5023444, lng:   -69.77556, heading:0, completed:100}
+                            { statusId:2, id:614790, trLnkId: 581, deviceId: 875156, lat: 18.5023444, lng:   -69.77556, heading:0, completed: 88}
                         ]
                     },
                     {
@@ -661,7 +661,7 @@ const output2={
                             { statusId:2, deviceId: 875156, lat: 18.4702011, lng:-69.9569466, heading:347, completed: 61 },
                             { statusId:2, deviceId: 875156, lat: 18.4707566, lng:-69.9570711, heading:349, completed: 71 },
                             { statusId:2, deviceId: 875156, lat: 18.4714377, lng:-69.9572222, heading:347, completed: 82 },
-                            { statusId:2, deviceId: 875156, lat: 18.4724488, lng:-69.9574666, heading:351, completed:100 }
+                            { statusId:2, deviceId: 875156, lat: 18.4724488, lng:-69.9574666, heading:351, completed: 83 }
                         ]
                     },
 
@@ -728,19 +728,19 @@ const output3={
                         },
                         transferBlits:[
                             //{   id:465036,trLnkId:581, transferId:36365, deviceId:1073543, blitTime:"2024-09-27 16:35:33", lat:18.4581316,lng:-69.71066, heading:0, speed:0,distance:30420, distanceRemain:45976, travelTime:4141, timeRemain:2567, statusId:2, completed:0 },
-                            { statusId:2, deviceId: 875156, lat: 18.4662666, lng: -69.9561022, heading: 125, completed:   0}, 
-                            { statusId:2, deviceId: 875156, lat: 18.4662666, lng: -69.9561022, heading: 125, completed:   0}, 
-                            { statusId:2, deviceId: 875156, lat: 18.4669766, lng: -69.9561822, heading: 347, completed:   8}, 
-                            { statusId:2, deviceId: 875156, lat: 18.4676822, lng: -69.9563688, heading: 348, completed:  20}, 
-                            { statusId:2, deviceId: 875156, lat: 18.46829,   lng: -69.9564977, heading: 346, completed:  30}, 
-                            { statusId:2, deviceId: 875156, lat: 18.46858,   lng: -69.9565733, heading: 344, completed:  35}, 
-                            { statusId:2, deviceId: 875156, lat: 18.4691788, lng: -69.9566977, heading: 350, completed:  45}, 
-                            { statusId:2, deviceId: 875156, lat: 18.4695111, lng: -69.9567866, heading: 348, completed:  50}, 
-                            { statusId:2, deviceId: 875156, lat: 18.4698166, lng: -69.9568577, heading: 346, completed:  55}, 
-                            { statusId:2, deviceId: 875156, lat: 18.4702011, lng: -69.9569466, heading: 347, completed:  61}, 
-                            { statusId:2, deviceId: 875156, lat: 18.4707566, lng: -69.9570711, heading: 349, completed:  71}, 
-                            { statusId:2, deviceId: 875156, lat: 18.4714377, lng: -69.9572222, heading: 347, completed:  82}, 
-                            { statusId:2, deviceId: 875156, lat: 18.4724488, lng: -69.9574666, heading: 351, completed: 100} 
+                            { statusId:2, deviceId: 875156, lat: 18.4662666, lng: -69.9561022, heading: 125, completed:  0}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4662666, lng: -69.9561022, heading: 125, completed:  0}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4669766, lng: -69.9561822, heading: 347, completed:  8}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4676822, lng: -69.9563688, heading: 348, completed: 20}, 
+                            { statusId:2, deviceId: 875156, lat: 18.46829,   lng: -69.9564977, heading: 346, completed: 30}, 
+                            { statusId:2, deviceId: 875156, lat: 18.46858,   lng: -69.9565733, heading: 344, completed: 35}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4691788, lng: -69.9566977, heading: 350, completed: 45}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4695111, lng: -69.9567866, heading: 348, completed: 50}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4698166, lng: -69.9568577, heading: 346, completed: 55}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4702011, lng: -69.9569466, heading: 347, completed: 61}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4707566, lng: -69.9570711, heading: 349, completed: 71}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4714377, lng: -69.9572222, heading: 347, completed: 82}, 
+                            { statusId:2, deviceId: 875156, lat: 18.4724488, lng: -69.9574666, heading: 351, completed: 83} 
 
                         ]
                     },
@@ -795,7 +795,7 @@ const output3={
                             { statusId:2, deviceId:875156, lat: 18.4969366, lng: -69.7958755, heading:  74, completed: 89},
                             { statusId:2, deviceId:875156, lat: 18.4993111, lng: -69.7868177, heading:  71, completed: 93},
                             { statusId:2, deviceId:875156, lat:   18.50135, lng: -69.7791422, heading:  76, completed: 96},
-                            { statusId:2, deviceId:875156, lat: 18.5019877, lng: -69.7767644, heading:  75, completed: 100}
+                            { statusId:2, deviceId:875156, lat: 18.5019877, lng: -69.7767644, heading:  75, completed: 97}
                         ]
                     },
 

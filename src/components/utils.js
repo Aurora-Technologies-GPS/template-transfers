@@ -98,6 +98,12 @@ export function convertirStatus(estados) {
 
 }
 
+export function ultimoElemento(listado){
+
+    return (listado[listado.length - 1]) || listado[0]
+
+}
+
 
 export function ten(i) {
 

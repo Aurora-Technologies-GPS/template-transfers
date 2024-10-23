@@ -82,7 +82,7 @@ let transfersList = ref([
 
 ]);
 
-let contenedoresCount = ref(0);
+let contenedoresCount = ref({count:22, date:'1/10/2024; 00:00PM'});
 
 let vistaGeneral = ref(true)
 
@@ -102,7 +102,8 @@ transfers_list(route.params.hash).then(result => {
 	if (result.success) {
 
 		if (result.clientFullTransfers.fullTransfer) {
-			contenedoresCount.value = result.clientFullTransfers.fullTransfer.length || 99
+			contenedoresCount.value.count = result.clientFullTransfers.fullTransfer.length || 99
+			contenedoresCount.value.date= new Date().toLocaleString(); 
 		}
 
 		transfersList.value = result.clientFullTransfers.fullTransfer
