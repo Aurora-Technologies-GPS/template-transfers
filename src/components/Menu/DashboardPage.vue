@@ -119,7 +119,7 @@ transfers_list(route.params.hash).then(result => {
 					console.log("No se cuenta ")
 
 				}else{
-					contenedoresCount.value.date=`${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString('en-US')}`
+					contenedoresCount.value.date= new Date().toLocaleString(); 
 					contenedoresCount.value.count=contenedoresCount.value.count+elem.count	|| 0	
 					/*console.log(elem)	*/
 				}

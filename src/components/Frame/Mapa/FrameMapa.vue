@@ -31,7 +31,7 @@ import { blitsTranfers } from '@/components/conexion/DataConector.js'
 
 import { ref, defineProps } from 'vue'
 
-import { ultimoElemento } from '@/components/utils.js'
+import { ultimoElementoGeneral } from '@/components/utils.js'
 
 import { useRoute } from 'vue-router';
 
@@ -125,7 +125,7 @@ function showTrace(blits) {
 
 		/*	mapaRef.value.clearMap()*/
 		
-		mapaRef.value.update_motorIcon(ultimoElemento(blits))
+		mapaRef.value.update_motorIcon(ultimoElementoGeneral(blits))
 //		mapaRef.value.update_motorIcon((blits[blits.length - 1]) || blits[0])
 		/*mapaRef.value.trace(blits)*/
 		mapaRef.value.updateTrace(blits)
