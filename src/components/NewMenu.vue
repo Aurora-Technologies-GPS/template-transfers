@@ -74,7 +74,7 @@
 </template>
 <script setup>
 
-import { ref, defineProps, defineEmits } from 'vue'
+import { ref, onMounted, defineProps, defineEmits, defineExpose } from 'vue'
 
 
 let vistas = ref({
@@ -84,15 +84,28 @@ let vistas = ref({
 })
 
 const incomingData = defineProps(
-	['LegalName', 'vistaSelected']
+	['LegalName', ]
 )
 
 const outGoingData = defineEmits(
 	['vista']
 )
 
+let updateView = ref(null);
 
-switch (incomingData.vistaSelected) {
+
+
+
+
+
+
+onMounted(async () => {
+
+	updateView.value = (indice) => {
+
+	const viewSelected= indice || 1
+
+	switch (viewSelected) {
 
 	case 1:
 		showDasboard();
@@ -110,6 +123,18 @@ switch (incomingData.vistaSelected) {
 		showDasboard();
 		break;
 }
+
+}
+
+
+
+
+})
+
+defineExpose({ updateView })
+
+
+
 
 
 function showDasboard() {
@@ -138,6 +163,8 @@ function showHistorial() {
 	outGoingData('vista', 3);
 
 }
+
+
 
 </script>
 
