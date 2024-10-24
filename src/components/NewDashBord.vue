@@ -1,7 +1,7 @@
 <template>
 	<div class="DashBoardPage">
 
-		<NewMenu :vistaSelected="vistaSelectedCode" :LegalName="name" @vista="changeVista" style=" width:15%;" />
+		<NewMenu :LegalName="name" @vista="changeVista" style=" width:15%;" ref="menuRef" />
 
 		<DashboardPage :countersGeneral="countersGeneral" @transfer_id="changeIndiceMapa" style=" width: 100%;"
 			v-if="vistaSelected == 1" />
@@ -38,7 +38,8 @@ export default {
 	setup(props) {
 
 		let vistaSelected = ref(1);
-		let vistaSelectedCode = 1;
+
+		const menuRef=ref(null)
 
 		let transfer_id_selected = ref(0)
 
@@ -63,7 +64,7 @@ export default {
 		function changeIndiceMapa(transfer_id) {
 
 			vistaSelected.value = 2;
-			vistaSelectedCode = 3
+			menuRef.value.updateView(2)
 			transfer_id_selected.value = transfer_id
 		}
 
@@ -79,7 +80,7 @@ export default {
 			VistaMapaPage, vistaSelected,
 			name, transfer_id_selected,
 			changeIndiceMapa, countersGeneral,
-			vistaSelectedCode
+			menuRef
 		}
 	},
 	mounted() {
